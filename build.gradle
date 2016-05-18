@@ -16,6 +16,10 @@ android {
     compileSdkVersion 19
     buildToolsVersion "23.0.2"
 
+    defaultConfig{
+        applicationId "newer.project.superwechat"
+    }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'

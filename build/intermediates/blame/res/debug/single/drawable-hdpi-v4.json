@@ -240,12 +240,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\conversation_normal.png"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\unread_count_bg.9.png",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\unread_count_bg.9.png"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_26.png",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\ee_26.png"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\unread_count_bg.9.png",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\unread_count_bg.9.png"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\record_animate_08.png",

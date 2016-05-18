@@ -6,10 +6,537 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="358c969c-05e2-45b4-a5a4-2297b78bfbe4" name="Default" comment="" />
+    <list default="true" id="358c969c-05e2-45b4-a5a4-2297b78bfbe4" name="Default" comment="添加工具包">
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\androidTest\debug\com\easemob\chatuidemo\test\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper$HXSyncListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\controller\HXSDKHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\DefaultHXSDKModel$Key.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\DefaultHXSDKModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\GroupRemoveListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\HXNotifier$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\HXNotifier$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\HXNotifier$HXNotificationInfoProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\HXNotifier.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\model\HXSDKModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\applib\utils\HXPreferenceUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\Constant.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\DemoHXSDKModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\Manifest$permission.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\Manifest.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\R.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\UserProfileManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\UserProfileManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\UserProfileManager.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\AddContactActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\AddContactActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\AddContactActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\AddContactActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\AlertDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaiduMapActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaiduMapActivity$BaiduSDKReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaiduMapActivity$MyLocationListenner.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaiduMapActivity$NotifyLister.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaiduMapActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BaseActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BlacklistActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BlacklistActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BlacklistActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BlacklistActivity$BlacklistAdapater.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\BlacklistActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\CallActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\CallActivity$CallingState.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\CallActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$10.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$11.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$12$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$12$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$12.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$13.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$7.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$8$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$8.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$9.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$GroupListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$GroupListener$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$GroupListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$ListScrollListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity$PressToSpeakListen.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatAllHistoryFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatHistoryFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$GridAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$GridAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$GridAdapter$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$GridAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ChatRoomDetailsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$7$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$7$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$7.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$8.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$9.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXBlackListSyncListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXBlackListSyncListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXContactInfoSyncListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXContactInfoSyncListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXContactSyncListener$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXContactSyncListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment$HXContactSyncListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContactlistFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ContextMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\DiagnoseActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\DiagnoseActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\DiagnoseActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\DiagnoseActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\EditActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ExitGroupDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ForwardMessageActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity$BlacklistAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupBlacklistActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$4$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$5$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$7$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$7$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$7.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$8$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$8.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$9$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$9$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$9.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$3$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$3$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$GridAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupDetailsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupPickContactsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupPickContactsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupPickContactsActivity$PickContactAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupPickContactsActivity$PickContactAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupPickContactsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupSimpleDetailActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$SyncListener$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$SyncListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity$SyncListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\GroupsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridFragment$ImageAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridFragment$ImageAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ImageGridFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\LoginActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$7.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$8$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$8.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$9.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyConnectionListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyConnectionListener$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyConnectionListener$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyConnectionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyContactListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyContactListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyGroupChangeListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyGroupChangeListener$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyGroupChangeListener$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyGroupChangeListener$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity$MyGroupChangeListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewFriendsMsgActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewGroupActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewGroupActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewGroupActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewGroupActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\NewGroupActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity$1$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\OfflinePushNickActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PickContactNoCheckboxActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PickContactNoCheckboxActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PickContactNoCheckboxActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$6$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$ChatRoomAdapter$RoomFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity$ChatRoomAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicChatRoomsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity$GroupsAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsSeachActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsSeachActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsSeachActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\PublicGroupsSeachActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RecorderVideoActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RegisterActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RegisterActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RegisterActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RegisterActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$4$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity$RobotAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\RobotsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SettingsFragment$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SettingsFragment$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SettingsFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SettingsFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$3$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowBigImage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowNormalFileActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowNormalFileActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowNormalFileActivity$1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowNormalFileActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowNormalFileActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowVideoActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowVideoActivity$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowVideoActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\ShowVideoActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SplashActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\SplashActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$4$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\UserProfileActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$LocalCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity$OppositeCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VideoCallActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\activity\VoiceCallActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatAllHistoryAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatAllHistoryAdapter$ConversationFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatAllHistoryAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatAllHistoryAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatHistoryAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatHistoryAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatHistoryAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatRoomAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatRoomAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ChatRoomAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ContactAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ContactAdapter$MyFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ContactAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ContactAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ExpressionAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\ExpressionPagerAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\GroupAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\GroupAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\GroupAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$10$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$10.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$11.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$12$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$12$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$12.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$13.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$14$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$14.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$15.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$16.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$17$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$17$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$17.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$18$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$18$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$18$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$18.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$19.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$20.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$21.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$22.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$7.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$8.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$9.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$MapClickListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\MessageAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\NewFriendsMsgAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\VoicePlayClickListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\VoicePlayClickListener$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\adapter\VoicePlayClickListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\db\DbOpenHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\db\DemoDBManager.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\db\InviteMessgeDao.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\db\UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\domain\InviteMessage$InviteMesageStatus.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\domain\InviteMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\domain\RobotUser.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\domain\User.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\domain\VideoEntity.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\parse\ParseManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\parse\ParseManager$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\parse\ParseManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\parse\ParseManager$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\parse\ParseManager.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\receiver\CallReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\receiver\GCMPushBroadCast.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\DownloadImageTask$DownloadFileCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\DownloadImageTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadImageTask$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadImageTask$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadImageTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadLocalBigImgTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadVideoImageTask$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadVideoImageTask$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\task\LoadVideoImageTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\CameraHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\CommonUtils$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\CommonUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\ImageCache$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\ImageCache.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\ImageUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\PreferenceUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\SmileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\utils\UserUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageCache$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageCache$ImageCacheParams.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageCache$RetainFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageCache.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageResizer.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageWorker$AsyncDrawable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageWorker$BitmapWorkerTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageWorker$CacheAsyncTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\ImageWorker.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\RecyclingBitmapDrawable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\Utils$ResolutionComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\video\util\Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\ExpandGridView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\MyChronometer.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\PasteEditText.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\RecyclingImageView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\Sidebar.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\Compat.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\IPhotoView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$AnimatedZoomRunnable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$FlingRunnable.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$OnMatrixChangedListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$OnPhotoTapListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher$OnViewTapListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\PhotoViewAttacher.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\SDK16.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\ScrollerProxy$GingerScroller.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\ScrollerProxy$PreGingerScroller.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\ScrollerProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector$CupcakeDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector$EclairDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector$FroyoDetector$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector$FroyoDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector$OnGestureListener.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\classes\debug\com\easemob\chatuidemo\widget\photoview\VersionedGestureDetector.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/superwechat/activity/ChatActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/superwechat/activity/ChatActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_chat.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_chat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_details.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_pick_contacts.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_pick_contacts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_pick_contact_no_checkbox.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_pick_contact_no_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_show_big_image.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_show_big_image.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_video_call.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_video_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_voice_call.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_voice_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/choose_griditem.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/choose_griditem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/expression_gridview.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/expression_gridview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/fragment_contact_list.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/fragment_contact_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="superwechat.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,21 +563,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tab_unread_bg.9.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/tab_unread_bg.9.png">
-          <provider editor-type-id="images">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="ninepatcheditor">
-            <state />
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="181.26666">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.666666">
+              <caret line="325" column="28" selection-start-line="325" selection-start-column="28" selection-end-line="326" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/values-ru-rRU/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.78846157">
+              <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-v11/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/activity/ChatActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1421" column="44" selection-start-line="1421" selection-start-column="44" selection-end-line="1421" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10208817">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/HttpUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/ImageLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -59,6 +668,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -655,7 +1265,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="D:\Project\superwechat\superwechat" value="1463542106816" />
+        <entry key="D:\Project\superwechat\superwechat" value="1463562730561" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -916,7 +1526,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/newer/project/superwechat/utils/BitmapUtils.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/superwechat/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/superwechat/I.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/superwechat/activity/ChatActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-ru-rRU/strings.xml" />
       </list>
     </option>
   </component>
@@ -940,7 +1558,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -959,6 +1577,96 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="superwechat" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="strings.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1017,6 +1725,192 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-zh-rCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-xlarge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-w820dp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-ru-rRU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-large" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1028,13 +1922,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_4_API_23" />
+    <property name="android.project.structure.last.selected" value="Notifications" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Git/bin/git.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\superwechat\superwechat\src\newer\project\superwechat" />
+      <recent name="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="newer.project.superwechat" />
     </key>
@@ -1094,6 +1995,15 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1206,11 +2116,30 @@
       <option name="number" value="Default" />
       <updated>1463542405617</updated>
     </task>
+    <task id="LOCAL-00001" summary="改了文件名">
+      <created>1463565290088</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1463565290088</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加工具包">
+      <created>1463566219852</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1463566219852</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加String的message">
+      <created>1463568098899</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463568098899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1227,13 +2156,13 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21724524" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43896976" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1246,8 +2175,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="改了文件名" />
+    <MESSAGE value="添加工具包" />
+    <MESSAGE value="添加String的message" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加String的message" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1259,10 +2196,124 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/BitmapUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10208817">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33293268">
+          <caret line="129" column="11" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/activity/ChatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1421" column="44" selection-start-line="1421" selection-start-column="44" selection-end-line="1421" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-v11/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.666666">
+          <caret line="325" column="28" selection-start-line="325" selection-start-column="28" selection-end-line="326" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="181.26666">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ru-rRU/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78846157">
+          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
           <folding />
         </state>
       </provider>
