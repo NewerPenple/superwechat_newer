@@ -39,11 +39,17 @@ public class SuperWeChatApplication extends Application {
 	 */
 	public static String currentUserNick = "";
 	public static DemoHXSDKHelper hxSDKHelper = new DemoHXSDKHelper();
+	/** 全局的当前登录用户对象 */
 	private User user;
+	/** 全局的当前登录用户的好友列表 */
 	private ArrayList<Contact> contactList = new ArrayList<Contact>();
+	/** 全局的当前登录用户的好友集合 */
 	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
+	/** 全局的群组集合 */
 	private ArrayList<Group> grougList = new ArrayList<Group>();
+	/** 全局的当前公共群列表 */
 	private ArrayList<Group> publicGroupList = new ArrayList<Group>();
+	/** 全局的群组成员列表 */
 	private HashMap<String, ArrayList<Member>> groupMemgbers = new HashMap<String, ArrayList<Member>>();
 
 	public User getUser() {
