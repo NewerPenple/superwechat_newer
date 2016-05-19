@@ -1,6 +1,8 @@
 package newer.project.superwechat.bean;
 
 
+import android.os.Handler;
+
 /**
  * User entity. @author MyEclipse Persistence Tools
  */
@@ -17,6 +19,7 @@ public class User extends Location implements java.io.Serializable {
 	private String muserPassword;
 	private String muserNick;
 	private Integer muserUnreadMsgCount;
+	private Handler handler;
 
 	// Constructors
 
