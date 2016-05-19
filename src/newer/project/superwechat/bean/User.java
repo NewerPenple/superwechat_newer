@@ -19,7 +19,6 @@ public class User extends Location implements java.io.Serializable {
 	private String muserPassword;
 	private String muserNick;
 	private Integer muserUnreadMsgCount;
-	private Handler handler;
 
 	// Constructors
 
@@ -86,14 +85,6 @@ public class User extends Location implements java.io.Serializable {
 
 	public void setMUserUnreadMsgCount(Integer MUserUnreadMsgCount) {
 		this.muserUnreadMsgCount = MUserUnreadMsgCount;
-	}
-
-	public Handler getHandler() {
-		return handler;
-	}
-
-	public void setHandler(Handler handler) {
-		this.handler = handler;
 	}
 
 	@Override
