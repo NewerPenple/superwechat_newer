@@ -13,16 +13,15 @@
  */
 package newer.project.superwechat.db;
 
+import android.content.Context;
+
 import java.util.List;
 import java.util.Map;
 
-import android.content.Context;
-
-
+import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.domain.RobotUser;
-import newer.project.superwechat.domain.User;
 
-public class UserDao {
+public class EMUserDao {
 	public static final String TABLE_NAME = "uers";
 	public static final String COLUMN_NAME_ID = "username";
 	public static final String COLUMN_NAME_NICK = "nick";
@@ -38,7 +37,7 @@ public class UserDao {
 	public static final String ROBOT_COLUMN_NAME_AVATAR = "avatar";
 	
 	
-	public UserDao(Context context) {
+	public EMUserDao(Context context) {
 	    DemoDBManager.getInstance().onInit(context);
 	}
 
@@ -47,7 +46,7 @@ public class UserDao {
 	 * 
 	 * @param contactList
 	 */
-	public void saveContactList(List<User> contactList) {
+	public void saveContactList(List<EMUser> contactList) {
 	    DemoDBManager.getInstance().saveContactList(contactList);
 	}
 
@@ -56,7 +55,7 @@ public class UserDao {
 	 * 
 	 * @return
 	 */
-	public Map<String, User> getContactList() {
+	public Map<String, EMUser> getContactList() {
 		
 	    return DemoDBManager.getInstance().getContactList();
 	}
@@ -73,7 +72,7 @@ public class UserDao {
 	 * 保存一个联系人
 	 * @param user
 	 */
-	public void saveContact(User user){
+	public void saveContact(EMUser user){
 	    DemoDBManager.getInstance().saveContact(user);
 	}
 	
