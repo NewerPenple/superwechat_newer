@@ -46,7 +46,7 @@ public class SuperWeChatApplication extends Application {
 	/** 全局的当前登录用户的好友集合 */
 	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
 	/** 全局的群组集合 */
-	private ArrayList<Group> grougList = new ArrayList<Group>();
+	private ArrayList<Group> groupList = new ArrayList<Group>();
 	/** 全局的当前公共群列表 */
 	private ArrayList<Group> publicGroupList = new ArrayList<Group>();
 	/** 全局的群组成员列表 */
@@ -76,12 +76,12 @@ public class SuperWeChatApplication extends Application {
 		this.userList = userList;
 	}
 
-	public ArrayList<Group> getGrougList() {
-		return grougList;
+	public ArrayList<Group> getGroupList() {
+		return groupList;
 	}
 
-	public void setGrougList(ArrayList<Group> grougList) {
-		this.grougList = grougList;
+	public void setGroupList(ArrayList<Group> groupList) {
+		this.groupList = groupList;
 	}
 
 	public ArrayList<Group> getPublicGroupList() {
