@@ -18,6 +18,14 @@ import android.content.Context;
 
 import com.easemob.EMCallBack;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.bean.Group;
+import newer.project.superwechat.bean.Member;
+import newer.project.superwechat.bean.User;
+
 public class SuperWeChatApplication extends Application {
 	public static String SERVER_ROOT = "http://10.2.0.0:8080/SuperWeChatServer/Server";
 
@@ -25,12 +33,18 @@ public class SuperWeChatApplication extends Application {
 	private static SuperWeChatApplication instance;
 	// login user name
 	public final String PREF_USERNAME = "username";
-	
+
 	/**
 	 * 当前用户nickname,为了苹果推送不是userid而是昵称
 	 */
 	public static String currentUserNick = "";
 	public static DemoHXSDKHelper hxSDKHelper = new DemoHXSDKHelper();
+	private User user;
+	private ArrayList<Contact> contactList = new ArrayList<Contact>();
+	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
+	private ArrayList<Group> grougList = new ArrayList<Group>();
+	private ArrayList<Group> publicGroupList = new ArrayList<Group>();
+	private HashMap<String, ArrayList<Member>> groupMemgbers = new HashMap<String, ArrayList<Member>>();
 
 	@Override
 	public void onCreate() {
@@ -40,17 +54,17 @@ public class SuperWeChatApplication extends Application {
 
         /**
          * this function will initialize the HuanXin SDK
-         * 
+         *
          * @return boolean true if caller can continue to call HuanXin related APIs after calling onInit, otherwise false.
-         * 
+         *
          * 环信初始化SDK帮助函数
          * 返回true如果正确初始化，否则false，如果返回为false，请在后续的调用中不要调用任何和环信相关的代码
-         * 
+         *
          * for example:
          * 例子：
-         * 
+         *
          * public class DemoHXSDKHelper extends HXSDKHelper
-         * 
+         *
          * HXHelper = new DemoHXSDKHelper();
          * if(HXHelper.onInit(context)){
          *     // do HuanXin related work
@@ -62,7 +76,7 @@ public class SuperWeChatApplication extends Application {
 	public static SuperWeChatApplication getInstance() {
 		return instance;
 	}
- 
+
 
 	/**
 	 * 获取当前登陆用户名
