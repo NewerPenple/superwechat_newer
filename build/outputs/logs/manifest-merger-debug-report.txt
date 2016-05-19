@@ -113,16 +113,16 @@ uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:34:5-82
 	android:name
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:34:22-79
-permission#com.easemob.chatuidemo.permission.C2D_MESSAGE
+permission#newer.project.superwechat.permission.C2D_MESSAGE
 ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:36:5-37:47
 	android:protectionLevel
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:37:9-44
 	android:name
-		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:36:17-77
-uses-permission#com.easemob.chatuidemo.permission.C2D_MESSAGE
-ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:38:5-85
+		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:36:17-80
+uses-permission#newer.project.superwechat.permission.C2D_MESSAGE
+ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:38:5-88
 	android:name
-		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:38:22-82
+		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:38:22-85
 application
 ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:41:5-362:25
 	android:label
