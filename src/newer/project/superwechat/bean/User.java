@@ -88,6 +88,14 @@ public class User extends Location implements java.io.Serializable {
 		this.muserUnreadMsgCount = MUserUnreadMsgCount;
 	}
 
+	public Handler getHandler() {
+		return handler;
+	}
+
+	public void setHandler(Handler handler) {
+		this.handler = handler;
+	}
+
 	@Override
 	public String toString() {
 		return "User [MUserId=" + muserId + ", MUserName=" + muserName
