@@ -98,11 +98,13 @@ public class User extends Location implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "User [MUserId=" + muserId + ", MUserName=" + muserName
-				+ ", MUserPassword=" + muserPassword + ", MUserNick="
-				+ muserNick + ", MUserUnreadMsgCount=" + muserUnreadMsgCount
-				+ "]";
+		return "User{" +
+				"muserId=" + muserId +
+				", muserName='" + muserName + '\'' +
+				", muserPassword='" + muserPassword + '\'' +
+				", muserNick='" + muserNick + '\'' +
+				", muserUnreadMsgCount=" + muserUnreadMsgCount +
+				", handler=" + handler +
+				'}';
 	}
-	
-
 }
