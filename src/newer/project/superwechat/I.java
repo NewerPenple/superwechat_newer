@@ -128,6 +128,7 @@ public interface I {
 	int MSG_UNKNOW									=		999;							//未知错误
 
 	String MSG_PREFIX_MSG                           =       "msg_";
+	/** 消息码的前缀 */
 	String KEY_REQUEST 								= 		"request";
 	/** 上传图片的类型：user_avatar或group_icon */
 	String AVATAR_TYPE 								= 		"avatarType";
