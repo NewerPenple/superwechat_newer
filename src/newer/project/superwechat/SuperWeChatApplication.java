@@ -46,6 +46,54 @@ public class SuperWeChatApplication extends Application {
 	private ArrayList<Group> publicGroupList = new ArrayList<Group>();
 	private HashMap<String, ArrayList<Member>> groupMemgbers = new HashMap<String, ArrayList<Member>>();
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public ArrayList<Contact> getContactList() {
+		return contactList;
+	}
+
+	public void setContactList(ArrayList<Contact> contactList) {
+		this.contactList = contactList;
+	}
+
+	public HashMap<String, Contact> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(HashMap<String, Contact> userList) {
+		this.userList = userList;
+	}
+
+	public ArrayList<Group> getGrougList() {
+		return grougList;
+	}
+
+	public void setGrougList(ArrayList<Group> grougList) {
+		this.grougList = grougList;
+	}
+
+	public ArrayList<Group> getPublicGroupList() {
+		return publicGroupList;
+	}
+
+	public void setPublicGroupList(ArrayList<Group> publicGroupList) {
+		this.publicGroupList = publicGroupList;
+	}
+
+	public HashMap<String, ArrayList<Member>> getGroupMemgbers() {
+		return groupMemgbers;
+	}
+
+	public void setGroupMemgbers(HashMap<String, ArrayList<Member>> groupMemgbers) {
+		this.groupMemgbers = groupMemgbers;
+	}
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
