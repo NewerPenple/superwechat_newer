@@ -1,8 +1,6 @@
 package newer.project.superwechat.bean;
 
 
-import android.os.Handler;
-
 /**
  * User entity. @author MyEclipse Persistence Tools
  */
@@ -19,6 +17,7 @@ public class User extends Location implements java.io.Serializable {
 	private String muserPassword;
 	private String muserNick;
 	private Integer muserUnreadMsgCount;
+	private String hander;
 
 	// Constructors
 
@@ -87,6 +86,14 @@ public class User extends Location implements java.io.Serializable {
 		this.muserUnreadMsgCount = MUserUnreadMsgCount;
 	}
 
+	public String getHander() {
+		return hander;
+	}
+
+	public void setHander(String hander) {
+		this.hander = hander;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -111,7 +118,7 @@ public class User extends Location implements java.io.Serializable {
 				", muserPassword='" + muserPassword + '\'' +
 				", muserNick='" + muserNick + '\'' +
 				", muserUnreadMsgCount=" + muserUnreadMsgCount +
-				", handler=" + handler +
+				", hander='" + hander + '\'' +
 				'}';
 	}
 }
