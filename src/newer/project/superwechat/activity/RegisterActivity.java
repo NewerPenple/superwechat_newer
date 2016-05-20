@@ -14,6 +14,7 @@
 package newer.project.superwechat.activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -23,9 +24,12 @@ import android.widget.Toast;
 
 import com.easemob.EMError;
 import com.easemob.chat.EMChatManager;
-import newer.project.superwechat.SuperWeChatApplication;
-import newer.project.superwechat.R;
 import com.easemob.exceptions.EaseMobException;
+
+import newer.project.superwechat.I;
+import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.listener.OnSetAvatarListener;
 
 /**
  * 注册页
@@ -37,6 +41,7 @@ public class RegisterActivity extends BaseActivity {
 	private EditText confirmPwdEditText;
 	private ImageView updateAvatarImageView;
 	private String avatarName;
+	private OnSetAvatarListener mOnSetAvatarListener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,16 @@ public class RegisterActivity extends BaseActivity {
 	private void setListener() {
 		setOnLoginListener();
 		setOnRegisterListener();
+		setAvatarListener();
+	}
+
+	private void setAvatarListener() {
+		findViewById(R.id.layout_updateAvatar).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				mOnSetAvatarListener = new OnSetAvatarListener(RegisterActivity.this, R.id.layout_register, getAvatarName(), I.AVATAR_TYPE_USER_PATH);
+			}
+		});
 	}
 
 	private void setOnRegisterListener() {
@@ -78,6 +93,14 @@ public class RegisterActivity extends BaseActivity {
 
 	public void setAvatarName(String avatarName) {
 		this.avatarName = avatarName;
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == RESULT_OK) {
+			mOnSetAvatarListener.setAvatar(requestCode,data,updateAvatarImageView);
+		}
 	}
 
 	/**
