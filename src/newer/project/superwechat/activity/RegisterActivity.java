@@ -36,6 +36,7 @@ public class RegisterActivity extends BaseActivity {
 	private EditText passwordEditText;
 	private EditText confirmPwdEditText;
 	private ImageView updateAvatarImageView;
+	private String avatarName;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,14 @@ public class RegisterActivity extends BaseActivity {
 				back();
 			}
 		});
+	}
+
+	public String getAvatarName() {
+		return avatarName;
+	}
+
+	public void setAvatarName(String avatarName) {
+		this.avatarName = avatarName;
 	}
 
 	/**
