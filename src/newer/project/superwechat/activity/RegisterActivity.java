@@ -45,14 +45,36 @@ public class RegisterActivity extends BaseActivity {
 		passwordEditText = (EditText) findViewById(R.id.password);
 		confirmPwdEditText = (EditText) findViewById(R.id.confirm_password);
 		updateAvatarImageView = (ImageView) findViewById(R.id.iv_updateAvatar);
+		setListener();
+	}
+
+	private void setListener() {
+		setOnLoginListener();
+		setOnRegisterListener();
+	}
+
+	private void setOnRegisterListener() {
+		findViewById(R.id.btn_lRegister_register).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				register();
+			}
+		});
+	}
+
+	private void setOnLoginListener() {
+		findViewById(R.id.btn_lRegister_login).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				back();
+			}
+		});
 	}
 
 	/**
 	 * 注册
-	 * 
-	 * @param view
 	 */
-	public void register(View view) {
+	private void register() {
 		final String username = userNameEditText.getText().toString().trim();
 		final String pwd = passwordEditText.getText().toString().trim();
 		String confirm_pwd = confirmPwdEditText.getText().toString().trim();
@@ -119,7 +141,7 @@ public class RegisterActivity extends BaseActivity {
 		}
 	}
 
-	public void back(View view) {
+	private void back() {
 		finish();
 	}
 
