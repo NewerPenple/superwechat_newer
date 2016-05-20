@@ -140,7 +140,7 @@ public class LoginActivity extends BaseActivity {
 	/**
 	 * 登录
 	 */
-	public void login() {
+	private void login() {
 		if (!CommonUtils.isNetWorkConnected(this)) {
 			Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
 			return;
@@ -276,7 +276,7 @@ public class LoginActivity extends BaseActivity {
 	/**
 	 * 注册
 	 */
-	public void register() {
+	private void register() {
 		startActivityForResult(new Intent(this, RegisterActivity.class), 0);
 	}
 
