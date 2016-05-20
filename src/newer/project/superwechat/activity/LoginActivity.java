@@ -95,6 +95,14 @@ public class LoginActivity extends BaseActivity {
 		if (SuperWeChatApplication.getInstance().getUserName() != null) {
 			usernameEditText.setText(SuperWeChatApplication.getInstance().getUserName());
 		}
+		setListener();
+	}
+
+	/**
+	 * 设置监听器
+	 */
+	private void setListener() {
+
 	}
 
 	/**
