@@ -14,9 +14,9 @@
             android:id="@+id/ivLogin_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="95dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/mobile" />
+            android:src="@drawable/wechat_logo" />
 
         <TextView
             android:layout_width="wrap_content"
