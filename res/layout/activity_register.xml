@@ -200,6 +200,7 @@
             android:orientation="horizontal" >
 
             <Button
+                android:id="@+id/btn_lRegister_login"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
@@ -209,12 +210,12 @@
                 />
 
             <Button
+                android:id="@+id/btn_lRegister_register"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/button_login_bg"
-                android:onClick="register"
                 android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
