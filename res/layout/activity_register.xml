@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/layout_register"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eff2f6"
@@ -11,10 +13,22 @@
         android:layout_weight="1" >
 
         <ImageView
+            android:id="@+id/ivLogin_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/welcom_logo" />
+            android:layout_marginLeft="110dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mobile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivLogin_logo"
+            android:layout_centerVertical="true"
+            android:text="超级微信"
+            android:textColor="#000"
+            android:textSize="30sp"
+            />
     </RelativeLayout>
 
     <LinearLayout
@@ -22,7 +36,7 @@
         android:layout_height="0dip"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_weight="1.5"
+        android:layout_weight="4.5"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -59,7 +73,38 @@
             android:layout_height="54dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/icon_account" />
+
+            <EditText
+                android:id="@+id/nick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_nick"
+                android:background="@null"
+                android:hint="@string/nickname"
+                android:inputType="textPassword"
+                android:paddingLeft="10dip"
+                android:singleLine="true"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="3dp"
             android:background="#fff" >
 
             <ImageView
@@ -90,7 +135,7 @@
             android:layout_height="54dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             android:background="#fff" >
 
             <ImageView
@@ -116,24 +161,60 @@
                 android:textSize="18sp" />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="3dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_updateAvatar"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/tv_updateAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@id/iv_updateAvatar"
+                android:background="@null"
+                android:hint="@string/dl_title_upload_photo"
+                android:paddingLeft="10dip"
+                android:singleLine="true"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal" >
 
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="25dp"
+                android:background="#fff"
+                android:text="@string/login"
+                android:textColor="#000"
+                />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/button_login_bg"
                 android:onClick="register"
-                android:paddingBottom="7dp"
-                android:paddingTop="7dp"
                 android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
