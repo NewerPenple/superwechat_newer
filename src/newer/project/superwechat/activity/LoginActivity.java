@@ -75,7 +75,23 @@ public class LoginActivity extends BaseActivity {
 		usernameEditText = (EditText) findViewById(R.id.username);
 		passwordEditText = (EditText) findViewById(R.id.password);
 
-		// 如果用户名改变，清空密码
+		setListener();
+	}
+
+	/**
+	 * 设置监听器
+	 */
+	private void setListener() {
+		setOnLoginListener();
+		setOnRegisterListener();
+		setOnUserNameChangedListener();
+	}
+
+	/**
+	 * 设置账号文本框监听器
+	 * 如果用户名改变，清空密码
+	 */
+	private void setOnUserNameChangedListener() {
 		usernameEditText.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -95,15 +111,6 @@ public class LoginActivity extends BaseActivity {
 		if (SuperWeChatApplication.getInstance().getUserName() != null) {
 			usernameEditText.setText(SuperWeChatApplication.getInstance().getUserName());
 		}
-		setListener();
-	}
-
-	/**
-	 * 设置监听器
-	 */
-	private void setListener() {
-		setOnLoginListener();
-		setOnRegisterListener();
 	}
 
 	/**
