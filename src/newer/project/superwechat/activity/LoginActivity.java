@@ -102,15 +102,38 @@ public class LoginActivity extends BaseActivity {
 	 * 设置监听器
 	 */
 	private void setListener() {
+		setOnLoginListener();
+		setOnRegisterListener();
+	}
 
+	/**
+	 * 设置注册按钮监听器
+	 */
+	private void setOnRegisterListener() {
+		findViewById(R.id.btn_to_register).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				register();
+			}
+		});
+	}
+
+	/**
+	 * 设置登录按钮监听器
+	 */
+	private void setOnLoginListener() {
+		findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				login();
+			}
+		});
 	}
 
 	/**
 	 * 登录
-	 * 
-	 * @param view
 	 */
-	public void login(View view) {
+	public void login() {
 		if (!CommonUtils.isNetWorkConnected(this)) {
 			Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
 			return;
@@ -245,10 +268,8 @@ public class LoginActivity extends BaseActivity {
 	
 	/**
 	 * 注册
-	 * 
-	 * @param view
 	 */
-	public void register(View view) {
+	public void register() {
 		startActivityForResult(new Intent(this, RegisterActivity.class), 0);
 	}
 
