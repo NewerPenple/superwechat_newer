@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.Response;
 import com.easemob.EMCallBack;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
@@ -35,19 +36,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.parsers.SAXParser;
-
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.bean.User;
+import newer.project.superwechat.data.ApiParams;
+import newer.project.superwechat.data.GsonRequest;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.utils.CommonUtils;
 import newer.project.superwechat.utils.MD5;
+import newer.project.superwechat.utils.Utils;
 
 /**
  * 登陆页面
@@ -192,10 +195,41 @@ public class LoginActivity extends BaseActivity {
 	private void loginClientServer() {
 		UserDao userDao = new UserDao(this);
 		User user = userDao.findUserByUserName(currentUsername);
-		if (user != null && user.getMUserPassword().equals(MD5.getData(currentPassword))) {
-			saveUser(user);// 登陆成功，保存用户信息
-			loginSuccess();
+		if (user != null) { //本地是否保存该账号
+			if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
+				saveUser(user);// 登陆成功，保存用户信息
+				loginSuccess();
+			} else {
+				Toast.makeText(getApplicationContext(), R.string.login_failure_failed, Toast.LENGTH_SHORT).show();
+				pd.dismiss();
+			}
+		} else { //在远程登录
+			try {
+				String path = new ApiParams()
+                        .with(I.User.USER_NAME, currentUsername)
+                        .with(I.User.PASSWORD, currentPassword)
+                        .getRequestUrl(I.REQUEST_LOGIN);
+				executeRequest(new GsonRequest<User>(path, User.class, responseListener(), errorListener()));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+	}
+
+	/** 设置登录成功监听 */
+	private Response.Listener<User> responseListener() {
+		return new Response.Listener<User>() {
+			@Override
+			public void onResponse(User user) {
+				if (user.isResult()) {
+					saveUser(user);
+					loginSuccess();
+				} else {
+					Utils.showToast(LoginActivity.this, Utils.getResourceString(LoginActivity.this, user.getMsg()), Toast.LENGTH_SHORT);
+					pd.dismiss();
+				}
+			}
+		};
 	}
 
 	/** 保存用户信息 */
@@ -239,7 +273,7 @@ public class LoginActivity extends BaseActivity {
 				public void run() {
 					pd.dismiss();
 					DemoHXSDKHelper.getInstance().logout(true, null);
-					Toast.makeText(getApplicationContext(), R.string.login_failure_failed, 1).show();
+					Toast.makeText(getApplicationContext(), R.string.login_failure_failed, Toast.LENGTH_SHORT).show();
 				}
 			});
 			return;
