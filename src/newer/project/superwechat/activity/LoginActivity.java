@@ -59,6 +59,8 @@ public class LoginActivity extends BaseActivity {
 	private String currentUsername;
 	private String currentPassword;
 
+	ProgressDialog pd;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,19 +80,14 @@ public class LoginActivity extends BaseActivity {
 		setListener();
 	}
 
-	/**
-	 * 设置监听器
-	 */
+	/** 设置监听器 */
 	private void setListener() {
 		setOnLoginListener();
 		setOnRegisterListener();
 		setOnUserNameChangedListener();
 	}
 
-	/**
-	 * 设置账号文本框监听器
-	 * 如果用户名改变，清空密码
-	 */
+	/** 设置账号文本框监听器，如果用户名改变，清空密码 */
 	private void setOnUserNameChangedListener() {
 		usernameEditText.addTextChangedListener(new TextWatcher() {
 			@Override
@@ -113,9 +110,7 @@ public class LoginActivity extends BaseActivity {
 		}
 	}
 
-	/**
-	 * 设置注册按钮监听器
-	 */
+	/** 设置注册按钮监听器 */
 	private void setOnRegisterListener() {
 		findViewById(R.id.btn_to_register).setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -125,9 +120,7 @@ public class LoginActivity extends BaseActivity {
 		});
 	}
 
-	/**
-	 * 设置登录按钮监听器
-	 */
+	/** 设置登录按钮监听器 */
 	private void setOnLoginListener() {
 		findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -137,9 +130,7 @@ public class LoginActivity extends BaseActivity {
 		});
 	}
 
-	/**
-	 * 登录
-	 */
+	/** 登录 */
 	private void login() {
 		if (!CommonUtils.isNetWorkConnected(this)) {
 			Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
@@ -158,7 +149,7 @@ public class LoginActivity extends BaseActivity {
 		}
 
 		progressShow = true;
-		final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
+		pd = new ProgressDialog(LoginActivity.this);
 		pd.setCanceledOnTouchOutside(false);
 		pd.setOnCancelListener(new OnCancelListener() {
 
@@ -273,9 +264,7 @@ public class LoginActivity extends BaseActivity {
 		dao.saveContactList(users);
 	}
 	
-	/**
-	 * 注册
-	 */
+	/** 注册 */
 	private void register() {
 		startActivityForResult(new Intent(this, RegisterActivity.class), 0);
 	}
