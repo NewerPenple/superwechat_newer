@@ -17,6 +17,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -160,9 +161,9 @@ public class RegisterActivity extends BaseActivity {
 		}
 	}
 
-	/** 注册到本地服务端 */
+	/** 注册到远端服务端 */
 	private void registerServer(final String username, final String nick, final String pwd) {
-		File file = new File(ImageUtils.getAvatarPath(RegisterActivity.this, I.AVATAR_TYPE_USER_PATH), avatarName + I.AVATAR_SUFFIX_JPG);
+		File file = new File(ImageUtils.getAvatarPath(RegisterActivity.this, I.AVATAR_TYPE_USER_PATH), avatarName + I.AVATAR_SUFFIX_JPG);//用户头像文件夹 + 暂存头像名 + .jpg
 		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
 		utils.url(SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_REGISTER)
@@ -179,6 +180,7 @@ public class RegisterActivity extends BaseActivity {
 						} else {
 							Utils.showToast(RegisterActivity.this,Utils.getResourceString(RegisterActivity.this,result.getMsg()),Toast.LENGTH_SHORT);
 							pd.dismiss();
+							Log.e(TAG, "register fail,error:" + result.getMsg());
 						}
 					}
 
@@ -186,6 +188,7 @@ public class RegisterActivity extends BaseActivity {
 					public void onError(String error) {
 						Utils.showToast(RegisterActivity.this,error,Toast.LENGTH_SHORT);
 						pd.dismiss();
+						Log.e(TAG, "register fail,error:" + error);
 					}
 				});
 
@@ -209,7 +212,7 @@ public class RegisterActivity extends BaseActivity {
 						}
 					});
 				} catch (final EaseMobException e) {
-					unregister(username);
+					unregister(username);//取消远端注册
 					runOnUiThread(new Runnable() {
 						public void run() {
 							if (!RegisterActivity.this.isFinishing())
@@ -233,7 +236,7 @@ public class RegisterActivity extends BaseActivity {
 		}).start();
 	}
 
-	/** 环信服务端注册失败时，取消本地服务端的注册 */
+	/** 环信服务端注册失败时，取消远端服务端的注册 */
 	private void unregister(String username) {
 		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
 		utils.url(SERVER_ROOT)
@@ -245,13 +248,14 @@ public class RegisterActivity extends BaseActivity {
 					public void onSuccess(Message result) {
 						if (!result.isResult()) {
 							Utils.showToast(RegisterActivity.this,Utils.getResourceString(RegisterActivity.this,result.getMsg()),Toast.LENGTH_SHORT);
+							Log.e(TAG, "unregister fail,error:" + result.getMsg());
 						}
 					}
 
 					@Override
 					public void onError(String error) {
-						Utils.showToast(RegisterActivity.this,error,Toast.LENGTH_SHORT);
-						pd.dismiss();
+						Utils.showToast(RegisterActivity.this, error, Toast.LENGTH_SHORT);
+						Log.e(TAG, "unregister fail,error:" + error);
 					}
 				});
 	}
