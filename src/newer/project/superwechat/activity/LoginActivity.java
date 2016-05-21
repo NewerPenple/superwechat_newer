@@ -35,14 +35,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.parsers.SAXParser;
+
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.User;
 import newer.project.superwechat.db.EMUserDao;
+import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.utils.CommonUtils;
+import newer.project.superwechat.utils.MD5;
 
 /**
  * 登陆页面
@@ -160,7 +165,7 @@ public class LoginActivity extends BaseActivity {
 				if (!progressShow) {
 					return;
 				}
-				loginSuccess();
+				loginClientServer();
 			}
 
 			@Override
@@ -183,6 +188,25 @@ public class LoginActivity extends BaseActivity {
 		});
 	}
 
+	/** 登录到客户端 */
+	private void loginClientServer() {
+		UserDao userDao = new UserDao(this);
+		User user = userDao.findUserByUserName(currentUsername);
+		if (user != null && user.getMUserPassword().equals(MD5.getData(currentPassword))) {
+			saveUser(user);// 登陆成功，保存用户信息
+			loginSuccess();
+		}
+	}
+
+	/** 保存用户信息 */
+	private void saveUser(User user) {
+		SuperWeChatApplication intance = SuperWeChatApplication.getInstance();
+		intance.setUser(user);
+		intance.setUserName(currentUsername);
+		intance.setPassword(currentPassword);
+		SuperWeChatApplication.currentUserNick = user.getMUserNick();
+	}
+
 	/** 显示进度对话框 */
 	private void showProgressDialog() {
 		progressShow = true;
@@ -201,10 +225,6 @@ public class LoginActivity extends BaseActivity {
 
 	/** 登录成功后操作 */
 	private void loginSuccess() {
-		// 登陆成功，保存用户名密码
-		SuperWeChatApplication.getInstance().setUserName(currentUsername);
-		SuperWeChatApplication.getInstance().setPassword(currentPassword);
-
 		try {
 			// ** 第一次登录或者之前logout后再登录，加载所有本地群和回话
 			// ** manually load all local groups and
