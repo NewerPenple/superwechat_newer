@@ -11,8 +11,16 @@ import android.widget.TextView;
 
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
+
 import newer.project.superwechat.DemoHXSDKHelper;
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.User;
+import newer.project.superwechat.db.UserDao;
+import newer.project.superwechat.task.DownloadAllGroupTask;
+import newer.project.superwechat.task.DownloadContactListTask;
+import newer.project.superwechat.task.DownloadPublicGroupTask;
 
 /**
  * 开屏页
@@ -41,7 +49,14 @@ public class SplashActivity extends BaseActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-
+		if (DemoHXSDKHelper.getInstance().isLogined()) {
+			String username = SuperWeChatApplication.getInstance().getUserName();
+			User user = new UserDao(SplashActivity.this).findUserByUserName(username);
+			SuperWeChatApplication.getInstance().setUser(user);
+			new DownloadContactListTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName()).execute();
+			new DownloadAllGroupTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName()).execute();
+			new DownloadPublicGroupTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName(), I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
+		}
 		new Thread(new Runnable() {
 			public void run() {
 				if (DemoHXSDKHelper.getInstance().isLogined()) {
