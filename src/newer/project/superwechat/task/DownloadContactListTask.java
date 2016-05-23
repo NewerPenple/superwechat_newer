@@ -2,6 +2,7 @@ package newer.project.superwechat.task;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.android.volley.Response;
 
@@ -31,7 +32,7 @@ public class DownloadContactListTask extends BaseActivity{
     public void initPath() {
         try {
             path = new ApiParams()
-                    .with(I.User.USER_NAME, username)
+                    .with(I.Contact.USER_NAME, username)
                     .getRequestUrl(I.REQUEST_DOWNLOAD_CONTACT_ALL_LIST);
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,9 +55,10 @@ public class DownloadContactListTask extends BaseActivity{
                     HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
                     userList.clear();
                     for (Contact c : contacts) {
-                        userList.put(c.getMContactUserName(), c);
+                        Log.i("my","userName" +c.getMUserName());
+                        userList.put(c.getMContactCname(), c);
                     }
-                    sendStickyBroadcast(new Intent("update_group_list"));
+                    context.sendStickyBroadcast(new Intent("update_group_list"));
                 }
             }
         };
