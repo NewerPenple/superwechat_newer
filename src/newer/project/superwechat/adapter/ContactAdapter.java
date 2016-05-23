@@ -115,15 +115,16 @@ public class ContactAdapter extends ArrayAdapter<EMUser>  implements SectionInde
 		}else if(username.equals(Constant.CHAT_ROOM)){
             //群聊item
             holder.nameTextview.setText(user.getNick());
-            holder.avatar.setDefaultImageResId(R.drawable.groups_icon);
+            holder.avatar.setImageResource(R.drawable.groups_icon);
 		}else if(username.equals(Constant.CHAT_ROBOT)){
 			//Robot item
 			holder.nameTextview.setText(user.getNick());
-			holder.avatar.setDefaultImageResId(R.drawable.groups_icon);
+			holder.avatar.setImageResource(R.drawable.groups_icon);
 		}else{
 		    holder.nameTextview.setText(user.getNick());
 		    //设置用户头像
-			UserUtils.setUserAvatar(getContext(), username, holder.avatar);
+//			UserUtils.setUserAvatar(getContext(), username, holder.avatar);
+			UserUtils.setContactAvatar(username,holder.avatar);
 			if(holder.unreadMsgView != null)
 			    holder.unreadMsgView.setVisibility(View.INVISIBLE);
 		}
