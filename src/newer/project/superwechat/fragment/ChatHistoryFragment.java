@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package newer.project.superwechat.activity;
+package newer.project.superwechat.fragment;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,6 +46,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import newer.project.superwechat.activity.ChatActivity;
+import newer.project.superwechat.activity.MainActivity;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMContact;
@@ -58,7 +60,7 @@ import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
 import newer.project.superwechat.adapter.ChatHistoryAdapter;
 import newer.project.superwechat.db.InviteMessgeDao;
-import newer.project.superwechat.domain.User;
+import newer.project.superwechat.domain.EMUser;
 
 /**
  * 聊天记录Fragment
@@ -68,7 +70,7 @@ public class ChatHistoryFragment extends Fragment {
 
 	private InputMethodManager inputMethodManager;
 	private ListView listView;
-	private Map<String, User> contactList;
+	private Map<String, EMUser> contactList;
 	private ChatHistoryAdapter adapter;
 	private EditText query;
 	private ImageButton clearSearch;
@@ -212,7 +214,7 @@ public class ChatHistoryFragment extends Fragment {
 	private List<EMContact> loadUsersWithRecentChat() {
 		List<EMContact> resultList = new ArrayList<EMContact>();
 		//获取有聊天记录的users，不包括陌生人
-		for (User user : contactList.values()) {
+		for (EMUser user : contactList.values()) {
 			EMConversation conversation = EMChatManager.getInstance().getConversation(user.getUsername());
 			if (conversation.getMsgCount() > 0) {
 				resultList.add(user);

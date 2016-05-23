@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package newer.project.superwechat.activity;
+package newer.project.superwechat.fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -38,6 +38,12 @@ import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.DemoHXSDKModel;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.activity.BlacklistActivity;
+import newer.project.superwechat.activity.DiagnoseActivity;
+import newer.project.superwechat.activity.LoginActivity;
+import newer.project.superwechat.activity.MainActivity;
+import newer.project.superwechat.activity.OfflinePushNickActivity;
+import newer.project.superwechat.activity.UserProfileActivity;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 
 /**
