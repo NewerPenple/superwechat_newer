@@ -37,10 +37,10 @@ public class DownloadAllGroupTask extends BaseActivity {
     }
 
     public void execute() {
-        executeRequest(new GsonRequest<Group[]>(path,Group[].class,responseDownloadContactListTask(),errorListener()));
+        executeRequest(new GsonRequest<Group[]>(path,Group[].class,responseDownloadAllGroupTask(),errorListener()));
     }
 
-    private Response.Listener<Group[]> responseDownloadContactListTask() {
+    private Response.Listener<Group[]> responseDownloadAllGroupTask() {
         return new Response.Listener<Group[]>() {
             @Override
             public void onResponse(Group[] contacts) {
