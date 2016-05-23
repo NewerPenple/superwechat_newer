@@ -30,14 +30,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easemob.EMCallBack;
-import newer.project.superwechat.applib.controller.HXSDKHelper;
-
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMChatOptions;
+
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.DemoHXSDKModel;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.applib.controller.HXSDKHelper;
 
 /**
  * 设置界面
@@ -358,8 +359,13 @@ public class SettingsFragment extends Fragment implements OnClickListener {
 				getActivity().runOnUiThread(new Runnable() {
 					public void run() {
 						pd.dismiss();
+						SuperWeChatApplication instance = SuperWeChatApplication.getInstance();
+						instance.getContactList().clear();
+						instance.getUserList().clear();
+						instance.getGroupList().clear();
+						instance.getPublicGroupList().clear();
 						// 重新显示登陆页面
-						((MainActivity) getActivity()).finish();
+								((MainActivity) getActivity()).finish();
 						startActivity(new Intent(getActivity(), LoginActivity.class));
 						
 					}
