@@ -48,6 +48,9 @@ import newer.project.superwechat.data.GsonRequest;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
+import newer.project.superwechat.task.DownloadAllGroupTask;
+import newer.project.superwechat.task.DownloadContactListTask;
+import newer.project.superwechat.task.DownloadPublicGroupTask;
 import newer.project.superwechat.utils.CommonUtils;
 import newer.project.superwechat.utils.MD5;
 import newer.project.superwechat.utils.Utils;
@@ -265,6 +268,14 @@ public class LoginActivity extends BaseActivity {
 			EMGroupManager.getInstance().loadAllGroups();
 			EMChatManager.getInstance().loadAllConversations();
 			// 处理好友和群组
+			new Thread(new Runnable() {
+				@Override
+				public void run() {
+					new DownloadContactListTask(LoginActivity.this, currentUsername).execute();
+					new DownloadAllGroupTask(LoginActivity.this, currentUsername).execute();
+					new DownloadPublicGroupTask(LoginActivity.this, currentUsername, I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
+				}
+			}).start();
 			initializeContacts();
 		} catch (Exception e) {
 			e.printStackTrace();
