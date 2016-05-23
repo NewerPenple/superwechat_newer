@@ -5,10 +5,16 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import newer.project.superwechat.I;
+import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
-import newer.project.superwechat.domain.User;
+import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.data.RequestManager;
+import newer.project.superwechat.domain.EMUser;
+
+import com.android.volley.toolbox.NetworkImageView;
 import com.squareup.picasso.Picasso;
 
 public class UserUtils {
@@ -17,10 +23,10 @@ public class UserUtils {
      * @param username
      * @return
      */
-    public static User getUserInfo(String username){
-        User user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(username);
+    public static EMUser getUserInfo(String username){
+        EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(username);
         if(user == null){
-            user = new User(username);
+            user = new EMUser(username);
         }
             
         if(user != null){
@@ -30,25 +36,52 @@ public class UserUtils {
         }
         return user;
     }
-    
+
+	public static Contact getContactInfo(String username) {
+		return SuperWeChatApplication.getInstance().getUserList().get(username);
+	}
+
     /**
      * 设置用户头像
      * @param username
      */
     public static void setUserAvatar(Context context, String username, ImageView imageView){
-    	User user = getUserInfo(username);
+    	EMUser user = getUserInfo(username);
         if(user != null && user.getAvatar() != null){
             Picasso.with(context).load(user.getAvatar()).placeholder(R.drawable.default_avatar).into(imageView);
         }else{
             Picasso.with(context).load(R.drawable.default_avatar).into(imageView);
         }
     }
-    
-    /**
+
+	public static void setContactAvatar(String username, NetworkImageView niv) {
+		Contact contact = getContactInfo(username);
+		if (contact != null && contact.getMContactUserName() != null) {
+			setUserAvatar(getAvatarPath(username), niv);
+		}
+	}
+
+	private static void setUserAvatar(String url, NetworkImageView niv) {
+		if (url == null || url.isEmpty()) {
+			return;
+		}
+		niv.setDefaultImageResId(R.drawable.default_avatar);
+		niv.setImageUrl(url, RequestManager.getImageLoader());
+		niv.setErrorImageResId(R.drawable.default_avatar);
+	}
+
+	private static String getAvatarPath(String username) {
+		if (username == null || username.isEmpty()) {
+			return null;
+		}
+		return I.REQUEST_DOWNLOAD_USER_AVATAR_URL + username;
+	}
+
+	/**
      * 设置当前用户头像
      */
 	public static void setCurrentUserAvatar(Context context, ImageView imageView) {
-		User user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().getCurrentUserInfo();
+		EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().getCurrentUserInfo();
 		if (user != null && user.getAvatar() != null) {
 			Picasso.with(context).load(user.getAvatar()).placeholder(R.drawable.default_avatar).into(imageView);
 		} else {
@@ -60,7 +93,7 @@ public class UserUtils {
      * 设置用户昵称
      */
     public static void setUserNick(String username,TextView textView){
-    	User user = getUserInfo(username);
+    	EMUser user = getUserInfo(username);
     	if(user != null){
     		textView.setText(user.getNick());
     	}else{
@@ -72,7 +105,7 @@ public class UserUtils {
      * 设置当前用户昵称
      */
     public static void setCurrentUserNick(TextView textView){
-    	User user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().getCurrentUserInfo();
+    	EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().getCurrentUserInfo();
     	if(textView != null){
     		textView.setText(user.getNick());
     	}
@@ -82,7 +115,7 @@ public class UserUtils {
      * 保存或更新某个用户
      * @param user
      */
-	public static void saveUserInfo(User newUser) {
+	public static void saveUserInfo(EMUser newUser) {
 		if (newUser == null || newUser.getUsername() == null) {
 			return;
 		}
