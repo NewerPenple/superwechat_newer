@@ -28,6 +28,7 @@ public class DownloadPublicGroupTask extends BaseActivity {
         this.username = username;
         this.pageId = pageId;
         this.pageSize = pageSize;
+        initPath();
     }
 
     public void initPath() {
@@ -49,10 +50,10 @@ public class DownloadPublicGroupTask extends BaseActivity {
     private Response.Listener<Group[]> responseDownloadPublicGroupTask() {
         return new Response.Listener<Group[]>() {
             @Override
-            public void onResponse(Group[] contacts) {
-                if (contacts != null) {
+            public void onResponse(Group[] groups) {
+                if (groups != null) {
                     ArrayList<Group> publicGroupList = SuperWeChatApplication.getInstance().getPublicGroupList();
-                    ArrayList<Group> list = Utils.array2List(contacts);
+                    ArrayList<Group> list = Utils.array2List(groups);
                     publicGroupList.clear();
                     publicGroupList.addAll(list);
                     sendStickyBroadcast(new Intent("update_public_group_list"));

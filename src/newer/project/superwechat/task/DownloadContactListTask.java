@@ -25,6 +25,7 @@ public class DownloadContactListTask extends BaseActivity{
     public DownloadContactListTask(Context context, String username) {
         this.context = context;
         this.username = username;
+        initPath();
     }
 
     public void initPath() {
