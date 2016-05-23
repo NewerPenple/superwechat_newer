@@ -16,7 +16,7 @@ import newer.project.superwechat.data.GsonRequest;
 import newer.project.superwechat.utils.Utils;
 
 public class DownloadAllGroupTask extends BaseActivity {
-    private static final String TAG = DownloadContactListTask.class.toString();
+    private static final String TAG = DownloadAllGroupTask.class.toString();
     private Context context;
     private String username;
     private String path;
