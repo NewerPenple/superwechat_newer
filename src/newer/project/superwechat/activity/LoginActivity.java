@@ -171,6 +171,7 @@ public class LoginActivity extends BaseActivity {
 				if (!progressShow) {
 					return;
 				}
+				Log.i(TAG, "onSuccess");
 				loginClientServer();
 			}
 
@@ -198,11 +199,13 @@ public class LoginActivity extends BaseActivity {
 	private void loginClientServer() {
 		UserDao userDao = new UserDao(this);
 		User user = userDao.findUserByUserName(currentUsername);
+		Log.i(TAG, String.valueOf(user == null));
 		if (user != null) { //本地是否保存该账号
 			if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
-				saveUser(user);// 登陆成功，保存用户信息
+				Log.i(TAG, "loginClient");
 				loginSuccess();
 			} else {
+				Log.i(TAG, "user == null");
 				Toast.makeText(getApplicationContext(), R.string.login_failure_failed, Toast.LENGTH_SHORT).show();
 				pd.dismiss();
 			}
@@ -214,6 +217,7 @@ public class LoginActivity extends BaseActivity {
                         .getRequestUrl(I.REQUEST_LOGIN);
 				executeRequest(new GsonRequest<User>(path, User.class, responseListener(), errorListener()));
 			} catch (Exception e) {
+				Log.i(TAG, "login fail"+e.getMessage());
 				e.printStackTrace();
 			}
 		}
@@ -224,6 +228,7 @@ public class LoginActivity extends BaseActivity {
 		return new Response.Listener<User>() {
 			@Override
 			public void onResponse(User user) {
+				Log.i(TAG, "onResponse");
 				if (user.isResult()) {
 					saveUser(user);
 					loginSuccess();
@@ -268,14 +273,14 @@ public class LoginActivity extends BaseActivity {
 			EMGroupManager.getInstance().loadAllGroups();
 			EMChatManager.getInstance().loadAllConversations();
 			// 处理好友和群组
-			new Thread(new Runnable() {
+			runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
 					new DownloadContactListTask(LoginActivity.this, currentUsername).execute();
 					new DownloadAllGroupTask(LoginActivity.this, currentUsername).execute();
 					new DownloadPublicGroupTask(LoginActivity.this, currentUsername, I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
 				}
-			}).start();
+			});
 			initializeContacts();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -325,12 +330,12 @@ public class LoginActivity extends BaseActivity {
 		userlist.put(Constant.GROUP_USERNAME, groupUser);
 		
 		// 添加"Robot"
-		EMUser robotUser = new EMUser();
+		/*EMUser robotUser = new EMUser();
 		String strRobot = getResources().getString(R.string.robot_chat);
 		robotUser.setUsername(Constant.CHAT_ROBOT);
 		robotUser.setNick(strRobot);
 		robotUser.setHeader("");
-		userlist.put(Constant.CHAT_ROBOT, robotUser);
+		userlist.put(Constant.CHAT_ROBOT, robotUser);*/
 		
 		// 存入内存
 		((DemoHXSDKHelper)HXSDKHelper.getInstance()).setContactList(userlist);
