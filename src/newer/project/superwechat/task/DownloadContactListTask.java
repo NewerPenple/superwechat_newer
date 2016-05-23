@@ -31,7 +31,7 @@ public class DownloadContactListTask extends BaseActivity{
         try {
             path = new ApiParams()
                     .with(I.User.USER_NAME, username)
-                    .getRequestUrl(I.REQUEST_DOWNLOAD_CONTACT_LIST);
+                    .getRequestUrl(I.REQUEST_DOWNLOAD_CONTACT_ALL_LIST);
         } catch (Exception e) {
             e.printStackTrace();
         }
