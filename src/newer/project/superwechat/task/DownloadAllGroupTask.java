@@ -43,10 +43,10 @@ public class DownloadAllGroupTask extends BaseActivity {
     private Response.Listener<Group[]> responseDownloadAllGroupTask() {
         return new Response.Listener<Group[]>() {
             @Override
-            public void onResponse(Group[] contacts) {
-                if (contacts != null) {
+            public void onResponse(Group[] groups) {
+                if (groups != null) {
                     ArrayList<Group> groupList = SuperWeChatApplication.getInstance().getGroupList();
-                    ArrayList<Group> list = Utils.array2List(contacts);
+                    ArrayList<Group> list = Utils.array2List(groups);
                     groupList.clear();
                     groupList.addAll(list);
                     sendStickyBroadcast(new Intent("update_group_list"));
