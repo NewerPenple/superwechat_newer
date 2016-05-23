@@ -1,4 +1,4 @@
-package newer.project.superwechat.utils;
+package newer.project.superwechat.data;
 
 import android.os.Handler;
 import android.os.Message;
@@ -13,12 +13,17 @@ import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import newer.project.superwechat.SuperWeChatApplication;
+
 
 /**
  * Created by yao on 2016/4/6.
@@ -53,7 +58,7 @@ public class OkHttpUtils2<T> {
         mUrl = new StringBuilder();
         mokHttpClient = new OkHttpClient();
         //处理服务端响应成功和失败的消息
-        mHandler = new Handler() {
+        mHandler = new Handler(SuperWeChatApplication.applicationContext.getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 switch (msg.what) {
@@ -69,7 +74,9 @@ public class OkHttpUtils2<T> {
                     case DOWNLOADING_PERCENT://文件下载的进度更新的事件
                     case DOWNLOADING_FINISH://文件下载完成的事件
                         T result = (T) msg;
-                        mListener.onSuccess(result);
+                        if(mListener!=null) {
+                            mListener.onSuccess(result);
+                        }
                         break;
                 }
             }
@@ -177,6 +184,14 @@ public class OkHttpUtils2<T> {
         if (mListener == null && listener != null) {
             mListener = listener;
         }
+        if (mUrl.indexOf("request") == -1 && mCallback == null) {
+            Log.e("main", "请设置request");
+            Message msg = Message.obtain();
+            msg.what = RESULT_ERROR;
+            msg.obj = "请设置request";
+            mHandler.sendMessage(msg);
+            return;
+        }
         //创建OkHttp请求
         Request.Builder builder = new Request.Builder().url(this.mUrl.toString());
         Log.i("main", mUrl.toString());
@@ -205,33 +220,26 @@ public class OkHttpUtils2<T> {
 
                 @Override
                 public void onResponse(Response response) throws IOException {
-                    try {
-                        T obj;
-                        if (mClzz != null) {//若有目标类对象，则解析
-                            obj = parseJson(response.body().string(), mClzz);
-                        } else {//下载文件场景，直接保存response实例
-                            if (mFileBody == null) {//若上传文件为null，则是下载文件的场景
-                                obj = (T) response;
-                            } else {
-                                //否则是上传文件，但使用者忘记获取服务端返回数据了
-                                obj=null;
-                            }
-                        }
-                        if (obj != null) {
-                            Message msg = Message.obtain();
-                            msg.what = RESULT_SUCCESS;
-                            msg.obj = obj;
-                            mHandler.sendMessage(msg);
-                        } else {
-                            Log.e("main", "上传文件请设置服务端返回json数据的解析类型");
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }finally {
-                        if (call != null) {
-                            if (!call.isCanceled()) {
-                                call.cancel();
-                            }
+                    T obj = null;
+                    if (mClzz != null) {//若有目标类对象，则解析
+                        obj = parseJson(response.body().string(), mClzz);
+                    } else if (mCallback != null) {//下载文件场景，直接保存response实例
+                        obj = (T) response;
+                    }
+                    if (obj != null) {
+                        Message msg = Message.obtain();
+                        msg.what = RESULT_SUCCESS;
+                        msg.obj = obj;
+                        mHandler.sendMessage(msg);
+                    } else {
+                        Log.e("main", "忘记设置targetClass()");
+                        Message msg = Message.obtain();
+                        msg.what = RESULT_ERROR;
+                        msg.obj = "忘记设置targetClass()";
+                    }
+                    if (call != null) {
+                        if (!call.isCanceled()) {
+                            call.cancel();
                         }
                     }
                 }
@@ -277,7 +285,7 @@ public class OkHttpUtils2<T> {
      *
      * @param percent:下载进度的百分比
      */
-    public static void publish(int what,int percent) {
+    public static void publishUpdate(int what,int percent) {
         final Message message = Message.obtain();
         message.what = what;
         message.arg1 = percent;
@@ -304,6 +312,48 @@ public class OkHttpUtils2<T> {
     public static <T> ArrayList<T> array2List(T[] array) {
         final List<T> list = Arrays.asList(array);
         return new ArrayList(list);
+    }
+
+    /**
+     * 下载文件，保存至指定路径
+     *
+     * @param response
+     * @param file
+     * @param showProgress
+     * @throws IOException
+     */
+    public void downloadFile(Response response, File file, boolean showProgress) throws IOException {
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(file);
+            int len;
+            byte[] buffer = new byte[1024];
+            int total = 0;
+            int percent = 1;
+            final InputStream in = response.body().byteStream();
+            final long fileSize = response.body().contentLength();
+            publishUpdate(DOWNLOADING_START, 0);
+            while ((len = in.read(buffer)) != -1) {
+                out.write(buffer, 0, len);
+                if (showProgress) {//若显示下载进度
+                    total += len;
+                    int current = (int) (100L * total / fileSize);
+                    if (current > percent) {
+                        publishUpdate(DOWNLOADING_PERCENT, current);
+                        percent = current + 1;
+                    }
+                }
+            }
+            if (showProgress) {
+                OkHttpUtils2.publishUpdate(DOWNLOADING_FINISH, 0);
+            }
+        } catch (IOException e) {
+            Log.e("main", e.getMessage());
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+        }
     }
 }
 
