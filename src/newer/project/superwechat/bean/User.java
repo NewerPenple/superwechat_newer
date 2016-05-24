@@ -2,7 +2,7 @@ package newer.project.superwechat.bean;
 
 
 /**
- * User entity. @author MyEclipse Persistence Tools
+ * EMUser entity. @author MyEclipse Persistence Tools
  */
 public class User extends Location implements java.io.Serializable {
 	private static final long serialVersionUID = 6848921231724157394L;
@@ -17,7 +17,7 @@ public class User extends Location implements java.io.Serializable {
 	private String muserPassword;
 	private String muserNick;
 	private Integer muserUnreadMsgCount;
-	private String hander;
+	private String header;
 
 	// Constructors
 
@@ -86,12 +86,12 @@ public class User extends Location implements java.io.Serializable {
 		this.muserUnreadMsgCount = MUserUnreadMsgCount;
 	}
 
-	public String getHander() {
-		return hander;
+	public String getHeader() {
+		return header;
 	}
 
-	public void setHander(String hander) {
-		this.hander = hander;
+	public void setHeader(String hander) {
+		this.header = hander;
 	}
 
 	@Override
@@ -112,13 +112,13 @@ public class User extends Location implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "User{" +
+		return "EMUser{" +
 				"muserId=" + muserId +
 				", muserName='" + muserName + '\'' +
 				", muserPassword='" + muserPassword + '\'' +
 				", muserNick='" + muserNick + '\'' +
 				", muserUnreadMsgCount=" + muserUnreadMsgCount +
-				", hander='" + hander + '\'' +
+				", hander='" + header + '\'' +
 				'}';
 	}
 }
