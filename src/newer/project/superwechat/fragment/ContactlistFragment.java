@@ -47,6 +47,7 @@ import com.easemob.chat.EMContactManager;
 import com.easemob.exceptions.EaseMobException;
 import com.easemob.util.EMLog;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -470,13 +471,13 @@ public class ContactlistFragment extends Fragment {
 	 * 获取联系人列表，并过滤掉黑名单和排序
 	 */
 	private void getContactList() {
-		contactList.clear();
+//		contactList.clear();
 		mContactList.clear();
 		//获取本地好友列表
 		ArrayList<Contact> contacts = SuperWeChatApplication.getInstance().getContactList();
 		mContactList.addAll(contacts);
 
-		Map<String, EMUser> users = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
+		/*Map<String, EMUser> users = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
 		Iterator<Entry<String, EMUser>> iterator = users.entrySet().iterator();
 		while (iterator.hasNext()) {
 			Entry<String, EMUser> entry = iterator.next();
@@ -486,7 +487,30 @@ public class ContactlistFragment extends Fragment {
 					&& !entry.getKey().equals(Constant.CHAT_ROBOT)
 					&& !blackList.contains(entry.getKey()))
 				contactList.add(entry.getValue());
+		}*/
+
+		// 添加"群聊"
+		Contact groupUser = new Contact();
+		String strGroup = getActivity().getString(R.string.group_chat);
+		groupUser.setMContactCname(Constant.GROUP_USERNAME);
+		groupUser.setMUserName(Constant.NEW_FRIENDS_USERNAME);
+		groupUser.setMUserNick(strGroup);
+		groupUser.setHander("");
+		if (mContactList.indexOf(groupUser) == -1) {
+			mContactList.add(0, groupUser);
 		}
+
+		// 添加user"申请与通知"
+		Contact newFriends = new Contact();
+		String strChat = getActivity().getString(R.string.Application_and_notify);
+		newFriends.setMContactCname(Constant.NEW_FRIENDS_USERNAME);
+		newFriends.setMUserName(Constant.NEW_FRIENDS_USERNAME);
+		newFriends.setMUserNick(strChat);
+		newFriends.setHander("");
+		if (mContactList.indexOf(newFriends) == -1) {
+			mContactList.add(0, newFriends);
+		}
+
 		// 排序
 		Collections.sort(contactList, new Comparator<EMUser>() {
 
