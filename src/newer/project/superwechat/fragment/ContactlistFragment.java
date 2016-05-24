@@ -47,14 +47,10 @@ import com.easemob.chat.EMContactManager;
 import com.easemob.exceptions.EaseMobException;
 import com.easemob.util.EMLog;
 
-import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
@@ -72,6 +68,7 @@ import newer.project.superwechat.bean.Contact;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.InviteMessgeDao;
 import newer.project.superwechat.domain.EMUser;
+import newer.project.superwechat.utils.UserUtils;
 import newer.project.superwechat.widget.Sidebar;
 
 /**
@@ -180,6 +177,7 @@ public class ContactlistFragment extends Fragment {
 		//黑名单列表
 		blackList = EMContactManager.getInstance().getBlackListUsernames();
 		contactList = new ArrayList<EMUser>();
+		mContactList = new ArrayList<Contact>();
 		// 获取设置contactlist
 		getContactList();
 		
@@ -495,7 +493,7 @@ public class ContactlistFragment extends Fragment {
 		groupUser.setMContactCname(Constant.GROUP_USERNAME);
 		groupUser.setMUserName(Constant.NEW_FRIENDS_USERNAME);
 		groupUser.setMUserNick(strGroup);
-		groupUser.setHander("");
+		groupUser.setHeader("");
 		if (mContactList.indexOf(groupUser) == -1) {
 			mContactList.add(0, groupUser);
 		}
@@ -506,17 +504,20 @@ public class ContactlistFragment extends Fragment {
 		newFriends.setMContactCname(Constant.NEW_FRIENDS_USERNAME);
 		newFriends.setMUserName(Constant.NEW_FRIENDS_USERNAME);
 		newFriends.setMUserNick(strChat);
-		newFriends.setHander("");
+		newFriends.setHeader("");
 		if (mContactList.indexOf(newFriends) == -1) {
 			mContactList.add(0, newFriends);
 		}
 
 		// 排序
-		Collections.sort(contactList, new Comparator<EMUser>() {
+		for (Contact c : mContactList) {
+			UserUtils.setUserHeader(c.getMContactCname(), c);
+		}
+		Collections.sort(mContactList, new Comparator<Contact>() {
 
 			@Override
-			public int compare(EMUser lhs, EMUser rhs) {
-				return lhs.getUsername().compareTo(rhs.getUsername());
+			public int compare(Contact lhs, Contact rhs) {
+				return lhs.getHeader().compareTo(rhs.getHeader());
 			}
 		});
 
@@ -526,12 +527,12 @@ public class ContactlistFragment extends Fragment {
 		// 加入"群聊"和"聊天室"
         /*if(users.get(Constant.CHAT_ROOM) != null)
             contactList.add(0, users.get(Constant.CHAT_ROOM));*/
-        if(users.get(Constant.GROUP_USERNAME) != null)
-            contactList.add(0, users.get(Constant.GROUP_USERNAME));
-        
-		// 把"申请与通知"添加到首位
-		if(users.get(Constant.NEW_FRIENDS_USERNAME) != null)
-		    contactList.add(0, users.get(Constant.NEW_FRIENDS_USERNAME));
+//        if(users.get(Constant.GROUP_USERNAME) != null)
+//            contactList.add(0, users.get(Constant.GROUP_USERNAME));
+//
+//		// 把"申请与通知"添加到首位
+//		if(users.get(Constant.NEW_FRIENDS_USERNAME) != null)
+//		    contactList.add(0, users.get(Constant.NEW_FRIENDS_USERNAME));
 		
 	}
 	
