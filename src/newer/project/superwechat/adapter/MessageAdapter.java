@@ -13,18 +13,6 @@
  */
 package newer.project.superwechat.adapter;
 
-import java.io.File;
-import java.util.Date;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.xmlpull.v1.XmlPullParser;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -54,7 +42,6 @@ import android.widget.Toast;
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.EMCallBack;
 import com.easemob.EMError;
-import newer.project.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMConversation;
 import com.easemob.chat.EMMessage;
@@ -68,6 +55,25 @@ import com.easemob.chat.NormalFileMessageBody;
 import com.easemob.chat.TextMessageBody;
 import com.easemob.chat.VideoMessageBody;
 import com.easemob.chat.VoiceMessageBody;
+import com.easemob.exceptions.EaseMobException;
+import com.easemob.util.DensityUtil;
+import com.easemob.util.EMLog;
+import com.easemob.util.FileUtils;
+import com.easemob.util.LatLng;
+import com.easemob.util.TextFormater;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParser;
+
+import java.io.File;
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
@@ -79,6 +85,7 @@ import newer.project.superwechat.activity.ShowBigImage;
 import newer.project.superwechat.activity.ShowNormalFileActivity;
 import newer.project.superwechat.activity.ShowVideoActivity;
 import newer.project.superwechat.activity.UserProfileActivity;
+import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.task.LoadImageTask;
 import newer.project.superwechat.task.LoadVideoImageTask;
 import newer.project.superwechat.utils.DateUtils;
@@ -86,12 +93,6 @@ import newer.project.superwechat.utils.ImageCache;
 import newer.project.superwechat.utils.ImageUtils;
 import newer.project.superwechat.utils.SmileUtils;
 import newer.project.superwechat.utils.UserUtils;
-import com.easemob.exceptions.EaseMobException;
-import com.easemob.util.DensityUtil;
-import com.easemob.util.EMLog;
-import com.easemob.util.FileUtils;
-import com.easemob.util.LatLng;
-import com.easemob.util.TextFormater;
 
 public class MessageAdapter extends BaseAdapter{
 
@@ -569,12 +570,12 @@ public class MessageAdapter extends BaseAdapter{
 	 * @param message
 	 * @param imageView
 	 */
-	private void setUserAvatar(final EMMessage message, ImageView imageView){
+	private void setUserAvatar(final EMMessage message, NetworkImageView imageView){
 	    if(message.direct == Direct.SEND){
 	        //显示自己头像
-	        UserUtils.setCurrentUserAvatar(context, imageView);
+	        UserUtils.setCurrentUserAvatar(imageView);
 	    }else{
-	        UserUtils.setUserAvatar(context, message.getFrom(), imageView);
+	        UserUtils.setUserAvatar(message.getFrom(), imageView);
 	    }
 	    imageView.setOnClickListener(new View.OnClickListener() {
 			
