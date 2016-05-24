@@ -7,8 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.easemob.util.HanziToPinyin;
 import com.squareup.picasso.Picasso;
 
+import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.I;
 import newer.project.superwechat.R;
@@ -68,7 +70,7 @@ public class UserUtils {
 		}
 	}
 
-	private static void setUserAvatar(String url, NetworkImageView niv) {
+	public static void setUserAvatar(String url, NetworkImageView niv) {
 		if (url == null || url.isEmpty()) {
 			return;
 		}
@@ -99,7 +101,7 @@ public class UserUtils {
 	public static void setCurrentUserAvatar(NetworkImageView niv) {
 		User user = SuperWeChatApplication.getInstance().getUser();
 		if (user != null) {
-			setUserAvatar(getAvatarPath(user.getMUserName()),niv);
+			setUserAvatar(getAvatarPath(user.getMUserName()), niv);
 		}
 	}
 
@@ -144,5 +146,25 @@ public class UserUtils {
 		}
 		((DemoHXSDKHelper) HXSDKHelper.getInstance()).saveContact(newUser);
 	}
-    
+
+	private static void setSort(String username, Contact user) {
+		String headerName = null;
+		if (!TextUtils.isEmpty(user.getMUserNick())) {
+			headerName = user.getMUserNick();
+		} else {
+			headerName = user.getMContactCname();
+		}
+		if (username.equals(Constant.NEW_FRIENDS_USERNAME) || username.equals(Constant.GROUP_USERNAME)) {
+			user.setHeader("");
+		} else if (Character.isDigit(headerName.charAt(0))) {
+			user.setHeader("#");
+		} else {
+			user.setHeader(HanziToPinyin.getInstance().get(headerName.substring(0, 1)).get(0).target.substring(0, 1)
+					.toUpperCase());
+			char header = user.getHeader().toLowerCase().charAt(0);
+			if (header < 'a' || header > 'z') {
+				user.setHeader("#");
+			}
+		}
+	}
 }
