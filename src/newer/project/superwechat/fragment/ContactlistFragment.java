@@ -489,6 +489,7 @@ public class ContactlistFragment extends Fragment {
 
 		// 添加"群聊"
 		Contact groupUser = new Contact();
+		groupUser.setMContactId(-2);
 		String strGroup = getActivity().getString(R.string.group_chat);
 		groupUser.setMContactCname(Constant.GROUP_USERNAME);
 		groupUser.setMUserName(Constant.NEW_FRIENDS_USERNAME);
@@ -500,12 +501,12 @@ public class ContactlistFragment extends Fragment {
 
 		// 添加user"申请与通知"
 		Contact newFriends = new Contact();
+		newFriends.setMContactId(-1);
 		String strChat = getActivity().getString(R.string.Application_and_notify);
 		newFriends.setMContactCname(Constant.NEW_FRIENDS_USERNAME);
 		newFriends.setMUserName(Constant.NEW_FRIENDS_USERNAME);
 		newFriends.setMUserNick(strChat);
 		newFriends.setHeader("");
-
 		if (mContactList.indexOf(newFriends) == -1) {
 			mContactList.add(0, newFriends);
 		}
