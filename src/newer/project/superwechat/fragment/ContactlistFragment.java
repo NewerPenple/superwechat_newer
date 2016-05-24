@@ -66,6 +66,7 @@ import newer.project.superwechat.activity.NewFriendsMsgActivity;
 import newer.project.superwechat.adapter.ContactAdapter;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.applib.controller.HXSDKHelper.HXSyncListener;
+import newer.project.superwechat.bean.Contact;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.InviteMessgeDao;
 import newer.project.superwechat.domain.EMUser;
@@ -94,6 +95,7 @@ public class ContactlistFragment extends Fragment {
     private EMUser toBeProcessUser;
     private String toBeProcessUsername;
 	ContactlistChangedReceiver receiver;
+	private List<Contact> mContactList;
 
 	class HXContactSyncListener implements HXSDKHelper.HXSyncListener {
 		@Override
