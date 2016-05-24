@@ -15,6 +15,7 @@ import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.RequestManager;
 import newer.project.superwechat.domain.EMUser;
 
@@ -39,7 +40,6 @@ public class UserUtils {
     }
 
 	public static Contact getContactInfo(String username) {
-
 		return SuperWeChatApplication.getInstance().getUserList().get(username);
 	}
 
@@ -95,7 +95,14 @@ public class UserUtils {
 			Picasso.with(context).load(R.drawable.default_avatar).into(imageView);
 		}
 	}
-    
+
+	public static void setCurrentUserAvatar(NetworkImageView niv) {
+		User user = SuperWeChatApplication.getInstance().getUser();
+		if (user != null) {
+			setUserAvatar(getAvatarPath(user.getMUserName()),niv);
+		}
+	}
+
     /**
      * 设置用户昵称
      */
