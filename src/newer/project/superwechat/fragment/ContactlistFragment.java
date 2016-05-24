@@ -58,6 +58,7 @@ import java.util.Map.Entry;
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.activity.AddContactActivity;
 import newer.project.superwechat.activity.ChatActivity;
 import newer.project.superwechat.activity.GroupsActivity;
@@ -470,7 +471,11 @@ public class ContactlistFragment extends Fragment {
 	 */
 	private void getContactList() {
 		contactList.clear();
+		mContactList.clear();
 		//获取本地好友列表
+		ArrayList<Contact> contacts = SuperWeChatApplication.getInstance().getContactList();
+		mContactList.addAll(contacts);
+
 		Map<String, EMUser> users = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
 		Iterator<Entry<String, EMUser>> iterator = users.entrySet().iterator();
 		while (iterator.hasNext()) {
