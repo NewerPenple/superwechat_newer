@@ -147,7 +147,7 @@ public class UserUtils {
 		((DemoHXSDKHelper) HXSDKHelper.getInstance()).saveContact(newUser);
 	}
 
-	private static void setSort(String username, Contact user) {
+	public static void setUserHeader(String username, Contact user) {
 		String headerName = null;
 		if (!TextUtils.isEmpty(user.getMUserNick())) {
 			headerName = user.getMUserNick();
