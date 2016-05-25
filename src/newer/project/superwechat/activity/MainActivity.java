@@ -28,6 +28,7 @@ import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,14 +63,21 @@ import java.util.UUID;
 
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.InviteMessgeDao;
-import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.domain.InviteMessage;
+import newer.project.superwechat.fragment.ChatAllHistoryFragment;
+import newer.project.superwechat.fragment.ContactlistFragment;
+import newer.project.superwechat.fragment.SettingsFragment;
 import newer.project.superwechat.utils.CommonUtils;
+import newer.project.superwechat.utils.Utils;
 
 public class MainActivity extends BaseActivity implements EMEventListener {
 
@@ -95,6 +103,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 	
 	private MyConnectionListener connectionListener = null;
 	private MyGroupChangeListener groupChangeListener = null;
+	private MainActivity mContext;
 
 	/**
 	 * 检查当前用户是否被删除
@@ -106,7 +115,8 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		mContext = this;
+
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
 			// 防止被移除后，没点确定按钮然后按了home键，长期在后台又进app导致的crash
 			// 三个fragment里加的判断同理
@@ -519,13 +529,48 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 			// 保存增加的联系人
 			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
 			Map<String, EMUser> toAddUsers = new HashMap<String, EMUser>();
+			HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
+			ArrayList<String> toAddUserNames = new ArrayList<String>();
+			boolean add = false;
 			for (String username : usernameList) {
 				EMUser user = setUserHead(username);
 				// 添加好友时可能会回调added方法两次
 				if (!localUsers.containsKey(username)) {
 					userDao.saveContact(user);
+					add = true;
 				}
 				toAddUsers.put(username, user);
+				if (!userList.containsKey(username)) {
+					toAddUserNames.add(username);
+				}
+			}
+			for (String userName : toAddUserNames) {
+				if (add) {
+					OkHttpUtils2<Contact> utils = new OkHttpUtils2<Contact>();
+					utils.url(SuperWeChatApplication.SERVER_ROOT)
+							.addParam(I.KEY_REQUEST,I.REQUEST_ADD_CONTACT)
+							.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+							.addParam(I.Contact.CU_NAME,userName)
+							.targetClass(Contact.class)
+							.execute(new OkHttpUtils2.OnCompleteListener<Contact>() {
+								@Override
+								public void onSuccess(Contact result) {
+									if (result != null && result.isResult()) {
+										SuperWeChatApplication.getInstance().getContactList().add(result);
+										SuperWeChatApplication.getInstance().getUserList().put(result.getMContactCname(), result);
+										mContext.sendStickyBroadcast(new Intent("update_contact_list"));
+										Utils.showToast(mContext, R.string.Add_buddy_success, Toast.LENGTH_SHORT);
+									} else {
+										Utils.showToast(mContext, result.getMsg(), Toast.LENGTH_SHORT);
+									}
+								}
+
+								@Override
+								public void onError(String error) {
+
+								}
+							});
+				}
 			}
 			localUsers.putAll(toAddUsers);
 			// 刷新ui
