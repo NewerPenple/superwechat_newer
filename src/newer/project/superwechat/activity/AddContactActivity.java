@@ -29,11 +29,14 @@ import android.widget.Toast;
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.chat.EMContactManager;
 
+import java.util.HashMap;
+
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.Contact;
 import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.utils.UserUtils;
@@ -97,20 +100,11 @@ public class AddContactActivity extends BaseActivity{
 			// TODO 从服务器获取此contact,如果不存在提示不存在此用户
 			
 			//服务器存在此用户，显示此用户和添加按钮
-			if (existUser(toAddUsername)) {
-				searchedUserLayout.setVisibility(View.VISIBLE);
-				mtvNoUser.setVisibility(View.GONE);
-				nameText.setText(userNick);
-				UserUtils.setUserAvatar(UserUtils.getAvatarPath(toAddUsername), avatar);
-			} else {
-				searchedUserLayout.setVisibility(View.GONE);
-				mtvNoUser.setVisibility(View.VISIBLE);
-			}
+			existUser(toAddUsername);
 		}
 	}
 
-	private boolean existUser(final String userName) {
-		exist = false;
+	private void existUser(final String userName) {
 		OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
 		utils.url(SuperWeChatApplication.SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_FIND_USER)
@@ -119,7 +113,6 @@ public class AddContactActivity extends BaseActivity{
 				.execute(new OkHttpUtils2.OnCompleteListener<User>() {
 					@Override
 					public void onSuccess(User result) {
-						Log.i("my", "onSuccess");
 						if (result != null) {
 							if (result.getMUserNick() != null) {
 								userNick = result.getMUserNick();
@@ -127,17 +120,35 @@ public class AddContactActivity extends BaseActivity{
 								userNick = result.getMUserName();
 							}
 							exist = true;
-						} else {
-							exist = false;
+							showUser();
 						}
 					}
 
 					@Override
 					public void onError(String error) {
-
+						exist = false;
+						showUser();
 					}
 				});
-		return exist;
+		Log.i("my", String.valueOf(exist));
+	}
+
+	private void showUser() {
+		if (exist) {
+			mtvNoUser.setVisibility(View.GONE);
+			HashMap<String,Contact> map = SuperWeChatApplication.getInstance().getUserList();
+			if (map.containsKey(toAddUsername)) {
+				searchedUserLayout.setVisibility(View.GONE);
+				startActivity(new Intent(this, UserProfileActivity.class).putExtra("username", toAddUsername));
+			} else {
+				searchedUserLayout.setVisibility(View.VISIBLE);
+				nameText.setText(userNick);
+				UserUtils.setUserAvatar(UserUtils.getAvatarPath(toAddUsername), avatar);
+			}
+		} else {
+			searchedUserLayout.setVisibility(View.GONE);
+			mtvNoUser.setVisibility(View.VISIBLE);
+		}
 	}
 
 	/**
