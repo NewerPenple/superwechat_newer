@@ -63,9 +63,6 @@ public class UserUtils {
 		Contact contact = getContactInfo(username);
 		Log.i("my", "contact" + contact);
 		if (contact != null && contact.getMContactUserName() != null) {
-			String s = getAvatarPath(username);
-			Log.i("my", s);
-			setUserAvatar(s, niv);
 			setUserAvatar(getAvatarPath(username), niv);
 		}
 	}
@@ -79,7 +76,7 @@ public class UserUtils {
 		niv.setErrorImageResId(R.drawable.default_avatar);
 	}
 
-	private static String getAvatarPath(String username) {
+	public static String getAvatarPath(String username) {
 		if (username == null || username.isEmpty()) {
 			return null;
 		}
@@ -117,11 +114,12 @@ public class UserUtils {
     	}
     }
 
-	public static void setUserBeanNick(String username,TextView textView){
+	public static void setUserBeanNick(String username,TextView textView) {
+		Log.i("my", "setUserBeanNick");
 		Contact contact = getContactInfo(username);
-		if(contact != null && contact.getMUserNick() != null){
+		if (contact != null && contact.getMUserNick() != null) {
 			textView.setText(contact.getMUserNick());
-		}else{
+		} else {
 			textView.setText(username);
 		}
 	}
@@ -135,7 +133,14 @@ public class UserUtils {
     		textView.setText(user.getNick());
     	}
     }
-    
+
+	public static void setCurrentUserBeanNick(TextView textView) {
+		User user = SuperWeChatApplication.getInstance().getUser();
+		if (user != null && user.getMUserNick() != null && textView != null) {
+			textView.setText(user.getMUserNick());
+		}
+	}
+
     /**
      * 保存或更新某个用户
      * @param newUser
