@@ -236,6 +236,7 @@ public class OkHttpUtils2<T> {
                         Message msg = Message.obtain();
                         msg.what = RESULT_ERROR;
                         msg.obj = "忘记设置targetClass()";
+                        mHandler.sendMessage(msg);
                     }
                     if (call != null) {
                         if (!call.isCanceled()) {
