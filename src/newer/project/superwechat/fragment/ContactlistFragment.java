@@ -452,6 +452,7 @@ public class ContactlistFragment extends Fragment {
 			((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
 		}
 		super.onDestroy();
+		getActivity().unregisterReceiver(receiver);
 	}
 	
 	public void showProgressBar(boolean show) {
@@ -462,7 +463,6 @@ public class ContactlistFragment extends Fragment {
 				progressBar.setVisibility(View.GONE);
 			}
 		}
-		getActivity().unregisterReceiver(receiver);
 	}
 
 	/**
