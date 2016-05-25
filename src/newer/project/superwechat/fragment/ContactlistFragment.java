@@ -54,6 +54,7 @@ import java.util.List;
 
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.activity.AddContactActivity;
@@ -65,6 +66,7 @@ import newer.project.superwechat.adapter.ContactAdapter;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.applib.controller.HXSDKHelper.HXSyncListener;
 import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.db.InviteMessgeDao;
 import newer.project.superwechat.domain.EMUser;
@@ -354,6 +356,27 @@ public class ContactlistFragment extends Fragment {
 		pd.setMessage(st1);
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
+		OkHttpUtils2<Boolean> utils = new OkHttpUtils2<Boolean>();
+		utils.url(SuperWeChatApplication.SERVER_ROOT)
+				.addParam(I.KEY_REQUEST,I.REQUEST_DELETE_CONTACT)
+				.addParam(I.Contact.USER_NAME, SuperWeChatApplication.getInstance().getUserName())
+				.addParam(I.Contact.CU_NAME,tobeDeleteUser.getMContactCname())
+				.targetClass(Boolean.class)
+				.execute(new OkHttpUtils2.OnCompleteListener<Boolean>() {
+					@Override
+					public void onSuccess(Boolean result) {
+						if (result != null && result) {
+							SuperWeChatApplication.getInstance().getContactList().remove(tobeDeleteUser);
+							SuperWeChatApplication.getInstance().getUserList().remove(tobeDeleteUser.getMContactCname());
+							getActivity().sendStickyBroadcast(new Intent("update_contact_list"));
+						}
+					}
+
+					@Override
+					public void onError(String error) {
+
+					}
+				});
 		new Thread(new Runnable() {
 			public void run() {
 				try {
