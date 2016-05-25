@@ -97,4 +97,14 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvNoUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:text="无结果"
+        android:visibility="gone"
+        />
 </LinearLayout>
