@@ -589,7 +589,7 @@ public class ContactlistFragment extends Fragment {
 
 	private void RegisterContactlistChangedReceiver() {
 		receiver = new ContactlistChangedReceiver();
-		IntentFilter filter = new IntentFilter("update_group_list");
+		IntentFilter filter = new IntentFilter("update_contact_list");
 		getActivity().registerReceiver(receiver, filter);
 	}
 }
