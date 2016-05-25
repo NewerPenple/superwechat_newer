@@ -28,7 +28,6 @@ import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -583,10 +582,22 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		public void onContactDeleted(final List<String> usernameList) {
 			// 被删除
 			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
+			HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
+			ArrayList<String> toDeleteUserNames = new ArrayList<String>();
+			boolean delete = false;
 			for (String username : usernameList) {
 				localUsers.remove(username);
 				userDao.deleteContact(username);
 				inviteMessgeDao.deleteMessage(username);
+				if (userList.containsKey(username)) {
+					delete = true;
+					toDeleteUserNames.add(username);
+				}
+			}
+			for (String userName : toDeleteUserNames) {
+				SuperWeChatApplication.getInstance().getContactList().remove(userList.get(userName));
+				SuperWeChatApplication.getInstance().getUserList().remove(userName);
+				sendStickyBroadcast(new Intent("update_contact_list"));
 			}
 			runOnUiThread(new Runnable() {
 				public void run() {
@@ -594,7 +605,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 					String st10 = getResources().getString(R.string.have_you_removed);
 					if (ChatActivity.activityInstance != null
 							&& usernameList.contains(ChatActivity.activityInstance.getToChatUsername())) {
-						Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, 1)
+						Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_LONG)
 								.show();
 						ChatActivity.activityInstance.finish();
 					}
