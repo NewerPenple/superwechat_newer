@@ -26,17 +26,23 @@ import com.easemob.EMValueCallBack;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.Message;
 import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.OkHttpUtils2;
+import newer.project.superwechat.data.RequestManager;
 import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
+import newer.project.superwechat.listener.OnSetAvatarListener;
+import newer.project.superwechat.utils.ImageUtils;
 import newer.project.superwechat.utils.UserUtils;
+import newer.project.superwechat.utils.Utils;
 
 public class UserProfileActivity extends BaseActivity implements OnClickListener{
 	private final static String TAG = UserProfileActivity.class.getName();
@@ -49,9 +55,9 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 	private TextView tvUsername;
 	private ProgressDialog dialog;
 	private RelativeLayout rlNickName;
-	
-	
-	
+	private OnSetAvatarListener mOnSetAvatarListener;
+	private String avatarName;
+
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
@@ -98,7 +104,8 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.user_head_avatar:
-			uploadHeadPhoto();
+			mOnSetAvatarListener = new OnSetAvatarListener(UserProfileActivity.this, R.id.layout_user_profile, getAvatarName(), I.AVATAR_TYPE_USER_PATH);
+//			uploadHeadPhoto();
 			break;
 		case R.id.rl_nickname:
 			final EditText editText = new EditText(this);
@@ -231,7 +238,7 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		switch (requestCode) {
+		/*switch (requestCode) {
 		case REQUESTCODE_PICK:
 			if (data == null || data.getData() == null) {
 				return;
@@ -245,8 +252,49 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 			break;
 		default:
 			break;
-		}
+		}*/
 		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode != RESULT_OK) {
+			return;
+		}
+		mOnSetAvatarListener.setAvatar(requestCode, data, headAvatar);
+		if (requestCode == OnSetAvatarListener.REQUEST_CROP_PHOTO) {
+			uploadAvatar();
+		}
+	}
+
+	private void uploadAvatar() {
+		dialog = ProgressDialog.show(this, getString(R.string.dl_update_photo), getString(R.string.dl_waiting));
+		final File file = new File(ImageUtils.getAvatarPath(UserProfileActivity.this, I.AVATAR_TYPE_USER_PATH), avatarName + I.AVATAR_SUFFIX_JPG);
+		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
+		utils.url(SuperWeChatApplication.SERVER_ROOT)
+				.addParam(I.KEY_REQUEST,I.REQUEST_UPLOAD_AVATAR)
+				.addParam(I.AVATAR_TYPE,I.AVATAR_TYPE_USER_PATH)
+				.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+				.addFile(file)
+				.targetClass(Message.class)
+				.execute(new OkHttpUtils2.OnCompleteListener<Message>() {
+					@Override
+					public void onSuccess(Message result) {
+						if (result.isResult()) {
+							String avatarPath = UserUtils.getAvatarPath(SuperWeChatApplication.getInstance().getUser().getMUserName());
+							RequestManager.getRequestQueue().getCache().remove(avatarPath);
+							UserUtils.setCurrentUserAvatar(headAvatar);
+							Utils.showToast(UserProfileActivity.this, R.string.toast_updatephoto_success, Toast.LENGTH_SHORT);
+						} else {
+							Utils.showToast(UserProfileActivity.this, Utils.getResourceString(UserProfileActivity.this, result.getMsg()), Toast.LENGTH_SHORT);
+							Log.e(TAG, "upload avatar,error:" + result.getMsg());
+						}
+						dialog.dismiss();
+					}
+
+					@Override
+					public void onError(String error) {
+						Utils.showToast(UserProfileActivity.this, error, Toast.LENGTH_SHORT);
+						Log.e(TAG, "upload avatar,error:" + error);
+						dialog.dismiss();
+					}
+				});
 	}
 
 	public void startPhotoZoom(Uri uri) {
@@ -311,5 +359,10 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
 		return baos.toByteArray();
+	}
+
+	public String getAvatarName() {
+		avatarName = String.valueOf(System.currentTimeMillis());
+		return avatarName;
 	}
 }
