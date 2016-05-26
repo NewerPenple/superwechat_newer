@@ -37,12 +37,12 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btn_save_group"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/common_tab_bg"
-            android:onClick="save"
             android:text="@string/button_save"
             android:textColor="#fff"
             android:textSize="18sp" />
@@ -75,7 +75,7 @@
         android:textSize="18sp" />
 
     <RelativeLayout
-        android:id="@+id/layout_updateGroupAvatar"
+        android:id="@+id/layout_uploadGroupAvatar"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_marginLeft="10dp"
@@ -84,20 +84,20 @@
         android:background="#fff" >
 
         <ImageView
-            android:id="@+id/iv_updateGroupAvatar"
+            android:id="@+id/iv_uploadGroupAvatar"
             android:layout_width="54dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/create_group" />
+            android:src="@drawable/group_icon" />
 
         <TextView
-            android:id="@+id/tv_updateGroupAvatar"
+            android:id="@+id/tv_uploadGroupAvatar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:gravity="center_vertical"
-            android:layout_toLeftOf="@id/iv_updateAvatar"
+            android:layout_toLeftOf="@id/iv_uploadGroupAvatar"
             android:background="@null"
             android:hint="@string/dl_title_upload_photo"
             android:paddingLeft="10dip"
