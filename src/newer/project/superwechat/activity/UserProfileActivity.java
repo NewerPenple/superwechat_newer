@@ -34,6 +34,7 @@ import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.OkHttpUtils2;
+import newer.project.superwechat.db.UserDao;
 import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.utils.UserUtils;
 
@@ -216,6 +217,11 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 							Toast.makeText(UserProfileActivity.this, getString(R.string.toast_updatenick_success), Toast.LENGTH_SHORT)
 									.show();
 							tvNickName.setText(nickName);
+							SuperWeChatApplication.currentUserNick = nickName;
+							User user = SuperWeChatApplication.getInstance().getUser();
+							user.setMUserNick(nickName);
+							UserDao dao = new UserDao(UserProfileActivity.this);
+							dao.updateUser(user);
 						}
 					});
 				}
