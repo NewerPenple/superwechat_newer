@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -27,14 +28,17 @@ import com.squareup.picasso.Picasso;
 import java.io.ByteArrayOutputStream;
 
 import newer.project.superwechat.DemoHXSDKHelper;
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.User;
+import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.domain.EMUser;
 import newer.project.superwechat.utils.UserUtils;
 
 public class UserProfileActivity extends BaseActivity implements OnClickListener{
-	
+	private final static String TAG = UserProfileActivity.class.getName();
 	private static final int REQUESTCODE_PICK = 1;
 	private static final int REQUESTCODE_CUTTING = 2;
 	private NetworkImageView headAvatar;
@@ -107,32 +111,31 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 								Toast.makeText(UserProfileActivity.this, getString(R.string.toast_nick_not_isnull), Toast.LENGTH_SHORT).show();
 								return;
 							}
-							updateRemoteNick(nickString);
+							updateUserNick(nickString);
 						}
 					}).setNegativeButton(R.string.dl_cancel, null).show();
 			break;
 		default:
 			break;
 		}
-
 	}
-	
+
 	public void asyncFetchUserInfo(String username){
 		((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().asyncGetUserInfo(username, new EMValueCallBack<EMUser>() {
-			
+
 			@Override
 			public void onSuccess(EMUser user) {
 				if (user != null) {
 					tvNickName.setText(user.getNick());
-					if(!TextUtils.isEmpty(user.getAvatar())){
-						 Picasso.with(UserProfileActivity.this).load(user.getAvatar()).placeholder(R.drawable.default_avatar).into(headAvatar);
-					}else{
+					if (!TextUtils.isEmpty(user.getAvatar())) {
+						Picasso.with(UserProfileActivity.this).load(user.getAvatar()).placeholder(R.drawable.default_avatar).into(headAvatar);
+					} else {
 						Picasso.with(UserProfileActivity.this).load(R.drawable.default_avatar).into(headAvatar);
 					}
 					UserUtils.saveUserInfo(user);
 				}
 			}
-			
+
 			@Override
 			public void onError(int error, String errorMsg) {
 			}
@@ -166,8 +169,26 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 				});
 		builder.create().show();
 	}
-	
-	
+
+	private void updateUserNick(final String nickName) {
+		OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
+		utils.url(SuperWeChatApplication.SERVER_ROOT)
+				.addParam(I.KEY_REQUEST,I.REQUEST_UPDATE_USER_NICK)
+				.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+				.addParam(I.User.NICK,nickName)
+				.targetClass(User.class)
+				.execute(new OkHttpUtils2.OnCompleteListener<User>() {
+					@Override
+					public void onSuccess(User result) {
+						updateRemoteNick(nickName);
+					}
+
+					@Override
+					public void onError(String error) {
+						Log.e(TAG, error);
+					}
+				});
+	}
 
 	private void updateRemoteNick(final String nickName) {
 		dialog = ProgressDialog.show(this, getString(R.string.dl_update_nick), getString(R.string.dl_waiting));
