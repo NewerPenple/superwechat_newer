@@ -1,13 +1,9 @@
 package newer.project.superwechat.fragment;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Hashtable;
-import java.util.List;
-
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -37,9 +33,16 @@ import android.widget.Toast;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMConversation;
 import com.easemob.chat.EMConversation.EMConversationType;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Hashtable;
+import java.util.List;
+
 import newer.project.superwechat.Constant;
-import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.activity.ChatActivity;
 import newer.project.superwechat.activity.MainActivity;
 import newer.project.superwechat.adapter.ChatAllHistoryAdapter;
@@ -61,6 +64,7 @@ public class ChatAllHistoryFragment extends Fragment implements View.OnClickList
 	public TextView errorText;
 	private boolean hidden;
 	private List<EMConversation> conversationList = new ArrayList<EMConversation>();
+	HistoryChangedReceiver receiver;
 		
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -156,7 +160,7 @@ public class ChatAllHistoryFragment extends Fragment implements View.OnClickList
 				hideSoftKeyboard();
 			}
 		});
-		
+		RegisterHistoryChangedReceiver();
 	}
 
 	void hideSoftKeyboard() {
@@ -300,4 +304,24 @@ public class ChatAllHistoryFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {        
     }
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		getActivity().unregisterReceiver(receiver);
+	}
+
+	public class HistoryChangedReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			adapter.notifyDataSetChanged();
+		}
+	}
+
+	private void RegisterHistoryChangedReceiver() {
+		receiver = new HistoryChangedReceiver();
+		IntentFilter filter = new IntentFilter("update_contact_list");
+		getActivity().registerReceiver(receiver, filter);
+	}
 }
