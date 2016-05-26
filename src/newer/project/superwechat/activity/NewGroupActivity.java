@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -45,8 +46,10 @@ public class NewGroupActivity extends BaseActivity {
 	private RelativeLayout mLayoutUploadGroupAvatar;
 	private ImageView mivUploadGroupAvatar;
 	private TextView mtvUploadGroupAvatar;
+	private Button mbtnSaveGroup;
 	private OnSetAvatarListener mOnSetAvatarListener;
 	private String avatarName;
+	private final static int CREATE_GROUP = 10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,22 @@ public class NewGroupActivity extends BaseActivity {
 	}
 
 	private void setListener() {
+		mbtnSaveGroup.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				String str6 = getResources().getString(R.string.Group_name_cannot_be_empty);
+				String name = groupNameEditText.getText().toString();
+				if (TextUtils.isEmpty(name)) {
+					Intent intent = new Intent(NewGroupActivity.this, AlertDialog.class);
+					intent.putExtra("msg", str6);
+					startActivity(intent);
+				} else {
+					// 进通讯录选人
+					startActivityForResult(new Intent(NewGroupActivity.this, GroupPickContactsActivity.class).putExtra("groupName", name), CREATE_GROUP);
+				}
+			}
+		});
+
 		checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -68,6 +87,7 @@ public class NewGroupActivity extends BaseActivity {
 				}
 			}
 		});
+
 		mLayoutUploadGroupAvatar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -90,39 +110,27 @@ public class NewGroupActivity extends BaseActivity {
 		mLayoutUploadGroupAvatar = (RelativeLayout) findViewById(R.id.layout_uploadGroupAvatar);
 		mivUploadGroupAvatar = (ImageView) findViewById(R.id.iv_uploadGroupAvatar);
 		mtvUploadGroupAvatar = (TextView) findViewById(R.id.tv_uploadGroupAvatar);
+		mbtnSaveGroup = (Button) findViewById(R.id.btn_save_group);
 	}
 
-	/**
-	 * @param v
-	 */
-	public void save(View v) {
-		String str6 = getResources().getString(R.string.Group_name_cannot_be_empty);
-		String name = groupNameEditText.getText().toString();
-		if (TextUtils.isEmpty(name)) {
-			Intent intent = new Intent(this, AlertDialog.class);
-			intent.putExtra("msg", str6);
-			startActivity(intent);
-		} else {
-			// 进通讯录选人
-			startActivityForResult(new Intent(this, GroupPickContactsActivity.class).putExtra("groupName", name), 0);
-		}
-	}
-	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, final Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		String st1 = getResources().getString(R.string.Is_to_create_a_group_chat);
-		final String st2 = getResources().getString(R.string.Failed_to_create_groups);
-		if (resultCode == RESULT_OK) {
-			//新建群组
-			setProgressDialog(st1);
-			createNewGroup(data, st2);
-
+		if (resultCode != RESULT_OK) {
+			return;
 		}
-		mOnSetAvatarListener.setAvatar(requestCode, data, mivUploadGroupAvatar);
+		if (requestCode == CREATE_GROUP) {
+			setProgressDialog();
+			//新建群组
+
+			createNewGroup(data);
+		} else {
+			mOnSetAvatarListener.setAvatar(requestCode, data, mivUploadGroupAvatar);
+		}
 	}
 
-	private void createNewGroup(final Intent data, final String st2) {
+	private void createNewGroup(final Intent data) {
+		final String st2 = getResources().getString(R.string.Failed_to_create_groups);
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -159,7 +167,8 @@ public class NewGroupActivity extends BaseActivity {
 		}).start();
 	}
 
-	public void setProgressDialog(String st1) {
+	public void setProgressDialog() {
+		String st1 = getResources().getString(R.string.Is_to_create_a_group_chat);
 		progressDialog = new ProgressDialog(this);
 		progressDialog.setMessage(st1);
 		progressDialog.setCanceledOnTouchOutside(false);
