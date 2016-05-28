@@ -9,6 +9,8 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.util.HanziToPinyin;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.I;
@@ -16,6 +18,7 @@ import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.bean.Contact;
+import newer.project.superwechat.bean.Group;
 import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.RequestManager;
 import newer.project.superwechat.domain.EMUser;
@@ -177,5 +180,17 @@ public class UserUtils {
 			pinyin = pinyin + HanziToPinyin.getInstance().get(s).get(0).target.toLowerCase();
 		}
 		return pinyin;
+	}
+
+	public static Group getGroupByHXID(String hxid) {
+		if (hxid != null && !hxid.isEmpty()) {
+			ArrayList<Group> groupList = SuperWeChatApplication.getInstance().getGroupList();
+			for (Group g : groupList) {
+				if (g.getMGroupHxid().equals(hxid)) {
+					return g;
+				}
+			}
+		}
+		return null;
 	}
 }
