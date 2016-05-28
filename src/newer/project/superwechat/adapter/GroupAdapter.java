@@ -14,15 +14,13 @@
 package newer.project.superwechat.adapter;
 
 import android.content.Context;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
@@ -44,7 +42,8 @@ public class GroupAdapter extends BaseAdapter {
 		this.inflater = LayoutInflater.from(context);
 		newGroup = context.getResources().getString(R.string.The_new_group_chat);
 		addPublicGroup = context.getResources().getString(R.string.add_public_group_chat);
-		this.groups = groups;
+		this.groups = new ArrayList<Group>();
+		this.groups.addAll(groups);
 	}
 
 	public void initList(ArrayList<Group> list) {
@@ -79,7 +78,7 @@ public class GroupAdapter extends BaseAdapter {
 			}
 			final EditText query = (EditText) convertView.findViewById(R.id.query);
 			final ImageButton clearSearch = (ImageButton) convertView.findViewById(R.id.search_clear);
-			query.addTextChangedListener(new TextWatcher() {
+			/*query.addTextChangedListener(new TextWatcher() {
 				public void onTextChanged(CharSequence s, int start, int before, int count) {
 					getFilter().filter(s);
 					if (s.length() > 0) {
@@ -100,18 +99,18 @@ public class GroupAdapter extends BaseAdapter {
 				public void onClick(View v) {
 					query.getText().clear();
 				}
-			});
+			});*/
 		} else if (getItemViewType(position) == 1) {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.row_add_group, null);
 			}
-			((NetworkImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.create_group);
+			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.create_group);
 			((TextView) convertView.findViewById(R.id.name)).setText(newGroup);
 		} else if (getItemViewType(position) == 2) {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.row_add_group, null);
 			}
-			((NetworkImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.add_public_group);
+			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.add_public_group);
 			((TextView) convertView.findViewById(R.id.name)).setText(addPublicGroup);
 			((TextView) convertView.findViewById(R.id.header)).setVisibility(View.VISIBLE);
 
