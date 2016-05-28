@@ -13,8 +13,6 @@
  */
 package newer.project.superwechat.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,26 +20,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.easemob.chat.EMGroup;
+import com.android.volley.toolbox.NetworkImageView;
+
+import java.util.ArrayList;
+
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
+import newer.project.superwechat.bean.Group;
+import newer.project.superwechat.data.RequestManager;
 
-public class GroupAdapter extends ArrayAdapter<EMGroup> {
-
+public class GroupAdapter extends BaseAdapter {
 	private LayoutInflater inflater;
 	private String newGroup;
 	private String addPublicGroup;
+	private ArrayList<Group> groups;
 
-	public GroupAdapter(Context context, int res, List<EMGroup> groups) {
-		super(context, res, groups);
+	public GroupAdapter(Context context, int res, ArrayList<Group> groups) {
 		this.inflater = LayoutInflater.from(context);
 		newGroup = context.getResources().getString(R.string.The_new_group_chat);
 		addPublicGroup = context.getResources().getString(R.string.add_public_group_chat);
+		this.groups = groups;
 	}
 
 	@Override
@@ -96,13 +99,13 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.row_add_group, null);
 			}
-			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.create_group);
+			((NetworkImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.create_group);
 			((TextView) convertView.findViewById(R.id.name)).setText(newGroup);
 		} else if (getItemViewType(position) == 2) {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.row_add_group, null);
 			}
-			((ImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.add_public_group);
+			((NetworkImageView) convertView.findViewById(R.id.avatar)).setImageResource(R.drawable.add_public_group);
 			((TextView) convertView.findViewById(R.id.name)).setText(addPublicGroup);
 			((TextView) convertView.findViewById(R.id.header)).setVisibility(View.VISIBLE);
 
@@ -110,8 +113,12 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 			if (convertView == null) {
 				convertView = inflater.inflate(R.layout.row_group, null);
 			}
-			((TextView) convertView.findViewById(R.id.name)).setText(getItem(position - 3).getGroupName());
-
+			((TextView) convertView.findViewById(R.id.name)).setText(getItem(position - 3).getMGroupName());
+			NetworkImageView miv = ((NetworkImageView) convertView.findViewById(R.id.avatar));
+			String hxid = groups.get(position).getMGroupHxid();
+			miv.setDefaultImageResId(R.drawable.group_icon);
+			miv.setImageUrl(I.REQUEST_DOWNLOAD_GROUP_AVATAR_URL + hxid, RequestManager.getImageLoader());
+			miv.setErrorImageResId(R.drawable.group_icon);
 		}
 
 		return convertView;
@@ -119,7 +126,17 @@ public class GroupAdapter extends ArrayAdapter<EMGroup> {
 
 	@Override
 	public int getCount() {
-		return super.getCount() + 3;
+		return groups.size() + 3;
+	}
+
+	@Override
+	public Group getItem(int i) {
+		return groups.get(i);
+	}
+
+	@Override
+	public long getItemId(int i) {
+		return 0;
 	}
 
 }
