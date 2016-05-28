@@ -31,7 +31,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.easemob.chat.EMGroupManager;
 import com.easemob.util.EMLog;
 
 import java.util.ArrayList;
@@ -53,7 +52,7 @@ public class GroupsActivity extends BaseActivity {
 	private View progressBar;
 	private SwipeRefreshLayout swipeRefreshLayout;
 	Handler handler = new Handler();
-	CroupChangedReceiver receiver;
+	GroupChangedReceiver receiver;
 
 	class SyncListener implements HXSDKHelper.HXSyncListener {
 		@Override
@@ -96,7 +95,7 @@ public class GroupsActivity extends BaseActivity {
 		
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
 		swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
-		                android.R.color.holo_orange_light, android.R.color.holo_red_light);
+				android.R.color.holo_orange_light, android.R.color.holo_red_light);
 		swipeRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
 
 			@Override
@@ -207,16 +206,19 @@ public class GroupsActivity extends BaseActivity {
 		finish();
 	}
 
-	public class CroupChangedReceiver extends BroadcastReceiver {
+	public class GroupChangedReceiver extends BroadcastReceiver {
 
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			refresh();
+			if (groupAdapter.getCount() >= 3) {
+				ArrayList<Group> list = SuperWeChatApplication.getInstance().getGroupList();
+				groupAdapter.initList(list);
+			}
 		}
 	}
 
 	private void RegisterCroupChangedReceiver() {
-		receiver = new CroupChangedReceiver();
+		receiver = new GroupChangedReceiver();
 		IntentFilter filter = new IntentFilter("update_group_list");
 		GroupsActivity.this.registerReceiver(receiver, filter);
 	}
