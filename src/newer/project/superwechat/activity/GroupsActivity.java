@@ -13,9 +13,10 @@
  */
 package newer.project.superwechat.activity;
 
-import java.util.List;
-
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -30,19 +31,21 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import newer.project.superwechat.applib.controller.HXSDKHelper;
-
-import com.easemob.chat.EMGroup;
 import com.easemob.chat.EMGroupManager;
-import newer.project.superwechat.R;
-import newer.project.superwechat.adapter.GroupAdapter;
-
 import com.easemob.util.EMLog;
 
+import java.util.ArrayList;
+
+import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.adapter.GroupAdapter;
+import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.bean.Group;
+
 public class GroupsActivity extends BaseActivity {
-	public static final String TAG = "GroupsActivity";
+	public static final String TAG = GroupsActivity.class.getName();
 	private ListView groupListView;
-	protected List<EMGroup> grouplist;
+	protected ArrayList<Group> grouplist;
 	private GroupAdapter groupAdapter;
 	private InputMethodManager inputMethodManager;
 	public static GroupsActivity instance;
@@ -50,6 +53,7 @@ public class GroupsActivity extends BaseActivity {
 	private View progressBar;
 	private SwipeRefreshLayout swipeRefreshLayout;
 	Handler handler = new Handler();
+	CroupChangedReceiver receiver;
 
 	class SyncListener implements HXSDKHelper.HXSyncListener {
 		@Override
@@ -87,7 +91,7 @@ public class GroupsActivity extends BaseActivity {
 
 		instance = this;
 		inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-		grouplist = EMGroupManager.getInstance().getAllGroups();
+		grouplist = SuperWeChatApplication.getInstance().getGroupList();
 		groupListView = (ListView) findViewById(R.id.list);
 		
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
@@ -147,7 +151,8 @@ public class GroupsActivity extends BaseActivity {
 		} else {
 			progressBar.setVisibility(View.GONE);
 		}
-		
+		RegisterCroupChangedReceiver();
+
 		refresh();
 	}
 
@@ -166,7 +171,7 @@ public class GroupsActivity extends BaseActivity {
 	@Override
 	public void onResume() {
 		super.onResume();
-		grouplist = EMGroupManager.getInstance().getAllGroups();
+		grouplist = SuperWeChatApplication.getInstance().getGroupList();
 		groupAdapter = new GroupAdapter(this, 1, grouplist);
 		groupListView.setAdapter(groupAdapter);
 		groupAdapter.notifyDataSetChanged();
@@ -180,11 +185,12 @@ public class GroupsActivity extends BaseActivity {
 		}
 		super.onDestroy();
 		instance = null;
+		GroupsActivity.this.unregisterReceiver(receiver);
 	}
 	
 	public void refresh() {
 		if (groupListView != null && groupAdapter != null) {
-			grouplist = EMGroupManager.getInstance().getAllGroups();
+			grouplist = SuperWeChatApplication.getInstance().getGroupList();
 			groupAdapter = new GroupAdapter(GroupsActivity.this, 1,
 					grouplist);
 			groupListView.setAdapter(groupAdapter);
@@ -199,5 +205,19 @@ public class GroupsActivity extends BaseActivity {
 	 */
 	public void back(View view) {
 		finish();
+	}
+
+	public class CroupChangedReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			refresh();
+		}
+	}
+
+	private void RegisterCroupChangedReceiver() {
+		receiver = new CroupChangedReceiver();
+		IntentFilter filter = new IntentFilter("update_group_list");
+		GroupsActivity.this.registerReceiver(receiver, filter);
 	}
 }
