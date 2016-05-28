@@ -47,6 +47,12 @@ public class GroupAdapter extends BaseAdapter {
 		this.groups = groups;
 	}
 
+	public void initList(ArrayList<Group> list) {
+		groups.clear();
+		groups.addAll(list);
+		notifyDataSetChanged();
+	}
+
 	@Override
 	public int getViewTypeCount() {
 		return 4;
@@ -115,7 +121,7 @@ public class GroupAdapter extends BaseAdapter {
 			}
 			((TextView) convertView.findViewById(R.id.name)).setText(getItem(position - 3).getMGroupName());
 			NetworkImageView miv = ((NetworkImageView) convertView.findViewById(R.id.avatar));
-			String hxid = groups.get(position).getMGroupHxid();
+			String hxid = groups.get(position - 3).getMGroupHxid();
 			miv.setDefaultImageResId(R.drawable.group_icon);
 			miv.setImageUrl(I.REQUEST_DOWNLOAD_GROUP_AVATAR_URL + hxid, RequestManager.getImageLoader());
 			miv.setErrorImageResId(R.drawable.group_icon);
@@ -126,7 +132,7 @@ public class GroupAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		return groups.size() + 3;
+		return groups == null? 3:groups.size() + 3;
 	}
 
 	@Override
