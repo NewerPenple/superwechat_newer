@@ -2,7 +2,6 @@ package newer.project.superwechat.utils;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -59,9 +58,7 @@ public class UserUtils {
     }
 
 	public static void setContactAvatar(String username, NetworkImageView niv) {
-		Log.i("my", username);
 		Contact contact = getContactInfo(username);
-		Log.i("my", "contact" + contact);
 		if (contact != null && contact.getMContactUserName() != null) {
 			setUserAvatar(getAvatarPath(username), niv);
 		}
@@ -71,6 +68,7 @@ public class UserUtils {
 		if (url == null || url.isEmpty()) {
 			return;
 		}
+//		RequestManager.getRequestQueue().getCache().remove(url);
 		niv.setDefaultImageResId(R.drawable.default_avatar);
 		niv.setImageUrl(url, RequestManager.getImageLoader());
 		niv.setErrorImageResId(R.drawable.default_avatar);
@@ -115,7 +113,6 @@ public class UserUtils {
     }
 
 	public static void setUserBeanNick(String username,TextView textView) {
-		Log.i("my", "setUserBeanNick");
 		Contact contact = getContactInfo(username);
 		if (contact != null && contact.getMUserNick() != null) {
 			textView.setText(contact.getMUserNick());
@@ -171,5 +168,14 @@ public class UserUtils {
 				user.setHeader("#");
 			}
 		}
+	}
+
+	public static String hanziToPinyin(String hanzi) {
+		String pinyin = "";
+		for (int i = 0; i < hanzi.length(); i++) {
+			String s = hanzi.substring(i, i + 1);
+			pinyin = pinyin + HanziToPinyin.getInstance().get(s).get(0).target.toLowerCase();
+		}
+		return pinyin;
 	}
 }
