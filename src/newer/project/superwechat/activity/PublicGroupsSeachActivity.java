@@ -10,17 +10,23 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.easemob.EMError;
-import com.easemob.chat.EMGroup;
-import com.easemob.chat.EMGroupManager;
+import com.android.volley.toolbox.NetworkImageView;
+
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
-import com.easemob.exceptions.EaseMobException;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.Group;
+import newer.project.superwechat.data.OkHttpUtils2;
+import newer.project.superwechat.utils.UserUtils;
+import newer.project.superwechat.utils.Utils;
 
 public class PublicGroupsSeachActivity extends BaseActivity{
     private RelativeLayout containerLayout;
     private EditText idET;
     private TextView nameText;
-    public static EMGroup searchedGroup;
+    private NetworkImageView nivAvatar;
+    public static Group searchedGroup;
+    ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle arg0) {
@@ -30,7 +36,7 @@ public class PublicGroupsSeachActivity extends BaseActivity{
         containerLayout = (RelativeLayout) findViewById(R.id.rl_searched_group);
         idET = (EditText) findViewById(R.id.et_search_id);
         nameText = (TextView) findViewById(R.id.name);
-        
+        nivAvatar = (NetworkImageView) findViewById(R.id.avatar);
         searchedGroup = null;
     }
     
@@ -43,12 +49,40 @@ public class PublicGroupsSeachActivity extends BaseActivity{
             return;
         }
         
-        final ProgressDialog pd = new ProgressDialog(this);
+        pd = new ProgressDialog(this);
         pd.setMessage(getResources().getString(R.string.searching));
         pd.setCancelable(false);
         pd.show();
-        
-        new Thread(new Runnable() {
+
+        OkHttpUtils2<Group> utils = new OkHttpUtils2<Group>();
+        utils.url(SuperWeChatApplication.SERVER_ROOT)
+                .addParam(I.KEY_REQUEST,I.REQUEST_FIND_PUBLIC_GROUP_BY_HXID)
+                .addParam(I.Group.HX_ID,idET.getText().toString().trim())
+                .targetClass(Group.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<Group>() {
+                    @Override
+                    public void onSuccess(Group result) {
+                        if (result != null) {
+                            searchedGroup = result;
+                            containerLayout.setVisibility(View.VISIBLE);
+                            nameText.setText(result.getMGroupName());
+                            UserUtils.setGroupAvatar(result.getMGroupHxid(), nivAvatar);
+                        } else {
+                            containerLayout.setVisibility(View.GONE);
+                            Utils.showToast(PublicGroupsSeachActivity.this, getResources().getString(R.string.group_not_existed), Toast.LENGTH_SHORT);
+                        }
+                        pd.dismiss();
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        containerLayout.setVisibility(View.GONE);
+                        Utils.showToast(PublicGroupsSeachActivity.this, getResources().getString(R.string.group_search_failed), Toast.LENGTH_SHORT);
+                        pd.dismiss();
+                    }
+                });
+
+        /*new Thread(new Runnable() {
 
             public void run() {
                 try {
@@ -77,7 +111,7 @@ public class PublicGroupsSeachActivity extends BaseActivity{
                     });
                 }
             }
-        }).start();
+        }).start();*/
         
     }
     
