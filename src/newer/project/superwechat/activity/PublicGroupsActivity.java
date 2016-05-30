@@ -181,7 +181,6 @@ public class PublicGroupsActivity extends BaseActivity {
                 try {
                     isLoading = true;
                     final ArrayList<Group> publicGroupList = SuperWeChatApplication.getInstance().getPublicGroupList();
-                    Log.i("my", "isRun:"+publicGroupList.size());
                     for (Group group : publicGroupList) {
                         if (!groupsList.contains(group)) {
                             groupsList.add(group);
@@ -200,7 +199,6 @@ public class PublicGroupsActivity extends BaseActivity {
                                 pb.setVisibility(View.INVISIBLE);
                                 isFirstLoading = false;
                                 //设置adapter
-                                Log.i("my", "setAdapter");
                                 adapter = new GroupsAdapter(PublicGroupsActivity.this, 1, groupsList);
                                 listView.setAdapter(adapter);
                             } else {
@@ -224,7 +222,6 @@ public class PublicGroupsActivity extends BaseActivity {
                             pb.setVisibility(View.INVISIBLE);
                             footLoadingLayout.setVisibility(View.GONE);
                             Toast.makeText(PublicGroupsActivity.this, "加载数据失败，请检查网络或稍后重试", Toast.LENGTH_SHORT).show();
-                            Log.i("my", "error: "+e.getMessage());
                         }
                     });
                 }
@@ -257,12 +254,12 @@ public class PublicGroupsActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            return groupsList.size();
+            return groupList.size();
         }
 
         @Override
         public Group getItem(int i) {
-            return groupsList.get(i);
+            return groupList.get(i);
         }
 
         @Override
@@ -272,7 +269,6 @@ public class PublicGroupsActivity extends BaseActivity {
 
         @Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-            Log.i("my", "adapter: "+position);
 			if (convertView == null) {
 				convertView = inflater.inflate(newer.project.superwechat.R.layout.row_group, null);
 			}
@@ -318,7 +314,7 @@ public class PublicGroupsActivity extends BaseActivity {
 
         public Filter getFilter() {
             if(myFilter == null){
-                myFilter = new MyFilter(groupsList);
+                myFilter = new MyFilter(groupList);
             }
             return myFilter;
         }
