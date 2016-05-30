@@ -22,21 +22,25 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.easemob.chat.EMChatManager;
-import com.easemob.chat.EMGroup;
-import com.easemob.chat.EMGroupInfo;
-import com.easemob.chat.EMGroupManager;
+import com.android.volley.toolbox.NetworkImageView;
+
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
-import com.easemob.exceptions.EaseMobException;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.Group;
+import newer.project.superwechat.data.OkHttpUtils2;
+import newer.project.superwechat.utils.UserUtils;
+import newer.project.superwechat.utils.Utils;
 
 public class GroupSimpleDetailActivity extends BaseActivity {
 	private Button btn_add_group;
 	private TextView tv_admin;
 	private TextView tv_name;
 	private TextView tv_introduction;
-	private EMGroup group;
+	private Group group;
 	private String groupid;
 	private ProgressBar progressBar;
+	private NetworkImageView nivAvatar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +51,19 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 		btn_add_group = (Button) findViewById(R.id.btn_add_to_group);
 		tv_introduction = (TextView) findViewById(R.id.tv_introduction);
 		progressBar = (ProgressBar) findViewById(R.id.loading);
-
-		EMGroupInfo groupInfo = (EMGroupInfo) getIntent().getSerializableExtra("groupinfo");
+		nivAvatar = (NetworkImageView) findViewById(R.id.avatar);
+		Group groupInfo = (Group) getIntent().getSerializableExtra("groupinfo");
 		String groupname = null;
-		if(groupInfo != null){
-		    groupname = groupInfo.getGroupName();
-		    groupid = groupInfo.getGroupId();
+		if(groupInfo != null) {
+			group = groupInfo;
+			groupname = groupInfo.getMGroupName();
+			groupid = groupInfo.getMGroupHxid();
 		}else{
 		    group = PublicGroupsSeachActivity.searchedGroup;
 		    if(group == null)
 		        return;
-		    groupname = group.getGroupName();
-		    groupid = group.getGroupId();
+		    groupname = group.getMGroupName();
+		    groupid = group.getMGroupHxid();
 		}
 		
 		tv_name.setText(groupname);
@@ -68,7 +73,25 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 		    showGroupDetail();
 		    return;
 		}
-		new Thread(new Runnable() {
+		OkHttpUtils2<Group> utils = new OkHttpUtils2<Group>();
+		utils.url(SuperWeChatApplication.SERVER_ROOT)
+				.addParam(I.KEY_REQUEST,I.REQUEST_FIND_PUBLIC_GROUP_BY_HXID)
+				.addParam(I.Group.HX_ID,groupid)
+				.targetClass(Group.class)
+				.execute(new OkHttpUtils2.OnCompleteListener<Group>() {
+					@Override
+					public void onSuccess(Group result) {
+						if (result != null) {
+							showGroupDetail();
+						}
+					}
+
+					@Override
+					public void onError(String error) {
+						Utils.showToast(GroupSimpleDetailActivity.this, getResources().getString(R.string.Failed_to_get_group_chat_information)+error, Toast.LENGTH_SHORT);
+					}
+				});
+		/*new Thread(new Runnable() {
 
 			public void run() {
 				//从服务器获取详情
@@ -91,7 +114,7 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 				}
 				
 			}
-		}).start();
+		}).start();*/
 		
 	}
 	
@@ -107,7 +130,7 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 		pd.setMessage(st1);
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
-		new Thread(new Runnable() {
+		/*new Thread(new Runnable() {
 			public void run() {
 				try {
 					//如果是membersOnly的群，需要申请加入，不能直接join
@@ -136,18 +159,20 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 					});
 				}
 			}
-		}).start();
+		}).start();*/
 	}
 	
      private void showGroupDetail() {
          progressBar.setVisibility(View.INVISIBLE);
          //获取详情成功，并且自己不在群中，才让加入群聊按钮可点击
-         if(!group.getMembers().contains(EMChatManager.getInstance().getCurrentUser()))
-             btn_add_group.setEnabled(true);
-         tv_name.setText(group.getGroupName());
-         tv_admin.setText(group.getOwner());
-         tv_introduction.setText(group.getDescription());
-     }
+		 if (!SuperWeChatApplication.getInstance().getGroupList().contains(group)) {
+			 btn_add_group.setEnabled(true);
+		 }
+		 tv_name.setText(group.getMGroupName());
+		 tv_admin.setText(group.getMGroupOwner());
+         tv_introduction.setText(group.getMGroupDescription());
+		 UserUtils.setGroupAvatar(group.getMGroupHxid(), nivAvatar);
+	 }
 	
 	public void back(View view){
 		finish();
