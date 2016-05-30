@@ -17,8 +17,10 @@ package newer.project.superwechat.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,11 +42,13 @@ import com.easemob.chat.EMGroupInfo;
 import com.easemob.chat.EMGroupManager;
 import com.easemob.exceptions.EaseMobException;
 
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.Group;
+
 public class PublicGroupsActivity extends BaseActivity {
 	private ProgressBar pb;
 	private ListView listView;
 	private GroupsAdapter adapter;
-	
 	private List<EMGroupInfo> groupsList;
 	private boolean isLoading;
 	private boolean isFirstLoading = true;
@@ -55,29 +59,45 @@ public class PublicGroupsActivity extends BaseActivity {
     private ProgressBar footLoadingPB;
     private TextView footLoadingText;
     private Button searchBtn;
-    
+    private PublicGroupChangedReceiver receiver;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(newer.project.superwechat.R.layout.activity_public_groups);
+        initView();
+		seteListener();
+        RegisterPublicCroupChangedReceiver();
+	}
 
-		pb = (ProgressBar) findViewById(newer.project.superwechat.R.id.progressBar);
-		listView = (ListView) findViewById(newer.project.superwechat.R.id.list);
-		groupsList = new ArrayList<EMGroupInfo>();
-		searchBtn = (Button) findViewById(newer.project.superwechat.R.id.btn_search);
-		
-		View footView = getLayoutInflater().inflate(newer.project.superwechat.R.layout.listview_footer_view, null);
-        footLoadingLayout = (LinearLayout) footView.findViewById(newer.project.superwechat.R.id.loading_layout);
-        footLoadingPB = (ProgressBar)footView.findViewById(newer.project.superwechat.R.id.loading_bar);
-        footLoadingText = (TextView) footView.findViewById(newer.project.superwechat.R.id.loading_text);
-        listView.addFooterView(footView, null, false);
-        footLoadingLayout.setVisibility(View.GONE);
-        
-        //获取及显示数据
-        loadAndShowData();
-        
-        //设置item点击事件
+    private void seteListener() {
+        setOnItemClickListener();
+        setOnScrollListener();
+    }
+
+    private void setOnScrollListener() {
+        listView.setOnScrollListener(new OnScrollListener() {
+
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+                if (scrollState == OnScrollListener.SCROLL_STATE_IDLE) {
+                    if (listView.getCount() != 0) {
+                        int lasPos = view.getLastVisiblePosition();
+                        if (hasMoreData && !isLoading && lasPos == listView.getCount() - 1) {
+                            loadAndShowData();
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+            }
+        });
+    }
+
+    private void setOnItemClickListener() {
         listView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
@@ -86,29 +106,22 @@ public class PublicGroupsActivity extends BaseActivity {
                         putExtra("groupinfo", adapter.getItem(position)));
             }
         });
-        listView.setOnScrollListener(new OnScrollListener() {
-            
-            @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                if(scrollState == OnScrollListener.SCROLL_STATE_IDLE){
-                    if(listView.getCount() != 0){
-                        int lasPos = view.getLastVisiblePosition();
-                        if(hasMoreData && !isLoading && lasPos == listView.getCount()-1){
-                            loadAndShowData();
-                        }
-                    }
-                }
-            }
-            
-            @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                
-            }
-        });
-        
-	}
-	
-	/**
+    }
+
+    private void initView() {
+        pb = (ProgressBar) findViewById(newer.project.superwechat.R.id.progressBar);
+        listView = (ListView) findViewById(newer.project.superwechat.R.id.list);
+        groupsList = new ArrayList<EMGroupInfo>();
+        searchBtn = (Button) findViewById(newer.project.superwechat.R.id.btn_search);
+        View footView = getLayoutInflater().inflate(newer.project.superwechat.R.layout.listview_footer_view, null);
+        footLoadingLayout = (LinearLayout) footView.findViewById(newer.project.superwechat.R.id.loading_layout);
+        footLoadingPB = (ProgressBar)footView.findViewById(newer.project.superwechat.R.id.loading_bar);
+        footLoadingText = (TextView) footView.findViewById(newer.project.superwechat.R.id.loading_text);
+        listView.addFooterView(footView, null, false);
+        footLoadingLayout.setVisibility(View.GONE);
+    }
+
+    /**
 	 * 搜索
 	 * @param view
 	 */
@@ -196,4 +209,24 @@ public class PublicGroupsActivity extends BaseActivity {
 	public void back(View view){
 		finish();
 	}
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
+    }
+
+    public class PublicGroupChangedReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            loadAndShowData();
+        }
+    }
+
+    private void RegisterPublicCroupChangedReceiver() {
+        receiver = new PublicGroupChangedReceiver();
+        IntentFilter filter = new IntentFilter("update_public_group_list");
+        registerReceiver(receiver, filter);
+    }
 }
