@@ -13,16 +13,11 @@
  */
 package newer.project.superwechat.activity;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
@@ -43,6 +38,7 @@ import android.text.ClipboardManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -69,8 +65,6 @@ import com.easemob.EMError;
 import com.easemob.EMEventListener;
 import com.easemob.EMNotifierEvent;
 import com.easemob.EMValueCallBack;
-import newer.project.superwechat.applib.controller.HXSDKHelper;
-import newer.project.superwechat.applib.model.GroupRemoveListener;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMChatRoom;
 import com.easemob.chat.EMContactManager;
@@ -86,14 +80,31 @@ import com.easemob.chat.NormalFileMessageBody;
 import com.easemob.chat.TextMessageBody;
 import com.easemob.chat.VideoMessageBody;
 import com.easemob.chat.VoiceMessageBody;
-import newer.project.superwechat.SuperWeChatApplication;
+import com.easemob.exceptions.EaseMobException;
+import com.easemob.util.EMLog;
+import com.easemob.util.PathUtil;
+import com.easemob.util.VoiceRecorder;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.adapter.ExpressionAdapter;
 import newer.project.superwechat.adapter.ExpressionPagerAdapter;
 import newer.project.superwechat.adapter.MessageAdapter;
 import newer.project.superwechat.adapter.VoicePlayClickListener;
+import newer.project.superwechat.applib.controller.HXSDKHelper;
+import newer.project.superwechat.applib.model.GroupRemoveListener;
+import newer.project.superwechat.bean.Member;
 import newer.project.superwechat.domain.RobotUser;
+import newer.project.superwechat.task.DownloadGroupMemberTask;
 import newer.project.superwechat.utils.CommonUtils;
 import newer.project.superwechat.utils.ImageUtils;
 import newer.project.superwechat.utils.SmileUtils;
@@ -101,10 +112,6 @@ import newer.project.superwechat.utils.UserUtils;
 import newer.project.superwechat.utils.Utils;
 import newer.project.superwechat.widget.ExpandGridView;
 import newer.project.superwechat.widget.PasteEditText;
-import com.easemob.exceptions.EaseMobException;
-import com.easemob.util.EMLog;
-import com.easemob.util.PathUtil;
-import com.easemob.util.VoiceRecorder;
 
 /**
  * 聊天页面
@@ -203,6 +210,8 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 	public EMGroup group;
 	public EMChatRoom room;
 	public boolean isRobot;
+	ArrayList<Member> members;
+	GroupMemberChangedReceiver receiver;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -211,6 +220,7 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		activityInstance = this;
 		initView();
 		setUpView();
+		RegisterGroupMemberChangedReceiver();
 	}
 
 	/**
@@ -391,6 +401,7 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 					((TextView) findViewById(R.id.name)).setText(toChatUsername);
 				}
 			}else{
+//				UserUtils.setUserNick(toChatUsername,(TextView) findViewById(R.id.name));
 				UserUtils.setUserBeanNick(toChatUsername, (TextView) findViewById(R.id.name));
 			}
 		} else {
@@ -508,18 +519,23 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
         });
 	}
 	
-	protected void onGroupViewCreation(){
-	    group = EMGroupManager.getInstance().getGroup(toChatUsername);
-        
-        if (group != null){
-            ((TextView) findViewById(R.id.name)).setText(group.getGroupName());
-        }else{
-            ((TextView) findViewById(R.id.name)).setText(toChatUsername);
-        }
-        
-        // 监听当前会话的群聊解散被T事件
-        groupListener = new GroupListener();
-        EMGroupManager.getInstance().addGroupChangeListener(groupListener);
+	protected void onGroupViewCreation() {
+		members = SuperWeChatApplication.getInstance().getGroupMembers().get(toChatUsername);
+		if (members == null) {
+			members = new ArrayList<Member>();
+			new DownloadGroupMemberTask(ChatActivity.this, toChatUsername).execute();
+		}
+		group = EMGroupManager.getInstance().getGroup(toChatUsername);
+
+		if (group != null) {
+			((TextView) findViewById(R.id.name)).setText(group.getGroupName());
+		} else {
+			((TextView) findViewById(R.id.name)).setText(toChatUsername);
+		}
+
+		// 监听当前会话的群聊解散被T事件
+		groupListener = new GroupListener();
+		EMGroupManager.getInstance().addGroupChangeListener(groupListener);
 	}
 	
 	protected void onChatRoomViewCreation(){
@@ -1469,6 +1485,7 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		if(groupListener != null){
 		    EMGroupManager.getInstance().removeGroupChangeListener(groupListener);
 		}
+		unregisterReceiver(receiver);
 	}
 
 	@Override
@@ -1753,4 +1770,17 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		return listView;
 	}
 
+	public class GroupMemberChangedReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			adapter.notifyDataSetChanged();
+		}
+	}
+
+	private void RegisterGroupMemberChangedReceiver() {
+		receiver = new GroupMemberChangedReceiver();
+		IntentFilter filter = new IntentFilter("update_group_member_list");
+		registerReceiver(receiver, filter);
+	}
 }
