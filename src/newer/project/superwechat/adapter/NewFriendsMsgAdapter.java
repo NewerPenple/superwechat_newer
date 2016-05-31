@@ -18,6 +18,7 @@ import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -33,13 +34,17 @@ import com.easemob.chat.EMGroupManager;
 
 import java.util.List;
 
+import newer.project.superwechat.I;
 import newer.project.superwechat.R;
+import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.User;
+import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.db.InviteMessgeDao;
 import newer.project.superwechat.domain.InviteMessage;
 import newer.project.superwechat.utils.UserUtils;
 
 public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
-
+	private static final String TAG = NewFriendsMsgAdapter.class.getName();
 	private Context context;
 	private InviteMessgeDao messgeDao;
 
@@ -126,6 +131,23 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 			}
 
 			// 设置用户头像
+			UserUtils.setContactAvatar(msg.getFrom(), holder.avator);
+			OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
+			utils.url(SuperWeChatApplication.SERVER_ROOT)
+					.addParam(I.KEY_REQUEST,I.REQUEST_FIND_USER)
+					.addParam(I.User.USER_NAME,msg.getFrom())
+					.targetClass(User.class)
+					.execute(new OkHttpUtils2.OnCompleteListener<User>() {
+						@Override
+						public void onSuccess(User result) {
+							UserUtils.setNewUserNick(result, holder.name);
+						}
+
+						@Override
+						public void onError(String error) {
+							Log.i("my", TAG + "： " + error);
+						}
+					});
 		}
 
 		return convertView;
