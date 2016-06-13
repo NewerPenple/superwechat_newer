@@ -178,7 +178,6 @@ public class LoginActivity extends BaseActivity {
 				if (!progressShow) {
 					return;
 				}
-				Log.i(TAG, "onSuccess");
 				loginClientServer();
 			}
 
@@ -209,10 +208,8 @@ public class LoginActivity extends BaseActivity {
 		Log.i(TAG, String.valueOf(user == null));
 		if (user != null) { //本地是否保存该账号
 			if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
-				Log.i(TAG, "loginClient");
 				loginSuccess();
 			} else {
-				Log.i(TAG, "user == null");
 				Toast.makeText(getApplicationContext(), R.string.login_failure_failed, Toast.LENGTH_SHORT).show();
 				pd.dismiss();
 			}
@@ -224,7 +221,6 @@ public class LoginActivity extends BaseActivity {
                         .getRequestUrl(I.REQUEST_LOGIN);
 				executeRequest(new GsonRequest<User>(path, User.class, responseListener(), errorListener()));
 			} catch (Exception e) {
-				Log.i(TAG, "login fail"+e.getMessage());
 				e.printStackTrace();
 			}
 		}
@@ -235,10 +231,10 @@ public class LoginActivity extends BaseActivity {
 		return new Response.Listener<User>() {
 			@Override
 			public void onResponse(User user) {
-				Log.i(TAG, "onResponse");
 				if (user.isResult()) {
 					saveUser(user);
 					loginSuccess();
+					new UserDao(LoginActivity.this).addUser(user);
 				} else {
 					Utils.showToast(LoginActivity.this, Utils.getResourceString(LoginActivity.this, user.getMsg()), Toast.LENGTH_SHORT);
 					pd.dismiss();
@@ -324,7 +320,6 @@ public class LoginActivity extends BaseActivity {
 		boolean updatenick = EMChatManager.getInstance().updateCurrentUserNick(
 				SuperWeChatApplication.currentUserNick.trim());
 		if (!updatenick) {
-			Log.e("LoginActivity", "update current user nick fail");
 		}
 		if (!LoginActivity.this.isFinishing() && pd.isShowing()) {
 			pd.dismiss();

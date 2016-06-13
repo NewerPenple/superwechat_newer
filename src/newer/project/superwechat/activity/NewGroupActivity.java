@@ -150,12 +150,15 @@ public class NewGroupActivity extends BaseActivity {
 				String groupName = groupNameEditText.getText().toString().trim();
 				String desc = introductionEditText.getText().toString();
 				Contact[] contacts = (Contact[])data.getSerializableExtra("newmembers");
+				String[] hxMembers = null;
 				String[] members = null;
 				String[] memberIds = null;
 				if (contacts != null) {
+					hxMembers = new String[contacts.length];
 					members = new String[contacts.length];
 					memberIds = new String[contacts.length];
 					for (int i = 0; i < contacts.length; i++) {
+						hxMembers[i] = contacts[i].getMContactCname();
 						members[i] = contacts[i].getMContactCname() + ",";
 						memberIds[i] = contacts[i].getMContactId() + ",";
 					}
@@ -165,12 +168,13 @@ public class NewGroupActivity extends BaseActivity {
 					if(checkBox.isChecked()){
 						//创建公开群，此种方式创建的群，可以自由加入
 						//创建公开群，此种方式创建的群，用户需要申请，等群主同意后才能加入此群
-						emGroup = EMGroupManager.getInstance().createPublicGroup(groupName, desc, members, true,200);
-					}else{
+						emGroup = EMGroupManager.getInstance().createPublicGroup(groupName, desc, hxMembers, true,200);
+					}else {
 						//创建不公开群
-						emGroup = EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members, memberCheckbox.isChecked(),200);
+						emGroup = EMGroupManager.getInstance().createPrivateGroup(groupName, desc, hxMembers, memberCheckbox.isChecked(), 200);
 					}
 					String hxid = emGroup.getGroupId();
+					Log.i("my", "is public = "+emGroup.isPublic());
 					createMNewGroup(hxid, groupName, desc, members, memberIds);
 					runOnUiThread(new Runnable() {
 						public void run() {

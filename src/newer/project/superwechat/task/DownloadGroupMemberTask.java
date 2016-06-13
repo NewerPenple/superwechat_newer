@@ -2,6 +2,7 @@ package newer.project.superwechat.task;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.android.volley.Response;
 
@@ -45,14 +46,22 @@ public class DownloadGroupMemberTask extends BaseActivity {
     private Response.Listener<Member[]> responseDownloadAllGroupTask() {
         return new Response.Listener<Member[]>() {
             @Override
-            public void onResponse(Member[] menbers) {
-                if (menbers != null) {
-                    ArrayList<Member> list = Utils.array2List(menbers);
+            public void onResponse(Member[] members) {
+                if (members != null) {
+                    ArrayList<Member> list = Utils.array2List(members);
                     HashMap<String, ArrayList<Member>> groupMembers = SuperWeChatApplication.getInstance().getGroupMembers();
                     ArrayList<Member> memberList = groupMembers.get(hxid);
-                    memberList.clear();
-                    memberList.addAll(list);
+                    if (memberList != null) {
+                        memberList.clear();
+                        memberList.addAll(list);
+                        Log.i("my", TAG + memberList.size());
+                    } else {
+                        Log.i("my", TAG + " put memberList");
+                        groupMembers.put(hxid, list);
+                    }
                     context.sendStickyBroadcast(new Intent("update_group_member_list"));
+                } else {
+                    Log.i("my", TAG + "members is null");
                 }
             }
         };

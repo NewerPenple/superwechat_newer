@@ -548,7 +548,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 					OkHttpUtils2<Contact> utils = new OkHttpUtils2<Contact>();
 					utils.url(SuperWeChatApplication.SERVER_ROOT)
 							.addParam(I.KEY_REQUEST,I.REQUEST_ADD_CONTACT)
-							.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+							.addParam(I.Contact.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
 							.addParam(I.Contact.CU_NAME,userName)
 							.targetClass(Contact.class)
 							.execute(new OkHttpUtils2.OnCompleteListener<Contact>() {
@@ -566,7 +566,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 
 								@Override
 								public void onError(String error) {
-
+									Log.i("my", "onError "+error);
 								}
 							});
 				}

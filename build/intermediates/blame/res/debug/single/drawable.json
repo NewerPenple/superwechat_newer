@@ -4,12 +4,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\appitem_del_btn.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_blue_selector.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_blue_selector.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_green_normal_shape.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_green_normal_shape.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_blue_selector.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_blue_selector.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley_add_btn.xml",
@@ -24,12 +24,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\main_bottom_item_bg.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_normal_shape.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\button_normal_shape.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\recording_text_hint_bg.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\recording_text_hint_bg.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_normal_shape.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\button_normal_shape.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_bg_gray_selector.xml",
@@ -84,12 +84,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\msg_state_failed_resend.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_green_pressed_shape.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_green_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\red_circle.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\red_circle.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_green_pressed_shape.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_green_pressed_shape.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\call_hangup_bg.xml",
@@ -120,52 +120,52 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\smiley_minus_btn.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_login_bg.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\button_login_bg.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chatting_setmode_keyboard_btn.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chatting_setmode_keyboard_btn.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_login_bg.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\button_login_bg.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\mm_listitem.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\mm_listitem.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_takepic_selector.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_takepic_selector.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector_shape.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\button_selector_shape.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\mm_title_act_btn.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\mm_title_act_btn.xml"
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_takepic_selector.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_takepic_selector.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_video_selector.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_video_selector.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_setting_bg.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\tab_setting_bg.xml"
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\mm_title_act_btn.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\mm_title_act_btn.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_send_btn_selector.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_send_btn_selector.xml"
     },
     {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_setting_bg.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\tab_setting_bg.xml"
+    },
+    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\sidebar_background_pressed.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\sidebar_background_pressed.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_logout_normal_shape.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_logout_normal_shape.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\camera_switch_selector.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\camera_switch_selector.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_logout_normal_shape.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_logout_normal_shape.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel_bj.xml",
@@ -200,12 +200,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\mm_listitem_grey.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\nickename_input_bg.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\nickename_input_bg.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_edit.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_edit.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\nickename_input_bg.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\nickename_input_bg.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel_normal_shape.xml",
@@ -240,12 +240,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_green_selector.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\call_answer_bg.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\call_answer_bg.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_location_selector.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\chat_location_selector.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\call_answer_bg.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\call_answer_bg.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\chatto_bg.xml",
@@ -256,12 +256,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_white_normal_shape.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gray_normal_shape.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_gray_normal_shape.xml"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_bottom_selector.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_bottom_selector.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gray_normal_shape.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_gray_normal_shape.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_white_pressed_shape.xml",
@@ -272,12 +272,16 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\timestampe_bg.xml"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel_pressed_shape.xml",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_cancel_pressed_shape.xml"
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_pop_avatar.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\selector_pop_avatar.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_logout_pressed_shape.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_logout_pressed_shape.xml"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel_pressed_shape.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable\\btn_cancel_pressed_shape.xml"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable\\button_bg.xml",

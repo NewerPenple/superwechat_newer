@@ -56,7 +56,7 @@ public class DownloadPublicGroupTask extends BaseActivity {
                     ArrayList<Group> list = Utils.array2List(groups);
                     publicGroupList.clear();
                     publicGroupList.addAll(list);
-                    sendStickyBroadcast(new Intent("update_public_group_list"));
+                    context.sendStickyBroadcast(new Intent("update_public_group_list"));
                 }
             }
         };

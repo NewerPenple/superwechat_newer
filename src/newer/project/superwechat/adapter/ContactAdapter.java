@@ -226,8 +226,8 @@ public class ContactAdapter extends BaseAdapter implements SectionIndexer{
 				for(int i=0;i<count;i++){
 					final Contact user = mOriginalList.get(i);
 					String username = user.getMContactCname();
-					
-					if(username.startsWith(prefixString)){
+					String nick = UserUtils.hanziToPinyin(user.getMUserNick());
+					if(username.contains(prefixString) || nick.contains(prefixString)){
 						newValues.add(user);
 					}
 					else{

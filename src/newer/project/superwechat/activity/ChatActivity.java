@@ -102,6 +102,7 @@ import newer.project.superwechat.adapter.MessageAdapter;
 import newer.project.superwechat.adapter.VoicePlayClickListener;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.applib.model.GroupRemoveListener;
+import newer.project.superwechat.bean.Group;
 import newer.project.superwechat.bean.Member;
 import newer.project.superwechat.domain.RobotUser;
 import newer.project.superwechat.task.DownloadGroupMemberTask;
@@ -208,8 +209,9 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		}
 	};
 	public EMGroup group;
-	public EMChatRoom room;
 	public boolean isRobot;
+	public Group mGroup;
+	public EMChatRoom room;
 	ArrayList<Member> members;
 	GroupMemberChangedReceiver receiver;
 	
@@ -411,7 +413,7 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 			findViewById(R.id.container_voice_call).setVisibility(View.GONE);
 			findViewById(R.id.container_video_call).setVisibility(View.GONE);
 			toChatUsername = getIntent().getStringExtra("groupId");
-
+			Log.i("my", TAG + toChatUsername);
 			if(chatType == CHATTYPE_GROUP){
 			    onGroupViewCreation();
 			}else{ 
@@ -523,8 +525,22 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		members = SuperWeChatApplication.getInstance().getGroupMembers().get(toChatUsername);
 		if (members == null) {
 			members = new ArrayList<Member>();
+			Log.i("my", TAG + " DownloadGroupMemberTask");
 			new DownloadGroupMemberTask(ChatActivity.this, toChatUsername).execute();
 		}
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				ArrayList<Group> groups = SuperWeChatApplication.getInstance().getGroupList();
+				for (Group group : groups) {
+					if (group.getMGroupHxid() == toChatUsername) {
+						mGroup = group;
+						break;
+					}
+				}
+			}
+		});
+
 		group = EMGroupManager.getInstance().getGroup(toChatUsername);
 
 		if (group != null) {
@@ -1256,14 +1272,18 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 	 * @param view
 	 */
 	public void toGroupDetails(View view) {
+		Log.i("my", TAG + toChatUsername);
 		if (room == null && group == null) {
 			Toast.makeText(getApplicationContext(), R.string.gorup_not_found, 0).show();
 			return;
 		}
-		if(chatType == CHATTYPE_GROUP){
-			startActivityForResult((new Intent(this, GroupDetailsActivity.class).putExtra("groupId", toChatUsername)),
-					REQUEST_CODE_GROUP_DETAIL);
-		}else{
+		if (chatType == CHATTYPE_GROUP) {
+			Log.i("my", TAG + " to group details");
+			startActivityForResult((new Intent(this, GroupDetailsActivity.class)
+					.putExtra("groupId", toChatUsername)
+					.putExtra("mGroup", mGroup))
+					, REQUEST_CODE_GROUP_DETAIL);
+		} else {
 			startActivityForResult((new Intent(this, ChatRoomDetailsActivity.class).putExtra("roomId", toChatUsername)),
 					REQUEST_CODE_GROUP_DETAIL);
 		}

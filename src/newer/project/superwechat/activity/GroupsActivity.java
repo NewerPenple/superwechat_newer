@@ -137,7 +137,7 @@ public class GroupsActivity extends BaseActivity {
 					Intent intent = new Intent(GroupsActivity.this, ChatActivity.class);
 					// it is group chat
 					intent.putExtra("chatType", ChatActivity.CHATTYPE_GROUP);
-					intent.putExtra("groupId", groupAdapter.getItem(position - 3).getMGroupName());
+					intent.putExtra("groupId", groupAdapter.getItem(position - 3).getMGroupHxid());
 					startActivityForResult(intent, 0);
 				}
 			}
@@ -154,6 +154,7 @@ public class GroupsActivity extends BaseActivity {
 			}
 		});
 	}
+
 
 	private void initData() {
 		swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
@@ -237,6 +238,6 @@ public class GroupsActivity extends BaseActivity {
 	private void RegisterCroupChangedReceiver() {
 		receiver = new GroupChangedReceiver();
 		IntentFilter filter = new IntentFilter("update_group_list");
-		GroupsActivity.this.registerReceiver(receiver, filter);
+		registerReceiver(receiver, filter);
 	}
 }

@@ -162,6 +162,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/layout_updateAvatar"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_marginLeft="20dp"

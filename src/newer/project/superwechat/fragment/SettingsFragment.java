@@ -371,7 +371,7 @@ public class SettingsFragment extends Fragment implements OnClickListener {
 						instance.getGroupList().clear();
 						instance.getPublicGroupList().clear();
 						// 重新显示登陆页面
-								((MainActivity) getActivity()).finish();
+						((MainActivity) getActivity()).finish();
 						startActivity(new Intent(getActivity(), LoginActivity.class));
 						
 					}

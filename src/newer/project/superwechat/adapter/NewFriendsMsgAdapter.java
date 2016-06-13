@@ -31,16 +31,19 @@ import android.widget.Toast;
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
+import com.easemob.exceptions.EaseMobException;
 
 import java.util.List;
 
 import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
+import newer.project.superwechat.bean.Group;
 import newer.project.superwechat.bean.User;
 import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.db.InviteMessgeDao;
 import newer.project.superwechat.domain.InviteMessage;
+import newer.project.superwechat.task.DownloadGroupMemberTask;
 import newer.project.superwechat.utils.UserUtils;
 
 public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
@@ -172,26 +175,66 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 			public void run() {
 				// 调用sdk的同意方法
 				try {
-					if(msg.getGroupId() == null) //同意好友请求
+					if (msg.getGroupId() == null) { //同意好友请求
 						EMChatManager.getInstance().acceptInvitation(msg.getFrom());
-					else //同意加群申请
-					    EMGroupManager.getInstance().acceptApplication(msg.getFrom(), msg.getGroupId());
-					((Activity) context).runOnUiThread(new Runnable() {
+						((Activity) context).runOnUiThread(new Runnable() {
 
-						@Override
-						public void run() {
-							pd.dismiss();
-							button.setText(str2);
-							msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
-							// 更新db
-							ContentValues values = new ContentValues();
-							values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
-							messgeDao.updateMessage(msg.getId(), values);
-							button.setBackgroundDrawable(null);
-							button.setEnabled(false);
+							@Override
+							public void run() {
+								pd.dismiss();
+								button.setText(str2);
+								msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
+								// 更新db
+								ContentValues values = new ContentValues();
+								values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
+								messgeDao.updateMessage(msg.getId(), values);
+								button.setBackgroundDrawable(null);
+								button.setEnabled(false);
 
-						}
-					});
+							}
+						});
+					} else { //同意加群申请
+						OkHttpUtils2<Group> utils = new OkHttpUtils2<Group>();
+						utils.url(SuperWeChatApplication.SERVER_ROOT)
+								.addParam(I.KEY_REQUEST,I.REQUEST_ADD_GROUP_MEMBER_BY_USERNAME)
+								.addParam(I.Member.USER_NAME,msg.getFrom())
+								.addParam(I.Member.GROUP_HX_ID,msg.getGroupId())
+								.targetClass(Group.class)
+								.execute(new OkHttpUtils2.OnCompleteListener<Group>() {
+									@Override
+									public void onSuccess(Group result) {
+										if (result != null) {
+											new DownloadGroupMemberTask(context, result.getMGroupHxid()).execute();
+											try {
+												EMGroupManager.getInstance().acceptApplication(msg.getFrom(), msg.getGroupId());
+												((Activity) context).runOnUiThread(new Runnable() {
+
+													@Override
+													public void run() {
+														pd.dismiss();
+														button.setText(str2);
+														msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
+														// 更新db
+														ContentValues values = new ContentValues();
+														values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
+														messgeDao.updateMessage(msg.getId(), values);
+														button.setBackgroundDrawable(null);
+														button.setEnabled(false);
+
+													}
+												});
+											} catch (EaseMobException e) {
+												e.printStackTrace();
+											}
+										}
+									}
+
+									@Override
+									public void onError(String error) {
+
+									}
+								});
+					}
 				} catch (final Exception e) {
 					((Activity) context).runOnUiThread(new Runnable() {
 

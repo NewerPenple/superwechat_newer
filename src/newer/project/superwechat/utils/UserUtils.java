@@ -78,6 +78,12 @@ public class UserUtils {
 		niv.setErrorImageResId(R.drawable.default_avatar);
 	}
 
+	public static void setUserBeanAvatar(User user, NetworkImageView niv) {
+		if (user != null && user.getMUserName() != null) {
+			setUserAvatar(getAvatarPath(user.getMUserName()), niv);
+		}
+	}
+
 	public static String getAvatarPath(String username) {
 		if (username == null || username.isEmpty()) {
 			return null;

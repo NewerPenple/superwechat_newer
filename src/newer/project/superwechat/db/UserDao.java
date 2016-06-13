@@ -8,9 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import newer.project.superwechat.I;
 import newer.project.superwechat.bean.User;
+import newer.project.superwechat.utils.MD5;
 
 public class UserDao extends SQLiteOpenHelper{
     private static final String USER_NAME = "user";
+
+    public UserDao(Context context) {
+        super(context, "user.db", null, 1);
+    }
 
     public UserDao(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, "user.db", factory, version);
@@ -18,13 +23,12 @@ public class UserDao extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql = "DROP TABLE IF EXISTS " + I.User.TABLE_NAME +
-                " CREATE TABLE " + I.User.TABLE_NAME +
-                I.User.USER_ID + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                I.User.USER_NAME + " TEXT NOT NULL," +
+        String sql = "CREATE TABLE IF NOT EXISTS " + I.User.TABLE_NAME +"("+
+                I.User.USER_ID +" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                I.User.USER_NAME +" TEXT NOT NULL," +
                 I.User.PASSWORD + " TEXT NOT NULL," +
-                I.User.NICK + "  TEXT NOT NULL," +
-                I.User.UN_READ_MSG_COUNT + "  INTEGER DEFAULT 0);";
+                I.User.NICK + " TEXT NOT NULL," +
+                I.User.UN_READ_MSG_COUNT + " INTEGER DEFAULT 0);";
         sqLiteDatabase.execSQL(sql);
     }
 
@@ -38,7 +42,7 @@ public class UserDao extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(I.User.USER_ID, user.getMUserId());
         values.put(I.User.USER_NAME, user.getMUserName());
-        values.put(I.User.PASSWORD, user.getMUserPassword());
+        values.put(I.User.PASSWORD, MD5.getData(user.getMUserPassword()));
         values.put(I.User.NICK, user.getMUserNick());
         values.put(I.User.UN_READ_MSG_COUNT, user.getMUserUnreadMsgCount());
         long affect = db.insert(I.User.TABLE_NAME, null, values);
@@ -59,7 +63,7 @@ public class UserDao extends SQLiteOpenHelper{
 
     public User findUserByUserName(String userName) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(I.User.TABLE_NAME, new String[]{"*"}, I.User.TABLE_NAME + " = ?", new String[]{userName}, null, null, null);
+        Cursor cursor = db.query(I.User.TABLE_NAME, new String[]{"*"}, I.User.USER_NAME + " = ?", new String[]{userName}, null, null, null);
         if (cursor.moveToNext()) {
             User user = new User();
             user.setMUserId(cursor.getInt(cursor.getColumnIndex(I.User.USER_ID)));

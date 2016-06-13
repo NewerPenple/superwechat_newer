@@ -23,6 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.easemob.chat.EMGroupManager;
+import com.easemob.exceptions.EaseMobException;
 
 import newer.project.superwechat.I;
 import newer.project.superwechat.R;
@@ -130,11 +132,11 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 		pd.setMessage(st1);
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
-		/*new Thread(new Runnable() {
+		new Thread(new Runnable() {
 			public void run() {
 				try {
 					//如果是membersOnly的群，需要申请加入，不能直接join
-					if(group.isMembersOnly()){
+					if(group.getMGroupAllowInvites()){
 					    EMGroupManager.getInstance().applyJoinToGroup(groupid, st2);
 					}else{
 					    EMGroupManager.getInstance().joinGroup(groupid);
@@ -142,7 +144,7 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 					runOnUiThread(new Runnable() {
 						public void run() {
 							pd.dismiss();
-							if(group.isMembersOnly())
+							if(group.getMGroupAllowInvites())
 								Toast.makeText(GroupSimpleDetailActivity.this, st3, 0).show();
 							else
 								Toast.makeText(GroupSimpleDetailActivity.this, st4, 0).show();
@@ -159,7 +161,7 @@ public class GroupSimpleDetailActivity extends BaseActivity {
 					});
 				}
 			}
-		}).start();*/
+		}).start();
 	}
 	
      private void showGroupDetail() {

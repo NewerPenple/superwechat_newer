@@ -33,9 +33,9 @@ import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.SuperWeChatApplication;
 import newer.project.superwechat.bean.Message;
+import newer.project.superwechat.data.OkHttpUtils2;
 import newer.project.superwechat.listener.OnSetAvatarListener;
 import newer.project.superwechat.utils.ImageUtils;
-import newer.project.superwechat.utils.OkHttpUtils2;
 import newer.project.superwechat.utils.Utils;
 
 /**

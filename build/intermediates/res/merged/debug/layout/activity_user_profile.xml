@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/layout_user_profile"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eff2f6"
@@ -34,7 +36,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             >
-            <ImageView 
+            <com.android.volley.toolbox.NetworkImageView
                 android:id="@+id/user_head_avatar"
                 android:layout_width="60dip"
                 android:layout_height="60dip"

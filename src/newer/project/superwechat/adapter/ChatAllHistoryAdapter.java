@@ -43,11 +43,9 @@ import java.util.Map;
 
 import newer.project.superwechat.Constant;
 import newer.project.superwechat.DemoHXSDKHelper;
-import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.applib.controller.HXSDKHelper;
 import newer.project.superwechat.bean.Group;
-import newer.project.superwechat.data.RequestManager;
 import newer.project.superwechat.domain.RobotUser;
 import newer.project.superwechat.utils.DateUtils;
 import newer.project.superwechat.utils.SmileUtils;
@@ -58,8 +56,7 @@ import newer.project.superwechat.utils.UserUtils;
  * 
  */
 public class ChatAllHistoryAdapter extends ArrayAdapter<EMConversation> {
-
-	private static final String TAG = "ChatAllHistoryAdapter";
+	private static final String TAG = ChatAllHistoryAdapter.class.getName();
 	private LayoutInflater inflater;
 	private List<EMConversation> conversationList;
 	private List<EMConversation> copyConversationList;
@@ -103,10 +100,7 @@ public class ChatAllHistoryAdapter extends ArrayAdapter<EMConversation> {
 		String username = conversation.getUserName();
 		if (conversation.getType() == EMConversationType.GroupChat) {
 			// 群聊消息，显示群聊头像
-			String avatarUrl = I.REQUEST_DOWNLOAD_GROUP_AVATAR_URL + username;
-			holder.avatar.setDefaultImageResId(R.drawable.group_icon);
-			holder.avatar.setImageUrl(avatarUrl, RequestManager.getImageLoader());
-			holder.avatar.setErrorImageResId(R.drawable.group_icon);
+			UserUtils.setGroupAvatar(username, holder.avatar);
 			Group group = UserUtils.getGroupByHXID(username);
 			holder.name.setText(group != null ? group.getMGroupName() : username);
 		} else if(conversation.getType() == EMConversationType.ChatRoom){

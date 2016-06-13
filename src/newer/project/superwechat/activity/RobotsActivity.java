@@ -43,7 +43,7 @@ import com.easemob.chat.EMContact;
 
 import newer.project.superwechat.DemoHXSDKHelper;
 import newer.project.superwechat.R;
-import newer.project.superwechat.db.UserDao;
+import newer.project.superwechat.db.EMUserDao;
 import newer.project.superwechat.domain.RobotUser;
 import com.easemob.exceptions.EaseMobException;
 
@@ -133,7 +133,7 @@ public class RobotsActivity extends BaseActivity {
 						// 存入内存
 						((DemoHXSDKHelper) HXSDKHelper.getInstance()).setRobotList(mMap);
 						// 存入db
-						UserDao dao = new UserDao(RobotsActivity.this);
+						EMUserDao dao = new EMUserDao(RobotsActivity.this);
 						dao.saveRobotUser(robotList);
 						adapter.notifyDataSetChanged();
 					}

@@ -1,7 +1,15 @@
 [
     {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\pop_bg.9.png",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-mdpi\\pop_bg.9.png"
+    },
+    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\pop_bg_press.9.png",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-mdpi\\pop_bg_press.9.png"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\unread_count_bg.9.png",

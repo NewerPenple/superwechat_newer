@@ -184,6 +184,10 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\layout\\row_received_file.xml"
     },
     {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\popu_show_avatar.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\layout\\popu_show_avatar.xml"
+    },
+    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_big_image.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\layout\\activity_show_big_image.xml"
     },

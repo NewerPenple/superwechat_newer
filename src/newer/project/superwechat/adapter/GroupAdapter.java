@@ -35,10 +35,9 @@ import com.easemob.util.EMLog;
 import java.util.ArrayList;
 import java.util.List;
 
-import newer.project.superwechat.I;
 import newer.project.superwechat.R;
 import newer.project.superwechat.bean.Group;
-import newer.project.superwechat.data.RequestManager;
+import newer.project.superwechat.utils.UserUtils;
 
 public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 	private static final String TAG = GroupAdapter.class.getName();
@@ -50,7 +49,6 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 	private SparseIntArray positionOfSection;
 	private SparseIntArray sectionOfPosition;
 	private List<String> list;
-	private List<Group> groupList;
 	private List<Group> copyGroupList;
 	private MyFilter myFilter;
 	private boolean notiyfyByFilter;
@@ -62,6 +60,8 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 		addPublicGroup = context.getResources().getString(R.string.add_public_group_chat);
 		this.groups = new ArrayList<Group>();
 		this.groups.addAll(groups);
+		copyGroupList = new ArrayList<Group>();
+		copyGroupList.addAll(groups);
 	}
 
 	public void initList(ArrayList<Group> list) {
@@ -139,9 +139,7 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 			((TextView) convertView.findViewById(R.id.name)).setText(getItem(position - 3).getMGroupName());
 			NetworkImageView miv = ((NetworkImageView) convertView.findViewById(R.id.avatar));
 			String hxid = groups.get(position - 3).getMGroupHxid();
-			miv.setDefaultImageResId(R.drawable.group_icon);
-			miv.setImageUrl(I.REQUEST_DOWNLOAD_GROUP_AVATAR_URL + hxid, RequestManager.getImageLoader());
-			miv.setErrorImageResId(R.drawable.group_icon);
+			UserUtils.setGroupAvatar(hxid, miv);
 		}
 
 		return convertView;
@@ -228,9 +226,9 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 				final ArrayList<Group> newValues = new ArrayList<Group>();
 				for (int i = 0; i < count; i++) {
 					final Group group = mOriginalList.get(i);
-					String username = group.getMGroupName();
+					String username = UserUtils.hanziToPinyin(group.getMGroupName());
 
-					if (username.startsWith(prefixString)) {
+					if (username.contains(prefixString)) {
 						newValues.add(group);
 					} else {
 						final String[] words = username.split(" ");
@@ -254,8 +252,8 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 
 		@Override
 		protected synchronized void publishResults(CharSequence constraint, FilterResults results) {
-			groupList.clear();
-			groupList.addAll((List<Group>)results.values);
+			groups.clear();
+			groups.addAll((List<Group>)results.values);
 			EMLog.d(TAG, "publish contacts filter results size: " + results.count);
 			if (results.count > 0) {
 				notiyfyByFilter = true;
@@ -270,9 +268,11 @@ public class GroupAdapter extends BaseAdapter implements SectionIndexer {
 	@Override
 	public void notifyDataSetChanged() {
 		super.notifyDataSetChanged();
-		if(!notiyfyByFilter){
-			copyGroupList.clear();
-			copyGroupList.addAll(groupList);
+		if(!notiyfyByFilter) {
+			if (copyGroupList != null) {
+				copyGroupList.clear();
+				copyGroupList.addAll(groups);
+			}
 		}
 	}
 }
