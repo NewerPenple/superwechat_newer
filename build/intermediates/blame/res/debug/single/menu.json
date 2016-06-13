@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\menu\\category_child.xml",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\menu\\category_child.xml"
+    },
+    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\menu\\context_tab_contact.xml",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\menu\\context_tab_contact.xml"
     },

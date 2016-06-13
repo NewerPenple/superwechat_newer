@@ -2,11 +2,994 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <locale>zh-rCN</locale>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+        <config>
+          <theme>@android:style/Theme.Holo</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39ac56e1-1b41-4785-a995-258bf9644e3d" name="Default" comment="" />
+    <list default="true" id="e71cae09-225d-4cb3-b64b-ea5877bad302" name="Default" comment="修改包名，添加资源">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alipay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/alipay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/alipay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/alipay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/arrow2_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/arrow2_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/arrow2_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/arrow_order_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/arrow_order_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/back_nomal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/back_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/baidupay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/baidupay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/baidupay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/beecloud_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/beecloud_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/bg_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/bg_collect_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/bg_collect_out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_good.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/bg_share_nor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/bg_share_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/boutique_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/boutique_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/boutique_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/category256_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/category256_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/category_child.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/center_card_coupon1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/center_card_coupon2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/center_card_coupon3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/checkbox_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/checkbox_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/contactlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/del_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/divid_explist_group.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/divide_explist_child.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/divide_line_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_bg_check_box.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_bg_check_box_seletor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_help_cvv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_help_date.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_login_btn_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_check_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_check_disable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_check_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_pwdpay_next_gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_radio_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ebpay_pwdpay_radio_sel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_pwdpay_save_tip_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_sec_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ebpay_title_v_line.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/expand_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/expand_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_erweima.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_friends.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_fujin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_gouwu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/find_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_piaoliuping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/find_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_yaoyiyao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/find_youxi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/friends_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/goods_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/iconfont_pengyou.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/iconfont_pengyoufill.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/iconfont_wode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/iconfont_xinxi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/iconfont_xinxifill.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/logo_uidemo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_cart_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_cart_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_category_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_category_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_collect_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_collect_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_contact_list_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_contact_list_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_conversation_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_conversation_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_new_good_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_new_good_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_personal_center_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/menu_item_personal_center_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/nopic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/order_list1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/order_list2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/order_list3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/order_list4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/order_list5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/pull_push_arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/scan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/scan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxxhdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_auth_title_back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_back_arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_alipay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_bluetooth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_check_checked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_check_default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_douban.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_dropbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_evernote.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_facebookmessenger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_flickr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_foursquare.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_googleplus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_instagram.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_instapaper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_kaixin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_kakaostory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_kakaotalk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_laiwang.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_laiwangmoments.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_linkedin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_mingdao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_pinterest.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_pocket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_qq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_qzone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_renren.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_shortmessage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_sinaweibo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_tencentweibo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_tumblr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_vkontakte.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_wechat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_wechatfavorite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_wechatmoments.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_whatsapp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_yixin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_yixinmoments.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_oks_classic_youdao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ssdk_oks_ptr_ptr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ssdk_title_div.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tb_bg_actionbar.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tb_btn_login_orange_normal.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tb_icon_home_qrcode_gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tb_icon_home_qrcode_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tb_icon_more_msg_56.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tb_icon_more_msg_white_56.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tb_regiser_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/unionpay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/unionpay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/unionpay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/unionpay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_action_bar_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_action_bar_back_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bank_item_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bank_item_hover_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_banklogo_defult.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bg_input_error.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bg_input_normal.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bg_input_tip.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_black_point_in_pwd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bottom_1.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bottom_1_hover.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_bottom_1_none.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_broken_line.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_btn_default_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_btn_disable.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_btn_pressed_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_clear_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_clear_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dashed_shape_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dashed_shape_press.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_delete_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_delete_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dialog_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dialog_leftbtn_press.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dialog_rightbtn_press.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_dialog_singlebtn_press.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_indicator_arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/wallet_base_indicator_arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_info_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_loading_img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_loading_img_gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_neg_btn_normal.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_neg_btn_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_password_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_activity_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_banklist_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_close_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_logo_disable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_logo_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_submit_bg_disable.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_submit_bg_normal.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_submit_bg_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_pwdpay_title_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_refresh_loading_img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_refresh_loading_small_img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_result_fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_result_success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_result_success_benefit.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_six_no_bg_left.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_six_no_bg_midle.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_six_no_bg_right.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_tab_bar_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wallet_base_toast_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/wechat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/wechat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/wechat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/wechat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/AddContactActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/AlertDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/ApiParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Avatar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/BaiduMapActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/BaseActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/BitmapLruCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/BitmapUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/BlacklistActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/CallActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/receiver/CallReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/CameraHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ChatActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ChatAllHistoryAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatAllHistoryFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ChatHistoryAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatHistoryFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ChatRoomActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ChatRoomAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ChatRoomDetailsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/CommonUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/Compat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/Constant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Contact.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ContactAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ContactlistFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ContextMenu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/D.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/DbOpenHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/model/DefaultHXSDKModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/DemoDBManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/DemoHXSDKHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/DemoHXSDKModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/DiagnoseActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadAllGroupTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadContactListTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadGroupMemberTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadImageTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadPublicGroupTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/domain/EMUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/EMUserDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/EditActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ExitGroupDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/ExpandGridView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ExpressionAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ExpressionPagerAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/FileUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ForwardMessageActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/FragmentUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/receiver/GCMPushBroadCast.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Group.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/GroupAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/GroupBlacklistActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/GroupDetailsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/GroupPickContactsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/model/GroupRemoveListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/GroupSimpleDetailActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/GroupsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/GsonRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/model/HXNotifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/utils/HXPreferenceUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/controller/HXSDKHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/applib/model/HXSDKModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/HttpUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/I.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/I.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/IPhotoView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/video/util/ImageCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ImageGridActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ImageGridFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/video/util/ImageResizer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/video/util/ImageWorker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/domain/InviteMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/InviteMessgeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/LoadImageTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/LoadLocalBigImgTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/LoadVideoImageTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Location.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/MD5.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Member.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/Message.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/MessageAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/MultipartRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/MyChronometer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/NewFriendsMsgActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewFriendsMsgAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/NewGroupActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/OfflinePushNickActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/listener/OnSetAvatarListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/parse/ParseManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/PasteEditText.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/PhotoView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/PhotoViewAttacher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PickContactNoCheckboxActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/PreferenceUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PublicChatRoomsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PublicGroupsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PublicGroupsSeachActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RecorderVideoActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/video/util/RecyclingBitmapDrawable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/RecyclingImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RegisterActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/RequestManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/domain/RobotUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RobotsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/SDK16.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/ScrollerProxy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/SettingsFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ShowBigImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ShowNormalFileActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ShowVideoActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/Sidebar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/SmileUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/SuperWeChatApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/UserDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/UserProfileActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/UserProfileManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/video/util/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/photoview/VersionedGestureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/VideoCallActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/domain/VideoEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/VoiceCallActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/VoicePlayClickListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/arrays.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/bd_wallet_bool.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/bd_wallet_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/btn_list_item_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/cart_hint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/category_child.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/checkbox_style.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ebpay_bg_checkbox_seletor.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ebpay_gray_line.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ebpay_list_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/ebpay_slide_from_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/ebpay_slide_from_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/ebpay_slide_to_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/ebpay_slide_to_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ebpay_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ebpay_styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ebpay_textview_bg_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ebpay_title_btn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_boutique.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_cart.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_category.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_new_good.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_person_center.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_wechat_centact.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/menu_wechat_msg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/orange_radius.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_menu_item_boutique.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_menu_item_cart.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_menu_item_category.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_menu_item_new_good.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_menu_item_personal_center.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_return_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_share_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ssdk_instapaper_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ssdk_oks_classic_platform_cell_back.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ssdk_oks_classic_progressbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ssdk_oks_color_drawables.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ssdk_oks_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ssdk_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/tab_find.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_bank_item_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_bg_clear_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_btn.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_btn_switch.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/wallet_base_click_text_color.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/wallet_base_colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_corners_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dash_btn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dashed_shape_normal.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dashed_shape_press.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_delete.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dialog_btn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/wallet_base_dialog_btntext_color_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dialog_leftbtn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_dialog_rightbtn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/wallet_base_dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_dismiss_dialog_anim.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_info_btn_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_loading.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_loading_gray.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_menu_item_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_neg_btn_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_progressbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_pwdpay_channel_activity_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_pwdpay_close_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_pwdpay_middle_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_pwdpay_submit_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_refresh_loading.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_refresh_loading_small.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_select_bank_item_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_service_squared_item_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_shape_scrollbar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_show_dialog_anim.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_slide_from_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_slide_from_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_slide_to_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/anim/wallet_base_slide_to_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/wallet_base_strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/wallet_base_styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wallet_base_title_back_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/资源.txt" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\Constant.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\DemoHXSDKHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\DemoHXSDKModel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\I.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\SuperWeChatApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\UserProfileManager.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\AddContactActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\AlertDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\BaiduMapActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\BaseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\BlacklistActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\CallActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ChatActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ChatRoomActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ChatRoomDetailsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ContextMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\DiagnoseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\EditActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ExitGroupDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ForwardMessageActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\GroupBlacklistActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\GroupDetailsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\GroupPickContactsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\GroupSimpleDetailActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\GroupsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ImageGridActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\LoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\NewFriendsMsgActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\NewGroupActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\OfflinePushNickActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\PickContactNoCheckboxActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\PublicChatRoomsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\PublicGroupsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\PublicGroupsSeachActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\RecorderVideoActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\RegisterActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\RobotsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ShowBigImage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ShowNormalFileActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\ShowVideoActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\SplashActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\UserProfileActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\VideoCallActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\activity\VoiceCallActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ChatAllHistoryAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ChatHistoryAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ChatRoomAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ContactAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ExpressionAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\ExpressionPagerAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\GroupAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\MessageAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\NewFriendsMsgAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\adapter\VoicePlayClickListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\controller\HXSDKHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\model\DefaultHXSDKModel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\model\GroupRemoveListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\model\HXNotifier.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\model\HXSDKModel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\applib\utils\HXPreferenceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Avatar.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Contact.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Group.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Location.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Member.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\Message.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\bean\User.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\ApiParams.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\BitmapLruCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\GsonRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\MultipartRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\OkHttpUtils2.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\data\RequestManager.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\db\DbOpenHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\db\DemoDBManager.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\db\EMUserDao.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\db\InviteMessgeDao.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\db\UserDao.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\domain\EMUser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\domain\InviteMessage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\domain\RobotUser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\domain\VideoEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\fragment\ChatAllHistoryFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\fragment\ChatHistoryFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\fragment\ContactlistFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\fragment\ImageGridFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\fragment\SettingsFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\listener\OnSetAvatarListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\parse\ParseManager.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\receiver\CallReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\receiver\GCMPushBroadCast.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\DownloadAllGroupTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\DownloadContactListTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\DownloadGroupMemberTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\DownloadImageTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\DownloadPublicGroupTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\LoadImageTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\LoadLocalBigImgTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\task\LoadVideoImageTask.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\BitmapUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\CameraHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\CommonUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\DateUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\HttpUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\ImageCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\ImageLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\ImageUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\MD5.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\PreferenceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\SmileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\UserUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\utils\Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\video\util\ImageCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\video\util\ImageResizer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\video\util\ImageWorker.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\video\util\RecyclingBitmapDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\video\util\Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\ExpandGridView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\MyChronometer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\PasteEditText.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\RecyclingImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\Sidebar.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\Compat.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\IPhotoView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\PhotoView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\PhotoViewAttacher.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\SDK16.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\ScrollerProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\superwechat\widget\photoview\VersionedGestureDetector.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi-v4/logo_uidemo.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi-v4/logo_uidemo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/logo_uidemo.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/logo_uidemo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi-v4/splash.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi-v4/splash.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/splash.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/splash.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-hdpi-v4/tab_unread_bg.9.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-hdpi-v4/tab_unread_bg.9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tab_unread_bg.9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tab_unread_bg.9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_chat.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_chat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_chat.xml" afterPath="$PROJECT_DIR$/res/layout/activity_chat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_details.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_group_details.xml" afterPath="$PROJECT_DIR$/res/layout/activity_group_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_pick_contacts.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_group_pick_contacts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_group_pick_contacts.xml" afterPath="$PROJECT_DIR$/res/layout/activity_group_pick_contacts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_pick_contact_no_checkbox.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_pick_contact_no_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_pick_contact_no_checkbox.xml" afterPath="$PROJECT_DIR$/res/layout/activity_pick_contact_no_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_show_big_image.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_show_big_image.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_show_big_image.xml" afterPath="$PROJECT_DIR$/res/layout/activity_show_big_image.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_video_call.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_video_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_video_call.xml" afterPath="$PROJECT_DIR$/res/layout/activity_video_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_voice_call.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_voice_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_voice_call.xml" afterPath="$PROJECT_DIR$/res/layout/activity_voice_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/anim.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/anim.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/attrs.xml" afterPath="$PROJECT_DIR$/res/values/attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/choose_griditem.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/choose_griditem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/choose_griditem.xml" afterPath="$PROJECT_DIR$/res/layout/choose_griditem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/color.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-nodpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-nodpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/expression_gridview.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/expression_gridview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/expression_gridview.xml" afterPath="$PROJECT_DIR$/res/layout/expression_gridview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/fragment_contact_list.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/fragment_contact_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_contact_list.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_contact_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/color/main_botton_text_color.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/color/main_botton_text_color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/color/main_botton_text_color.xml" afterPath="$PROJECT_DIR$/res/color/main_botton_text_color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/tab_chat_bg.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/tab_chat_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/tab_chat_bg.xml" afterPath="$PROJECT_DIR$/res/drawable/tab_chat_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/tab_contact_list_bg.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/tab_contact_list_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/tab_contact_list_bg.xml" afterPath="$PROJECT_DIR$/res/drawable/tab_contact_list_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/timestampe_bg.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable/timestampe_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/timestampe_bg.xml" afterPath="$PROJECT_DIR$/res/drawable/timestampe_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-ru-rRU.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-ru-rRU.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="superwechat.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,50 +1016,115 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GroupDetailsActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/activity/GroupDetailsActivity.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68793505">
-              <caret line="625" column="46" selection-start-line="625" selection-start-column="46" selection-end-line="625" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5831325">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
               <folding>
-                <element signature="e#4429#4470#0" expanded="true" />
-                <element signature="e#7118#7164#0" expanded="true" />
-                <element signature="e#7181#7238#0" expanded="true" />
-                <element signature="e#7255#7313#0" expanded="true" />
-                <element signature="e#7330#7388#0" expanded="true" />
-                <element signature="e#7405#7464#0" expanded="true" />
-                <element signature="e#7487#7554#0" expanded="true" />
-                <element signature="e#7577#7647#0" expanded="true" />
-                <element signature="e#7664#7722#0" expanded="true" />
-                <element signature="e#7745#7799#0" expanded="true" />
-                <element signature="e#7829#7891#0" expanded="true" />
-                <element signature="e#11381#11423#0" expanded="true" />
-                <element signature="e#11766#11828#0" expanded="true" />
-                <element signature="e#12460#12742#0" expanded="true" />
-                <element signature="e#12741#12742#0" expanded="true" />
-                <element signature="e#13385#13447#0" expanded="true" />
-                <element signature="e#13598#13659#0" expanded="true" />
-                <element signature="e#14431#14488#0" expanded="true" />
-                <element signature="e#15305#15350#0" expanded="true" />
-                <element signature="e#15373#15423#0" expanded="true" />
-                <element signature="e#17016#17067#0" expanded="true" />
-                <element signature="e#17092#17145#0" expanded="true" />
-                <element signature="e#18650#18703#0" expanded="true" />
-                <element signature="e#21280#21343#0" expanded="true" />
-                <element signature="e#21376#21554#0" expanded="true" />
-                <element signature="e#21553#21554#0" expanded="true" />
-                <element signature="e#22349#22408#0" expanded="true" />
-                <element signature="e#23525#23577#0" expanded="true" />
-                <element signature="e#23603#23649#0" expanded="true" />
-                <element signature="e#23675#23723#0" expanded="true" />
-                <element signature="e#23749#23803#0" expanded="true" />
-                <element signature="e#24257#24296#0" expanded="true" />
+                <element signature="e#952#970#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.8">
+              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orange_radius.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/orange_radius.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.466667">
+              <caret line="234" column="8" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ebpay_styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/ebpay_styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.266666">
+              <caret line="14" column="97" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_botton_text_color.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/color/main_botton_text_color.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -672,7 +1720,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="D:\Project\superwechat\superwechat" value="1464167913403" />
+        <entry key="D:\Project\superwechat\superwechat" value="1465803554693" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -938,7 +1986,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/newer/project/superwechat/activity/GroupDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
       </list>
     </option>
   </component>
@@ -963,11 +2015,11 @@
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
+      <flattenPackages ProjectPane="false" />
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -975,6 +2027,17 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1007,7 +2070,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
+              <option name="myItemId" value="newer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulicenter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1021,31 +2092,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="superwechat" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1053,6 +2123,8 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_4_API_23" />
   </component>
   <component name="RunManager" selected="Android Application.superwechat">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1074,6 +2146,26 @@
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1114,6 +2206,11 @@
         <option name="Make" enabled="false" />
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -1191,95 +2288,144 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39ac56e1-1b41-4785-a995-258bf9644e3d" name="Default" comment="" />
-      <created>1465787712499</created>
+      <changelist id="e71cae09-225d-4cb3-b64b-ea5877bad302" name="Default" comment="" />
+      <created>1465803248489</created>
       <option name="number" value="Default" />
-      <updated>1465787712499</updated>
+      <updated>1465803248489</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959402" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改包名，添加资源" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改包名，添加资源" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/newer/project/superwechat/activity/GroupDetailsActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/color/main_botton_text_color.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68793505">
-          <caret line="625" column="46" selection-start-line="625" selection-start-column="46" selection-end-line="625" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/orange_radius.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.466667">
+          <caret line="234" column="8" selection-start-line="234" selection-start-column="8" selection-end-line="234" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/ebpay_styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.266666">
+          <caret line="14" column="97" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.8">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5831325">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding>
-            <element signature="e#4429#4470#0" expanded="true" />
-            <element signature="e#7118#7164#0" expanded="true" />
-            <element signature="e#7181#7238#0" expanded="true" />
-            <element signature="e#7255#7313#0" expanded="true" />
-            <element signature="e#7330#7388#0" expanded="true" />
-            <element signature="e#7405#7464#0" expanded="true" />
-            <element signature="e#7487#7554#0" expanded="true" />
-            <element signature="e#7577#7647#0" expanded="true" />
-            <element signature="e#7664#7722#0" expanded="true" />
-            <element signature="e#7745#7799#0" expanded="true" />
-            <element signature="e#7829#7891#0" expanded="true" />
-            <element signature="e#11381#11423#0" expanded="true" />
-            <element signature="e#11766#11828#0" expanded="true" />
-            <element signature="e#12460#12742#0" expanded="true" />
-            <element signature="e#12741#12742#0" expanded="true" />
-            <element signature="e#13385#13447#0" expanded="true" />
-            <element signature="e#13598#13659#0" expanded="true" />
-            <element signature="e#14431#14488#0" expanded="true" />
-            <element signature="e#15305#15350#0" expanded="true" />
-            <element signature="e#15373#15423#0" expanded="true" />
-            <element signature="e#17016#17067#0" expanded="true" />
-            <element signature="e#17092#17145#0" expanded="true" />
-            <element signature="e#18650#18703#0" expanded="true" />
-            <element signature="e#21280#21343#0" expanded="true" />
-            <element signature="e#21376#21554#0" expanded="true" />
-            <element signature="e#21553#21554#0" expanded="true" />
-            <element signature="e#22349#22408#0" expanded="true" />
-            <element signature="e#23525#23577#0" expanded="true" />
-            <element signature="e#23603#23649#0" expanded="true" />
-            <element signature="e#23675#23723#0" expanded="true" />
-            <element signature="e#23749#23803#0" expanded="true" />
-            <element signature="e#24257#24296#0" expanded="true" />
+            <element signature="e#952#970#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

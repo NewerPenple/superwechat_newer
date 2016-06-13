@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="newer.project.superwechat.test">
+    package="newer.project.fulicenter.test">
 
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="newer.project.superwechat"
+                     android:targetPackage="newer.project.fulicenter"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for newer.project.superwechat"/>
+                     android:label="Tests for newer.project.fulicenter"/>
 </manifest>
