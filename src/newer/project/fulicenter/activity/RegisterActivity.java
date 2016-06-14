@@ -73,9 +73,20 @@ public class RegisterActivity extends BaseActivity {
 
 	/** 设置监听器 */
 	private void setListener() {
-		setOnLoginListener();
+//		setOnLoginListener();
 		setOnRegisterListener();
 		setAvatarListener();
+		setBackListener();
+	}
+
+	/** 设置返回按钮监听器，返回主界面 */
+	private void setBackListener() {
+		findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				back();
+			}
+		});
 	}
 
 	/** 点击选取头像布局，给两个选取头像方法的按钮设置选取头像监听器 */
@@ -90,7 +101,7 @@ public class RegisterActivity extends BaseActivity {
 
 	/** 设置注册按钮监听器 */
 	private void setOnRegisterListener() {
-		findViewById(R.id.btn_lRegister_register).setOnClickListener(new View.OnClickListener() {
+		findViewById(R.id.btn_register).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				register();
@@ -99,14 +110,14 @@ public class RegisterActivity extends BaseActivity {
 	}
 
 	/** 设置登录按钮监听器，返回登录界面 */
-	private void setOnLoginListener() {
+	/*private void setOnLoginListener() {
 		findViewById(R.id.btn_lRegister_login).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				back();
 			}
 		});
-	}
+	}*/
 
 	/** 设置暂存头像名，并返回 */
 	public String getAvatarName() {
