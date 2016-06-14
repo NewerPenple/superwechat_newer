@@ -104,6 +104,16 @@ public class LoginActivity extends BaseActivity {
 		setOnLoginListener();
 		setOnRegisterListener();
 		setOnUserNameChangedListener();
+		setBackListener();
+	}
+
+	private void setBackListener() {
+		findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+			}
+		});
 	}
 
 	/** 设置账号文本框监听器，如果用户名改变，清空密码 */
