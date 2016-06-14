@@ -7,25 +7,25 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff">
 
         <ImageView
-            android:id="@+id/ivLogin_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="95dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/wechat_logo" />
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/back_press"
+            />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/ivLogin_logo"
-            android:layout_centerVertical="true"
-            android:text="@string/app_name"
+            android:gravity="center"
+            android:text="账户登录"
             android:textColor="#000"
-            android:textSize="30sp"
+            android:textSize="20sp"
             />
     </RelativeLayout>
 
@@ -38,8 +38,6 @@
             android:id="@+id/rl_username"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
             android:background="#fff" >
 
             <ImageView
@@ -69,8 +67,6 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_below="@id/rl_username"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
             android:layout_marginTop="10dp"
             android:background="#fff" >
 
@@ -96,6 +92,40 @@
                 android:textSize="18sp" />
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_password"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@color/main_orange"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_to_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="140dip"
+            android:layout_marginRight="140dip"
+            android:layout_weight="1"
+            android:background="#fffff099"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:text="@string/register"
+            android:textColor="@color/orange"
+            android:textSize="18sp" />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,45 +134,6 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/btn_to_register"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_weight="1"
-                android:background="@drawable/button_register_bg"
-                android:gravity="center"
-                android:paddingBottom="7dp"
-                android:paddingTop="7dp"
-                android:text="@string/register"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_weight="1"
-                android:background="@drawable/button_login_bg"
-                android:gravity="center"
-                android:paddingBottom="7dp"
-                android:paddingTop="7dp"
-                android:text="@string/login"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
         </LinearLayout>
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="设置服务器IP地址"
-        android:gravity="center"
-        android:textColor="#000"
-        android:textSize="25sp"
-        />
 </LinearLayout>
