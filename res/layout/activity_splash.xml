@@ -9,18 +9,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/geek" />
+        android:src="@drawable/splash" />
 
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dip"
+        android:layout_marginBottom="30dip"
         android:layout_centerHorizontal="true"
-        android:text="超级微信2.2.5"
+        android:text="福利社2.2.5"
         android:textColor="#000"
-        android:textSize="20sp" >
+        android:textSize="16sp" >
     </TextView>
 
 </RelativeLayout>
