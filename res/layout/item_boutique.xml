@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_boutique"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:background="#fff"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/niv_boutique"
+        android:layout_width="240dp"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/niv_boutique"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@+id/tv_boutique_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="标题"
+            android:textColor="@color/list_item_title"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_boutique_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:text="标题"
+            android:textColor="@color/list_item_name"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_boutique_desc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginTop="12dp"
+            android:text="标题"
+            android:textColor="@color/list_item_des"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

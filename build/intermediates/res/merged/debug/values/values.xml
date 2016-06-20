@@ -165,7 +165,7 @@
     <color name="item_good_price">#df3131</color>
     <color name="item_good_text">#313131</color>
     <color name="list_background">#EFEFEF</color>
-    <color name="list_item_des">#DCDCDC</color>
+    <color name="list_item_des">#9f9f9f</color>
     <color name="list_item_name">#131313</color>
     <color name="list_item_title">#ED6F73</color>
     <color name="main_orange">#FF6C2C</color>
@@ -185,6 +185,7 @@
     <declare-styleable name="Emojicon"><attr format="dimension" name="emojiconSize"/><attr format="integer" name="emojiconTextStart"/><attr format="integer" name="emojiconTextLength"/></declare-styleable>
     <declare-styleable name="FlowIndicator"><attr format="integer" name="count"/><attr format="dimension" name="r"/><attr format="dimension" name="space"/><attr format="color|reference" name="normal_color"/><attr format="color|reference" name="focus_color"/><attr format="integer" name="focus"/></declare-styleable>
     <declare-styleable name="LinePageIndicator"><attr name="centered"/><attr name="unselectedColor"/><attr name="selectedColor"/><attr format="dimension" name="lineWidth"/><attr name="strokeWidth"/><attr format="dimension" name="gapWidth"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <declare-styleable name="TitlePageIndicator"><attr format="dimension" name="clipPadding"/><attr format="color" name="footerColor"/><attr format="dimension" name="footerLineHeight"/><attr name="footerIndicatorStyle"><enum name="none" value="0"/><enum name="triangle" value="1"/><enum name="underline" value="2"/></attr><attr format="dimension" name="footerIndicatorHeight"/><attr format="dimension" name="footerIndicatorUnderlinePadding"/><attr format="dimension" name="footerPadding"/><attr name="linePosition"><enum name="bottom" value="0"/><enum name="top" value="1"/></attr><attr name="selectedColor"/><attr format="boolean" name="selectedBold"/><attr name="android:textColor"/><attr name="android:textSize"/><attr format="dimension" name="titlePadding"/><attr format="dimension" name="topPadding"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="UnderlinePageIndicator"><attr format="boolean" name="fades"/><attr format="integer" name="fadeDelay"/><attr format="integer" name="fadeLength"/><attr name="selectedColor"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="ViewPagerIndicator"><attr format="reference" name="vpiCirclePageIndicatorStyle"/><attr format="reference" name="vpiIconPageIndicatorStyle"/><attr format="reference" name="vpiLinePageIndicatorStyle"/><attr format="reference" name="vpiTitlePageIndicatorStyle"/><attr format="reference" name="vpiTabPageIndicatorStyle"/><attr format="reference" name="vpiUnderlinePageIndicatorStyle"/></declare-styleable>
@@ -260,6 +261,9 @@
     <dimen name="height_top_bar">46dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
     <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="margin_chat_activity">5dp</dimen>
     <dimen name="notification_bar_height">25dp</dimen>
     <dimen name="padding_search_bar">5dp</dimen>
@@ -270,6 +274,7 @@
     <drawable name="menu_item_selected">#FF7A49</drawable>
     <drawable name="ssdk_oks_classic_platfrom_cell_back_nor">#ffffffff</drawable>
     <drawable name="ssdk_oks_classic_platfrom_cell_back_sel">#ffeeeeee</drawable>
+    <item name="item_touch_helper_previous_elevation" type="id"/>
     <integer name="default_circle_indicator_orientation">0</integer>
     <integer name="default_title_indicator_footer_indicator_style">2</integer>
     <integer name="default_title_indicator_line_position">0</integer>
@@ -746,6 +751,7 @@
     <string name="hanging_up">Hanging up..</string>
     <string name="have_connected_with">Connected to the peer and waiting for the peer to accept</string>
     <string name="have_you_removed">Have you removed from his buddy list</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="illegal_user_name">Illegal user name</string>
     <string name="input_new_nick_hint">Input a new nick</string>
@@ -754,6 +760,7 @@
     <string name="is_quit_the_group_chat">Exiting group</string>
     <string name="join_public_group">Join public group</string>
     <string name="list_is_for">Retrieving the groups and contacts</string>
+    <string name="load_more">load more</string>
     <string name="location_message">The location information</string>
     <string name="location_prefix">[my location]</string>
     <string name="location_recv">[%1$s location]</string>
@@ -774,6 +781,7 @@
     <string name="nickname">NickName</string>
     <string name="nickname_description">Once this nick is set, this nick will be used in push notification (by default this is HuanXin ID ) when the receiver is using the IOS device.</string>
     <string name="no_internet">no internet</string>
+    <string name="no_more">no more data!</string>
     <string name="no_more_messages">no more messages</string>
     <string name="not_add_myself">"Can't add myself"</string>
     <string name="not_connect_to_server">Not connect to server, please try again later</string>

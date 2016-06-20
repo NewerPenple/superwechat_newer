@@ -15,6 +15,7 @@
         android:background="#fff">
 
         <ImageView
+            android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -25,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="账户登录"
+            android:text="账户注册"
             android:textColor="#000"
             android:textSize="20sp"
             />
@@ -184,7 +185,7 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

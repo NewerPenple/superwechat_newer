@@ -728,12 +728,12 @@
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\menu_item_personal_center_selected.png"
     },
     {
-        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_marka.png",
-        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_marka.png"
-    },
-    {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\wallet_base_pwdpay_close_pressed.png",
         "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\wallet_base_pwdpay_close_pressed.png"
+    },
+    {
+        "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_marka.png",
+        "source": "D:\\Project\\superwechat\\superwechat\\res\\drawable-hdpi\\icon_marka.png"
     },
     {
         "merged": "D:\\Project\\superwechat\\superwechat\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_30.png",

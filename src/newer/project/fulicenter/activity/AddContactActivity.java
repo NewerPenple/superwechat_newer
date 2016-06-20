@@ -34,7 +34,7 @@ import java.util.HashMap;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.bean.User;
@@ -92,7 +92,7 @@ public class AddContactActivity extends BaseActivity{
 				startActivity(new Intent(this, AlertDialog.class).putExtra("msg", st));
 				return;
 			}
-			if (SuperWeChatApplication.getInstance().getUserName().equals(toAddUsername)) {
+			if (FuliCenterApplication.getInstance().getUserName().equals(toAddUsername)) {
 				String str = getString(R.string.not_add_myself);
 				startActivity(new Intent(this, AlertDialog.class).putExtra("msg", str));
 				return;
@@ -106,7 +106,7 @@ public class AddContactActivity extends BaseActivity{
 
 	private void existUser(final String userName) {
 		OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
-		utils.url(SuperWeChatApplication.SERVER_ROOT)
+		utils.url(FuliCenterApplication.SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_FIND_USER)
 				.addParam(I.User.USER_NAME,userName)
 				.targetClass(User.class)
@@ -136,7 +136,7 @@ public class AddContactActivity extends BaseActivity{
 	private void showUser() {
 		if (exist) {
 			mtvNoUser.setVisibility(View.GONE);
-			HashMap<String,Contact> map = SuperWeChatApplication.getInstance().getUserList();
+			HashMap<String,Contact> map = FuliCenterApplication.getInstance().getUserList();
 			if (map.containsKey(toAddUsername)) {
 				searchedUserLayout.setVisibility(View.GONE);
 				startActivity(new Intent(this, UserProfileActivity.class).putExtra("username", toAddUsername));
@@ -156,7 +156,7 @@ public class AddContactActivity extends BaseActivity{
 	 * @param view
 	 */
 	public void addContact(View view){
-		if(SuperWeChatApplication.getInstance().getUserName().equals(nameText.getText().toString())){
+		if(FuliCenterApplication.getInstance().getUserName().equals(nameText.getText().toString())){
 			String str = getString(R.string.not_add_myself);
 			startActivity(new Intent(this, AlertDialog.class).putExtra("msg", str));
 			return;

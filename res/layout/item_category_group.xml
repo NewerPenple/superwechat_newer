@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#fff"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/niv_category_group"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nopic"
+        />
+
+    <TextView
+        android:id="@+id/tv_category_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/niv_category_group"
+        android:layout_marginLeft="20dp"
+        android:text="大类"
+        android:textColor="#000"
+        android:textSize="22sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_catetory_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/expand_on"
+        />
+</RelativeLayout>

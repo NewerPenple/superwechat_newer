@@ -167,6 +167,14 @@ public class GoodDetailsBean implements Serializable {
         this.isPromote = promote;
     }
 
+    public PropertyBean[] getProperties() {
+        return properties;
+    }
+
+    public void setProperties(PropertyBean[] properties) {
+        this.properties = properties;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

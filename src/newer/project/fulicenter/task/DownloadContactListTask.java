@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import newer.project.fulicenter.I;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.activity.BaseActivity;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.data.ApiParams;
@@ -47,11 +47,11 @@ public class DownloadContactListTask extends BaseActivity{
             @Override
             public void onResponse(Contact[] contacts) {
                 if (contacts != null) {
-                    ArrayList<Contact> contactList = SuperWeChatApplication.getInstance().getContactList();
+                    ArrayList<Contact> contactList = FuliCenterApplication.getInstance().getContactList();
                     ArrayList<Contact> list = Utils.array2List(contacts);
                     contactList.clear();
                     contactList.addAll(list);
-                    HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
+                    HashMap<String, Contact> userList = FuliCenterApplication.getInstance().getUserList();
                     userList.clear();
                     for (Contact c : contacts) {
                         userList.put(c.getMContactCname(), c);

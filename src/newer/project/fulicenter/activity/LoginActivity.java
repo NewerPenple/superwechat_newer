@@ -45,7 +45,7 @@ import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.ApiParams;
@@ -55,9 +55,7 @@ import newer.project.fulicenter.db.EMUserDao;
 import newer.project.fulicenter.db.UserDao;
 import newer.project.fulicenter.domain.EMUser;
 import newer.project.fulicenter.listener.OnSetAvatarListener;
-import newer.project.fulicenter.task.DownloadAllGroupTask;
 import newer.project.fulicenter.task.DownloadContactListTask;
-import newer.project.fulicenter.task.DownloadPublicGroupTask;
 import newer.project.fulicenter.utils.CommonUtils;
 import newer.project.fulicenter.utils.MD5;
 import newer.project.fulicenter.utils.Utils;
@@ -134,8 +132,8 @@ public class LoginActivity extends BaseActivity {
 
 			}
 		});
-		if (SuperWeChatApplication.getInstance().getUserName() != null) {
-			usernameEditText.setText(SuperWeChatApplication.getInstance().getUserName());
+		if (FuliCenterApplication.getInstance().getUserName() != null) {
+			usernameEditText.setText(FuliCenterApplication.getInstance().getUserName());
 		}
 	}
 
@@ -255,11 +253,11 @@ public class LoginActivity extends BaseActivity {
 
 	/** 保存用户信息 */
 	private void saveUser(User user) {
-		SuperWeChatApplication intance = SuperWeChatApplication.getInstance();
+		FuliCenterApplication intance = FuliCenterApplication.getInstance();
 		intance.setUser(user);
 		intance.setUserName(currentUsername);
 		intance.setPassword(currentPassword);
-		SuperWeChatApplication.currentUserNick = user.getMUserNick();
+		FuliCenterApplication.currentUserNick = user.getMUserNick();
 	}
 
 	/** 显示进度对话框 */
@@ -287,7 +285,7 @@ public class LoginActivity extends BaseActivity {
 			EMChatManager.getInstance().loadAllConversations();
 			//下载用户头像
 			final OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
-			utils.url(SuperWeChatApplication.SERVER_ROOT)
+			utils.url(FuliCenterApplication.SERVER_ROOT)
 					.addParam(I.KEY_REQUEST,I.REQUEST_DOWNLOAD_AVATAR)
 					.addParam(I.AVATAR_TYPE,currentUsername)
 					.doInBackground(new Callback() {
@@ -309,8 +307,6 @@ public class LoginActivity extends BaseActivity {
 				@Override
 				public void run() {
 					new DownloadContactListTask(LoginActivity.this, currentUsername).execute();
-					new DownloadAllGroupTask(LoginActivity.this, currentUsername).execute();
-					new DownloadPublicGroupTask(LoginActivity.this, currentUsername, I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
 				}
 			});
 			initializeContacts();
@@ -328,7 +324,7 @@ public class LoginActivity extends BaseActivity {
 		}
 		// 更新当前用户的nickname 此方法的作用是在ios离线推送时能够显示用户nick
 		boolean updatenick = EMChatManager.getInstance().updateCurrentUserNick(
-				SuperWeChatApplication.currentUserNick.trim());
+				FuliCenterApplication.currentUserNick.trim());
 		if (!updatenick) {
 		}
 		if (!LoginActivity.this.isFinishing() && pd.isShowing()) {

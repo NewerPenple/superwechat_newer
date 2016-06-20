@@ -25,10 +25,7 @@ import android.widget.TextView;
 import android.widget.TextView.BufferType;
 
 import com.android.volley.toolbox.NetworkImageView;
-import com.easemob.chat.EMChatManager;
-import com.easemob.chat.EMChatRoom;
 import com.easemob.chat.EMConversation;
-import com.easemob.chat.EMConversation.EMConversationType;
 import com.easemob.chat.EMGroup;
 import com.easemob.chat.EMGroupManager;
 import com.easemob.chat.EMMessage;
@@ -45,7 +42,6 @@ import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
-import newer.project.fulicenter.bean.Group;
 import newer.project.fulicenter.domain.RobotUser;
 import newer.project.fulicenter.utils.DateUtils;
 import newer.project.fulicenter.utils.SmileUtils;
@@ -98,34 +94,23 @@ public class ChatAllHistoryAdapter extends ArrayAdapter<EMConversation> {
 		EMConversation conversation = getItem(position);
 		// 获取用户username或者群组groupid
 		String username = conversation.getUserName();
-		if (conversation.getType() == EMConversationType.GroupChat) {
-			// 群聊消息，显示群聊头像
-			UserUtils.setGroupAvatar(username, holder.avatar);
-			Group group = UserUtils.getGroupByHXID(username);
-			holder.name.setText(group != null ? group.getMGroupName() : username);
-		} else if(conversation.getType() == EMConversationType.ChatRoom){
-		    holder.avatar.setImageResource(R.drawable.group_icon);
-            EMChatRoom room = EMChatManager.getInstance().getChatRoom(username);
-            holder.name.setText(room != null && !TextUtils.isEmpty(room.getName()) ? room.getName() : username);
-		}else {
-		    UserUtils.setContactAvatar(username, holder.avatar);
-			if (username.equals(Constant.GROUP_USERNAME)) {
-				holder.name.setText("群聊");
+		UserUtils.setContactAvatar(username, holder.avatar);
+		if (username.equals(Constant.GROUP_USERNAME)) {
+			holder.name.setText("群聊");
 
-			} else if (username.equals(Constant.NEW_FRIENDS_USERNAME)) {
-				holder.name.setText("申请与通知");
-			}
-			Map<String,RobotUser> robotMap=((DemoHXSDKHelper)HXSDKHelper.getInstance()).getRobotList();
-			if(robotMap!=null&&robotMap.containsKey(username)){
-				String nick = robotMap.get(username).getNick();
-				if(!TextUtils.isEmpty(nick)){
-					holder.name.setText(nick);
-				}else{
-					holder.name.setText(username);
-				}
+		} else if (username.equals(Constant.NEW_FRIENDS_USERNAME)) {
+			holder.name.setText("申请与通知");
+		}
+		Map<String,RobotUser> robotMap=((DemoHXSDKHelper)HXSDKHelper.getInstance()).getRobotList();
+		if(robotMap!=null&&robotMap.containsKey(username)){
+			String nick = robotMap.get(username).getNick();
+			if(!TextUtils.isEmpty(nick)){
+				holder.name.setText(nick);
 			}else{
-				UserUtils.setUserBeanNick(username, holder.name);
+				holder.name.setText(username);
 			}
+		}else{
+			UserUtils.setUserBeanNick(username, holder.name);
 		}
 
 		if (conversation.getUnreadMsgCount() > 0) {

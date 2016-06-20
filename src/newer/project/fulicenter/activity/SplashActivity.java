@@ -13,14 +13,11 @@ import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 
 import newer.project.fulicenter.DemoHXSDKHelper;
-import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.db.UserDao;
-import newer.project.fulicenter.task.DownloadAllGroupTask;
 import newer.project.fulicenter.task.DownloadContactListTask;
-import newer.project.fulicenter.task.DownloadPublicGroupTask;
 
 /**
  * 开屏页
@@ -50,12 +47,10 @@ public class SplashActivity extends BaseActivity {
 	protected void onStart() {
 		super.onStart();
 		if (DemoHXSDKHelper.getInstance().isLogined()) {
-			String username = SuperWeChatApplication.getInstance().getUserName();
+			String username = FuliCenterApplication.getInstance().getUserName();
 			User user = new UserDao(SplashActivity.this).findUserByUserName(username);
-			SuperWeChatApplication.getInstance().setUser(user);
-			new DownloadContactListTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName()).execute();
-			new DownloadAllGroupTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName()).execute();
-			new DownloadPublicGroupTask(SplashActivity.this, SuperWeChatApplication.getInstance().getUserName(), I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
+			FuliCenterApplication.getInstance().setUser(user);
+			new DownloadContactListTask(SplashActivity.this, FuliCenterApplication.getInstance().getUserName()).execute();
 		}
 		new Thread(new Runnable() {
 			public void run() {
@@ -76,14 +71,14 @@ public class SplashActivity extends BaseActivity {
 						}
 					}
 					//进入主页面
-					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+					startActivity(new Intent(SplashActivity.this, FuliActivity.class));
 					finish();
 				}else {
 					try {
 						Thread.sleep(sleepTime);
 					} catch (InterruptedException e) {
 					}
-					startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+					startActivity(new Intent(SplashActivity.this, FuliActivity.class));
 					finish();
 				}
 			}
@@ -100,7 +95,7 @@ public class SplashActivity extends BaseActivity {
 		try {
 			PackageInfo packinfo = pm.getPackageInfo(getPackageName(), 0);
 			String version = packinfo.versionName;
-			return version;
+			return getResources().getString(R.string.app_name) + version;
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 			return st;

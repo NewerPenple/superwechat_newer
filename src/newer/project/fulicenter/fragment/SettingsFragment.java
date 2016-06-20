@@ -37,7 +37,7 @@ import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.DemoHXSDKModel;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.activity.BlacklistActivity;
 import newer.project.fulicenter.activity.DiagnoseActivity;
 import newer.project.fulicenter.activity.LoginActivity;
@@ -365,11 +365,9 @@ public class SettingsFragment extends Fragment implements OnClickListener {
 				getActivity().runOnUiThread(new Runnable() {
 					public void run() {
 						pd.dismiss();
-						SuperWeChatApplication instance = SuperWeChatApplication.getInstance();
+						FuliCenterApplication instance = FuliCenterApplication.getInstance();
 						instance.getContactList().clear();
 						instance.getUserList().clear();
-						instance.getGroupList().clear();
-						instance.getPublicGroupList().clear();
 						// 重新显示登陆页面
 						((MainActivity) getActivity()).finish();
 						startActivity(new Intent(getActivity(), LoginActivity.class));

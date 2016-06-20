@@ -56,10 +56,9 @@ import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.activity.AddContactActivity;
 import newer.project.fulicenter.activity.ChatActivity;
-import newer.project.fulicenter.activity.GroupsActivity;
 import newer.project.fulicenter.activity.MainActivity;
 import newer.project.fulicenter.activity.NewFriendsMsgActivity;
 import newer.project.fulicenter.adapter.ContactAdapter;
@@ -264,15 +263,6 @@ public class ContactlistFragment extends Fragment {
 					EMUser user = ((DemoHXSDKHelper) HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
 					user.setUnreadMsgCount(0);
 					startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
-				} else if (Constant.GROUP_USERNAME.equals(username)) {
-					// 进入群聊列表页面
-					startActivity(new Intent(getActivity(), GroupsActivity.class));
-//				} else if(Constant.CHAT_ROOM.equals(username)){
-//					//进入聊天室列表页面
-//				    startActivity(new Intent(getActivity(), PublicChatRoomsActivity.class));
-//				}else if(Constant.CHAT_ROBOT.equals(username)){
-//					//进入Robot列表页面
-//					startActivity(new Intent(getActivity(), RobotsActivity.class));
 				} else {
 					// demo中直接进入聊天页面，实际一般是进入用户详情页
 					startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", adapter.getItem(position).getMContactCname()));
@@ -300,7 +290,7 @@ public class ContactlistFragment extends Fragment {
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-		if (((AdapterContextMenuInfo) menuInfo).position > 1) {
+		if (((AdapterContextMenuInfo) menuInfo).position > 0) {
 		    toBeProcessUser = adapter.getItem(((AdapterContextMenuInfo) menuInfo).position);
 		    toBeProcessUsername = toBeProcessUser.getMContactCname();
 			getActivity().getMenuInflater().inflate(R.menu.context_contact_list, menu);
@@ -357,17 +347,17 @@ public class ContactlistFragment extends Fragment {
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
 		OkHttpUtils2<Boolean> utils = new OkHttpUtils2<Boolean>();
-		utils.url(SuperWeChatApplication.SERVER_ROOT)
+		utils.url(FuliCenterApplication.SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_DELETE_CONTACT)
-				.addParam(I.Contact.USER_NAME, SuperWeChatApplication.getInstance().getUserName())
+				.addParam(I.Contact.USER_NAME, FuliCenterApplication.getInstance().getUserName())
 				.addParam(I.Contact.CU_NAME,tobeDeleteUser.getMContactCname())
 				.targetClass(Boolean.class)
 				.execute(new OkHttpUtils2.OnCompleteListener<Boolean>() {
 					@Override
 					public void onSuccess(Boolean result) {
 						if (result != null && result) {
-							SuperWeChatApplication.getInstance().getContactList().remove(tobeDeleteUser);
-							SuperWeChatApplication.getInstance().getUserList().remove(tobeDeleteUser.getMContactCname());
+							FuliCenterApplication.getInstance().getContactList().remove(tobeDeleteUser);
+							FuliCenterApplication.getInstance().getUserList().remove(tobeDeleteUser.getMContactCname());
 							getActivity().sendStickyBroadcast(new Intent("update_contact_list"));
 						}
 					}
@@ -495,7 +485,7 @@ public class ContactlistFragment extends Fragment {
 //		contactList.clear();
 		mContactList.clear();
 		//获取本地好友列表
-		ArrayList<Contact> contacts = SuperWeChatApplication.getInstance().getContactList();
+		ArrayList<Contact> contacts = FuliCenterApplication.getInstance().getContactList();
 		mContactList.addAll(contacts);
 
 		/*Map<String, EMUser> users = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
@@ -509,18 +499,6 @@ public class ContactlistFragment extends Fragment {
 					&& !blackList.contains(entry.getKey()))
 				contactList.add(entry.getValue());
 		}*/
-
-		// 添加"群聊"
-		Contact groupUser = new Contact();
-		groupUser.setMContactId(-2);
-		String strGroup = getActivity().getString(R.string.group_chat);
-		groupUser.setMContactCname(Constant.GROUP_USERNAME);
-		groupUser.setMUserName(Constant.NEW_FRIENDS_USERNAME);
-		groupUser.setMUserNick(strGroup);
-		groupUser.setHeader("");
-		if (mContactList.indexOf(groupUser) == -1) {
-			mContactList.add(0, groupUser);
-		}
 
 		// 添加user"申请与通知"
 		Contact newFriends = new Contact();
@@ -549,12 +527,6 @@ public class ContactlistFragment extends Fragment {
 		/*if(users.get(Constant.CHAT_ROBOT)!=null){
 			contactList.add(0, users.get(Constant.CHAT_ROBOT));
 		}*/
-		// 加入"群聊"和"聊天室"
-        /*if(users.get(Constant.CHAT_ROOM) != null)
-            contactList.add(0, users.get(Constant.CHAT_ROOM));*/
-//        if(users.get(Constant.GROUP_USERNAME) != null)
-//            contactList.add(0, users.get(Constant.GROUP_USERNAME));
-//
 //		// 把"申请与通知"添加到首位
 //		if(users.get(Constant.NEW_FRIENDS_USERNAME) != null)
 //		    contactList.add(0, users.get(Constant.NEW_FRIENDS_USERNAME));

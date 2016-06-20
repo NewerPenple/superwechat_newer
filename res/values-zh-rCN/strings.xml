@@ -327,7 +327,11 @@
     <string name="msg_901">连接服务器失败</string>
     <string name="msg_902">上传头像成功</string>
     <string name="msg_903">上传头像失败</string>
-<!-- 支付的字符串资源 -->
+    <string name="load_more">加载更多</string>
+    <string name="no_more">没有更多数据了</string>
+    <string name="title_good_details">商品详情</string>
+
+    <!-- 支付的字符串资源 -->
     <string name="prompt_pay_falied">可能因为网络过于繁忙</string>
     <string name="copyright">支付接入由Ping++提供</string>
     <string name="title_test_activity">壹收款</string>

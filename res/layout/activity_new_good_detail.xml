@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff2f6">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/good_detail_title_bg"
+        android:paddingTop="3dp"
+        android:paddingBottom="3sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/back_nomal"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_good_details"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_cart_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:id="@+id/iv_cart_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_cart_selected"
+                />
+
+            <TextView
+                android:id="@+id/tv_cart_icon_hint"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#f00"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_collect_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bg_collect_in"
+            />
+
+        <ImageView
+            android:id="@+id/iv_share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bg_share_nor"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_title"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <TextView
+            android:id="@+id/tv_name_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English Name"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_en"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="¥998"
+            android:textColor="@color/item_good_price"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_name_ch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_en"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/tv_price"
+            android:layout_alignParentLeft="true"
+            android:text="中文名"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_picture"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/tv_name_ch"
+            android:layout_marginTop="10dp">
+
+            <newer.project.fulicenter.widget.SlideAutoLoopView
+                android:id="@+id/salv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/good_detail_bg_white"
+                />
+
+            <newer.project.fulicenter.widget.FlowIndicator
+                android:id="@+id/fi_cursor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:count="4"
+                app:focus="0"
+                app:focus_color="@color/good_detaul_flow_indicator_focus"
+                app:normal_color="#a1d1d1d1"
+                app:r="5dp"
+                app:space="3dp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_Color"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/layout_picture"
+            android:layout_marginTop="10dp">
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/wv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_Color"
+            android:background="#fff"
+            android:textColor="@color/good_detail_bg_white"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

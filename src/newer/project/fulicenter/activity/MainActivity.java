@@ -64,7 +64,7 @@ import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.data.OkHttpUtils2;
@@ -75,7 +75,6 @@ import newer.project.fulicenter.domain.InviteMessage;
 import newer.project.fulicenter.fragment.ChatAllHistoryFragment;
 import newer.project.fulicenter.fragment.ContactlistFragment;
 import newer.project.fulicenter.fragment.SettingsFragment;
-import newer.project.fulicenter.utils.CommonUtils;
 import newer.project.fulicenter.utils.Utils;
 
 public class MainActivity extends BaseActivity implements EMEventListener {
@@ -101,7 +100,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 	private boolean isCurrentAccountRemoved = false;
 	
 	private MyConnectionListener connectionListener = null;
-	private MyGroupChangeListener groupChangeListener = null;
 	private MainActivity mContext;
 
 	/**
@@ -170,10 +168,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		connectionListener = new MyConnectionListener();
 		EMChatManager.getInstance().addConnectionListener(connectionListener);
 		
-		groupChangeListener = new MyGroupChangeListener();
-		// 注册群聊相关的listener
-        EMGroupManager.getInstance().addGroupChangeListener(groupChangeListener);
-		
+
 		
 		//内部测试方法，请忽略
 		registerInternalDebugReceiver();
@@ -444,10 +439,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		    EMChatManager.getInstance().removeConnectionListener(connectionListener);
 		}
 		
-		if(groupChangeListener != null){
-		    EMGroupManager.getInstance().removeGroupChangeListener(groupChangeListener);
-		}
-		
+
 		try {
             unregisterReceiver(internalDebugReceiver);
         } catch (Exception e) {
@@ -528,7 +520,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 			// 保存增加的联系人
 			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
 			Map<String, EMUser> toAddUsers = new HashMap<String, EMUser>();
-			HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
+			HashMap<String, Contact> userList = FuliCenterApplication.getInstance().getUserList();
 			ArrayList<String> toAddUserNames = new ArrayList<String>();
 			boolean add = false;
 			for (String username : usernameList) {
@@ -546,17 +538,17 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 			for (String userName : toAddUserNames) {
 				if (add) {
 					OkHttpUtils2<Contact> utils = new OkHttpUtils2<Contact>();
-					utils.url(SuperWeChatApplication.SERVER_ROOT)
+					utils.url(FuliCenterApplication.SERVER_ROOT)
 							.addParam(I.KEY_REQUEST,I.REQUEST_ADD_CONTACT)
-							.addParam(I.Contact.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+							.addParam(I.Contact.USER_NAME, FuliCenterApplication.getInstance().getUserName())
 							.addParam(I.Contact.CU_NAME,userName)
 							.targetClass(Contact.class)
 							.execute(new OkHttpUtils2.OnCompleteListener<Contact>() {
 								@Override
 								public void onSuccess(Contact result) {
 									if (result != null && result.isResult()) {
-										SuperWeChatApplication.getInstance().getContactList().add(result);
-										SuperWeChatApplication.getInstance().getUserList().put(result.getMContactCname(), result);
+										FuliCenterApplication.getInstance().getContactList().add(result);
+										FuliCenterApplication.getInstance().getUserList().put(result.getMContactCname(), result);
 										mContext.sendStickyBroadcast(new Intent("update_contact_list"));
 										Utils.showToast(mContext, R.string.Add_buddy_success, Toast.LENGTH_SHORT);
 									} else {
@@ -582,7 +574,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		public void onContactDeleted(final List<String> usernameList) {
 			// 被删除
 			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
-			HashMap<String, Contact> userList = SuperWeChatApplication.getInstance().getUserList();
+			HashMap<String, Contact> userList = FuliCenterApplication.getInstance().getUserList();
 			ArrayList<String> toDeleteUserNames = new ArrayList<String>();
 			boolean delete = false;
 			for (String username : usernameList) {
@@ -595,8 +587,8 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 				}
 			}
 			for (String userName : toDeleteUserNames) {
-				SuperWeChatApplication.getInstance().getContactList().remove(userList.get(userName));
-				SuperWeChatApplication.getInstance().getUserList().remove(userName);
+				FuliCenterApplication.getInstance().getContactList().remove(userList.get(userName));
+				FuliCenterApplication.getInstance().getUserList().remove(userName);
 				sendStickyBroadcast(new Intent("update_contact_list"));
 			}
 			runOnUiThread(new Runnable() {
@@ -776,9 +768,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 					// 刷新ui
 					if (currentTabIndex == 0)
 						chatHistoryFragment.refresh();
-					if (CommonUtils.getTopActivity(MainActivity.this).equals(GroupsActivity.class.getName())) {
-						GroupsActivity.instance.onResume();
-					}
 				}
 			});
 
@@ -805,9 +794,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 						updateUnreadLabel();
 						if (currentTabIndex == 0)
 							chatHistoryFragment.refresh();
-						if (CommonUtils.getTopActivity(MainActivity.this).equals(GroupsActivity.class.getName())) {
-							GroupsActivity.instance.onResume();
-						}
 					} catch (Exception e) {
 						EMLog.e(TAG, "refresh exception " + e.getMessage());
 					}
@@ -826,9 +812,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 					updateUnreadLabel();
 					if (currentTabIndex == 0)
 						chatHistoryFragment.refresh();
-					if (CommonUtils.getTopActivity(MainActivity.this).equals(GroupsActivity.class.getName())) {
-						GroupsActivity.instance.onResume();
-					}
 				}
 			});
 
@@ -871,9 +854,6 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 					// 刷新ui
 					if (currentTabIndex == 0)
 						chatHistoryFragment.refresh();
-					if (CommonUtils.getTopActivity(MainActivity.this).equals(GroupsActivity.class.getName())) {
-						GroupsActivity.instance.onResume();
-					}
 				}
 			});
 		}

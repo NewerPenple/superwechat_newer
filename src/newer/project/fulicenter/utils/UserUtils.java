@@ -9,17 +9,13 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.util.HanziToPinyin;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-
 import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.Contact;
-import newer.project.fulicenter.bean.Group;
-import newer.project.fulicenter.bean.Member;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.RequestManager;
 import newer.project.fulicenter.domain.EMUser;
@@ -45,7 +41,7 @@ public class UserUtils {
     }
 
 	public static Contact getContactInfo(String username) {
-		return SuperWeChatApplication.getInstance().getUserList().get(username);
+		return FuliCenterApplication.getInstance().getUserList().get(username);
 	}
 
     /**
@@ -91,11 +87,6 @@ public class UserUtils {
 		return I.REQUEST_DOWNLOAD_USER_AVATAR_URL + username;
 	}
 
-	public static void setGroupAvatar(String hxid, NetworkImageView niv) {
-		niv.setDefaultImageResId(R.drawable.group_icon);
-		niv.setImageUrl(I.REQUEST_DOWNLOAD_GROUP_AVATAR_URL + hxid, RequestManager.getImageLoader());
-		niv.setErrorImageResId(R.drawable.group_icon);
-	}
 
 	/**
      * 设置当前用户头像
@@ -110,7 +101,7 @@ public class UserUtils {
 	}
 
 	public static void setCurrentUserAvatar(NetworkImageView niv) {
-		User user = SuperWeChatApplication.getInstance().getUser();
+		User user = FuliCenterApplication.getInstance().getUser();
 		if (user != null) {
 			setUserAvatar(getAvatarPath(user.getMUserName()), niv);
 		}
@@ -156,7 +147,7 @@ public class UserUtils {
     }
 
 	public static void setCurrentUserBeanNick(TextView textView) {
-		User user = SuperWeChatApplication.getInstance().getUser();
+		User user = FuliCenterApplication.getInstance().getUser();
 		if (user != null && user.getMUserNick() != null && textView != null) {
 			textView.setText(user.getMUserNick());
 		}
@@ -201,36 +192,5 @@ public class UserUtils {
 			pinyin = pinyin + HanziToPinyin.getInstance().get(s).get(0).target.toLowerCase();
 		}
 		return pinyin;
-	}
-
-	public static Group getGroupByHXID(String hxid) {
-		if (hxid != null && !hxid.isEmpty()) {
-			ArrayList<Group> groupList = SuperWeChatApplication.getInstance().getGroupList();
-			for (Group g : groupList) {
-				if (g.getMGroupHxid().equals(hxid)) {
-					return g;
-				}
-			}
-		}
-		return null;
-	}
-
-	private static Member getGroupMember(String hxid, String userName) {
-		ArrayList<Member> members = SuperWeChatApplication.getInstance().getGroupMembers().get(hxid);
-		if (members != null) {
-			for (Member member : members) {
-				if (member.getMMemberUserName().equals(userName)) {
-					return member;
-				}
-			}
-		}
-		return null;
-	}
-
-	public static void setGroupMemberNick(String hxid, String userName, TextView textView) {
-		Member member = getGroupMember(hxid, userName);
-		if (member != null) {
-			setNewUserNick(member, textView);
-		}
 	}
 }

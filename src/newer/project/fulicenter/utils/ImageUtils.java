@@ -14,12 +14,19 @@
 package newer.project.fulicenter.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.util.EMLog;
 import com.easemob.util.PathUtil;
 
 import java.io.File;
+
+import newer.project.fulicenter.I;
+import newer.project.fulicenter.R;
+import newer.project.fulicenter.data.RequestManager;
 
 public class ImageUtils {
 //	public static String getThumbnailImagePath(String imagePath) {
@@ -55,4 +62,38 @@ public class ImageUtils {
 		}
 		return avatar.getAbsolutePath();
 	}
+
+	public static void setGoodsPicture(NetworkImageView niv, String goodsUrl) {
+		niv.setDefaultImageResId(R.drawable.default_image);
+		niv.setImageUrl(I.REQUEST_DOWNLOAD_BOUTIQUE_IMG_URL + goodsUrl, RequestManager.getImageLoader());
+		niv.setErrorImageResId(R.drawable.default_image);
+	}
+
+	public static void setGoodsDetailThumb(NetworkImageView niv, String goodsImg) {
+		niv.setDefaultImageResId(R.drawable.nopic);
+		niv.setImageUrl(I.REQUEST_DOWNLOAD_COLOR_IMG_URL + goodsImg, RequestManager.getImageLoader());
+		niv.setErrorImageResId(R.drawable.nopic);
+	}
+
+	public static void setBoutiquePicture(NetworkImageView niv, String boutiqueUrl) {
+		niv.setDefaultImageResId(R.drawable.default_image);
+		niv.setImageUrl(I.REQUEST_DOWNLOAD_BOUTIQUE_IMG_URL + boutiqueUrl, RequestManager.getImageLoader());
+		niv.setErrorImageResId(R.drawable.default_image);
+	}
+
+	public static void setThumb(NetworkImageView niv, String url) {
+		niv.setDefaultImageResId(R.drawable.nopic);
+		niv.setImageUrl(url, RequestManager.getImageLoader());
+		niv.setErrorImageResId(R.drawable.nopic);
+	}
+
+	public static int getDrawableWidth(Context context,int resId){
+		Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), resId);
+		return bitmap.getWidth();
+	}
+	public static int getDrawableHeight(Context context,int resId){
+		Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), resId);
+		return bitmap.getHeight();
+	}
+
 }

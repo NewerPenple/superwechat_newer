@@ -30,20 +30,16 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.chat.EMChatManager;
-import com.easemob.chat.EMGroupManager;
-import com.easemob.exceptions.EaseMobException;
 
 import java.util.List;
 
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
-import newer.project.fulicenter.bean.Group;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.OkHttpUtils2;
 import newer.project.fulicenter.db.InviteMessgeDao;
 import newer.project.fulicenter.domain.InviteMessage;
-import newer.project.fulicenter.task.DownloadGroupMemberTask;
 import newer.project.fulicenter.utils.UserUtils;
 
 public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
@@ -136,7 +132,7 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 			// 设置用户头像
 			UserUtils.setContactAvatar(msg.getFrom(), holder.avator);
 			OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
-			utils.url(SuperWeChatApplication.SERVER_ROOT)
+			utils.url(FuliCenterApplication.SERVER_ROOT)
 					.addParam(I.KEY_REQUEST,I.REQUEST_FIND_USER)
 					.addParam(I.User.USER_NAME,msg.getFrom())
 					.targetClass(User.class)
@@ -193,47 +189,6 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 
 							}
 						});
-					} else { //同意加群申请
-						OkHttpUtils2<Group> utils = new OkHttpUtils2<Group>();
-						utils.url(SuperWeChatApplication.SERVER_ROOT)
-								.addParam(I.KEY_REQUEST,I.REQUEST_ADD_GROUP_MEMBER_BY_USERNAME)
-								.addParam(I.Member.USER_NAME,msg.getFrom())
-								.addParam(I.Member.GROUP_HX_ID,msg.getGroupId())
-								.targetClass(Group.class)
-								.execute(new OkHttpUtils2.OnCompleteListener<Group>() {
-									@Override
-									public void onSuccess(Group result) {
-										if (result != null) {
-											new DownloadGroupMemberTask(context, result.getMGroupHxid()).execute();
-											try {
-												EMGroupManager.getInstance().acceptApplication(msg.getFrom(), msg.getGroupId());
-												((Activity) context).runOnUiThread(new Runnable() {
-
-													@Override
-													public void run() {
-														pd.dismiss();
-														button.setText(str2);
-														msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
-														// 更新db
-														ContentValues values = new ContentValues();
-														values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
-														messgeDao.updateMessage(msg.getId(), values);
-														button.setBackgroundDrawable(null);
-														button.setEnabled(false);
-
-													}
-												});
-											} catch (EaseMobException e) {
-												e.printStackTrace();
-											}
-										}
-									}
-
-									@Override
-									public void onError(String error) {
-
-									}
-								});
 					}
 				} catch (final Exception e) {
 					((Activity) context).runOnUiThread(new Runnable() {

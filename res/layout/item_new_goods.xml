@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_new_goods"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/niv_new_goods"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/tv_new_goods_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_good_text"
+    />
+
+    <TextView
+        android:id="@+id/tv_new_goods_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_good_price"
+        />
+</LinearLayout>

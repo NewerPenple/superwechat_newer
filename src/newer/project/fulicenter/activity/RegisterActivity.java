@@ -31,7 +31,7 @@ import java.io.File;
 
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.bean.Message;
 import newer.project.fulicenter.data.OkHttpUtils2;
 import newer.project.fulicenter.listener.OnSetAvatarListener;
@@ -217,7 +217,7 @@ public class RegisterActivity extends BaseActivity {
 							if (!RegisterActivity.this.isFinishing())
 								pd.dismiss();
 							// 保存用户名
-							SuperWeChatApplication.getInstance().setUserName(username);
+							FuliCenterApplication.getInstance().setUserName(username);
 							Toast.makeText(getApplicationContext(), getResources().getString(R.string.Registered_successfully), 0).show();
 							finish();
 						}

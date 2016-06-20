@@ -31,7 +31,7 @@ import java.io.File;
 import newer.project.fulicenter.DemoHXSDKHelper;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.Message;
 import newer.project.fulicenter.bean.User;
@@ -89,16 +89,12 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 			headPhotoUpdate.setVisibility(View.GONE);
 			iconRightArrow.setVisibility(View.INVISIBLE);
 		}
-		if (username == null || username.equals(SuperWeChatApplication.getInstance().getUserName())) {
-			tvUsername.setText(SuperWeChatApplication.getInstance().getUserName());
+		if (username == null || username.equals(FuliCenterApplication.getInstance().getUserName())) {
+			tvUsername.setText(FuliCenterApplication.getInstance().getUserName());
 			UserUtils.setCurrentUserBeanNick(tvNickName);
 			UserUtils.setCurrentUserAvatar(headAvatar);
 		} else {
-			if (groupId != null) {
-				UserUtils.setGroupMemberNick(groupId, username, tvNickName);
-			} else {
-				UserUtils.setUserBeanNick(username, tvNickName);
-			}
+			UserUtils.setUserBeanNick(username, tvNickName);
 			UserUtils.setUserAvatar(UserUtils.getAvatarPath(username), headAvatar);
 			tvUsername.setText(username);
 //			asyncFetchUserInfo(username);
@@ -185,9 +181,9 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 
 	private void updateUserNick(final String nickName) {
 		OkHttpUtils2<User> utils = new OkHttpUtils2<User>();
-		utils.url(SuperWeChatApplication.SERVER_ROOT)
+		utils.url(FuliCenterApplication.SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_UPDATE_USER_NICK)
-				.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+				.addParam(I.User.USER_NAME, FuliCenterApplication.getInstance().getUserName())
 				.addParam(I.User.NICK,nickName)
 				.targetClass(User.class)
 				.execute(new OkHttpUtils2.OnCompleteListener<User>() {
@@ -229,8 +225,8 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 							Toast.makeText(UserProfileActivity.this, getString(R.string.toast_updatenick_success), Toast.LENGTH_SHORT)
 									.show();
 							tvNickName.setText(nickName);
-							SuperWeChatApplication.currentUserNick = nickName;
-							User user = SuperWeChatApplication.getInstance().getUser();
+							FuliCenterApplication.currentUserNick = nickName;
+							User user = FuliCenterApplication.getInstance().getUser();
 							user.setMUserNick(nickName);
 							UserDao dao = new UserDao(UserProfileActivity.this);
 							dao.updateUser(user);
@@ -272,17 +268,17 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 		dialog = ProgressDialog.show(this, getString(R.string.dl_update_photo), getString(R.string.dl_waiting));
 		final File file = new File(ImageUtils.getAvatarPath(UserProfileActivity.this, I.AVATAR_TYPE_USER_PATH), avatarName + I.AVATAR_SUFFIX_JPG);
 		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
-		utils.url(SuperWeChatApplication.SERVER_ROOT)
+		utils.url(FuliCenterApplication.SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_UPLOAD_AVATAR)
 				.addParam(I.AVATAR_TYPE,I.AVATAR_TYPE_USER_PATH)
-				.addParam(I.User.USER_NAME,SuperWeChatApplication.getInstance().getUserName())
+				.addParam(I.User.USER_NAME, FuliCenterApplication.getInstance().getUserName())
 				.addFile(file)
 				.targetClass(Message.class)
 				.execute(new OkHttpUtils2.OnCompleteListener<Message>() {
 					@Override
 					public void onSuccess(Message result) {
 						if (result.isResult()) {
-							String avatarPath = UserUtils.getAvatarPath(SuperWeChatApplication.getInstance().getUser().getMUserName());
+							String avatarPath = UserUtils.getAvatarPath(FuliCenterApplication.getInstance().getUser().getMUserName());
 							RequestManager.getRequestQueue().getCache().remove(avatarPath);
 							UserUtils.setCurrentUserAvatar(headAvatar);
 							Utils.showToast(UserProfileActivity.this, R.string.toast_updatephoto_success, Toast.LENGTH_SHORT);

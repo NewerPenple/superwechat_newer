@@ -58,7 +58,7 @@
     <color name="cart_buy_bg">#FF8000</color>
     <color name="list_item_title">#ED6F73</color>
     <color name="list_item_name">#131313</color>
-    <color name="list_item_des">#DCDCDC</color>
+    <color name="list_item_des">#9f9f9f</color>
     <color name="personal_center_top_bg">#FF5000</color>
     <color name="bg_gray_light">#EEEEEE</color>
     <color name="google_red">#d62d20</color>

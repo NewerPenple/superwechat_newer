@@ -42,7 +42,7 @@ import java.util.List;
 
 import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.activity.ChatActivity;
 import newer.project.fulicenter.activity.MainActivity;
 import newer.project.fulicenter.adapter.ChatAllHistoryAdapter;
@@ -94,7 +94,7 @@ public class ChatAllHistoryFragment extends Fragment implements View.OnClickList
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				EMConversation conversation = adapter.getItem(position);
 				String username = conversation.getUserName();
-				if (username.equals(SuperWeChatApplication.getInstance().getUserName()))
+				if (username.equals(FuliCenterApplication.getInstance().getUserName()))
 					Toast.makeText(getActivity(), st2, 0).show();
 				else {
 				    // 进入聊天页面

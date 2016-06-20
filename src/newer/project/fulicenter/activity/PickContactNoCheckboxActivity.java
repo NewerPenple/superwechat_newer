@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import newer.project.fulicenter.Constant;
-import newer.project.fulicenter.SuperWeChatApplication;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.adapter.ContactAdapter;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.widget.Sidebar;
@@ -77,7 +77,7 @@ public class PickContactNoCheckboxActivity extends BaseActivity {
 
 	private void getContactList() {
 		contactList.clear();
-		Map<String, Contact> users = SuperWeChatApplication.getInstance().getUserList();
+		Map<String, Contact> users = FuliCenterApplication.getInstance().getUserList();
 		Iterator<Entry<String, Contact>> iterator = users.entrySet().iterator();
 		while (iterator.hasNext()) {
 			Entry<String, Contact> entry = iterator.next();
