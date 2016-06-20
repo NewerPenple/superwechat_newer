@@ -46,6 +46,8 @@ public class FuliCenterApplication extends Application {
 	/** 全局的当前登录用户的好友集合 */
 	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
 
+	private int collectCount;
+
 	public User getUser() {
 		return user;
 	}
@@ -68,6 +70,14 @@ public class FuliCenterApplication extends Application {
 
 	public void setUserList(HashMap<String, Contact> userList) {
 		this.userList = userList;
+	}
+
+	public int getCollectCount() {
+		return collectCount;
+	}
+
+	public void setCollectCount(int collectCount) {
+		this.collectCount = collectCount;
 	}
 
 	@Override
