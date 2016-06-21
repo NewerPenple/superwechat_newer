@@ -1,20 +1,25 @@
 package newer.project.fulicenter.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.easemob.chat.EMChat;
 
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.fragment.BaseFragment;
 import newer.project.fulicenter.fragment.BoutiqueFragment;
 import newer.project.fulicenter.fragment.CategoryFragment;
 import newer.project.fulicenter.fragment.NewGoodsFragment;
+import newer.project.fulicenter.fragment.PersonFragment;
 
 public class FuliActivity extends BaseActivity {
     private static final String TAG = FuliActivity.class.getName();
@@ -29,6 +34,7 @@ public class FuliActivity extends BaseActivity {
     private NewGoodsFragment newGoodsFragment;
     private BoutiqueFragment boutiqueFragment;
     private CategoryFragment categoryFragment;
+    private PersonFragment personFragment;
     private BaseFragment[] fragmentArr;
 
     private boolean start = false;
@@ -40,11 +46,6 @@ public class FuliActivity extends BaseActivity {
         initView();
         initFragment();
         setListener();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
         start = true;
     }
 
@@ -68,6 +69,7 @@ public class FuliActivity extends BaseActivity {
                 mrbArr[currentIndex].setChecked(false);
                 currentIndex = position;
                 mrbArr[position].setChecked(true);
+                Log.i("my", TAG + " onPageSelected " + position);
                 if (fragmentArr[position] != null) {
                     fragmentArr[position].initData();
                 }
@@ -84,7 +86,8 @@ public class FuliActivity extends BaseActivity {
         newGoodsFragment = new NewGoodsFragment();
         boutiqueFragment = new BoutiqueFragment();
         categoryFragment = new CategoryFragment();
-        fragmentArr = new BaseFragment[]{newGoodsFragment, boutiqueFragment, categoryFragment};
+        personFragment = new PersonFragment();
+        fragmentArr = new BaseFragment[]{newGoodsFragment, boutiqueFragment, categoryFragment, new CategoryFragment(), personFragment};
         adapter = new MenuAdapter(getSupportFragmentManager(), fragmentArr);
         mvpContainer.setAdapter(adapter);
         mvpContainer.setCurrentItem(0);
@@ -121,11 +124,33 @@ public class FuliActivity extends BaseActivity {
                 break;
         }
         if (currentIndex != index) {
+            if (index == 4 && !EMChat.getInstance().isLoggedIn()) {
+                startActivityForResult(new Intent(this, LoginActivity.class), currentIndex);
+            } else {
+                mvpContainer.setCurrentItem(index);
+            }
             mrbArr[currentIndex].setChecked(false);
-            mvpContainer.setCurrentItem(index);
             currentIndex = index;
             mrbArr[index].setChecked(true);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == LoginActivity.RESULT_CODE_PERSON) {
+            mvpContainer.setCurrentItem(4);
+            return;
+        }else if (resultCode == LoginActivity.RESULT_CODE_LOG_OUT) {
+            index = 0;
+            mvpContainer.setCurrentItem(index);
+            mrbArr[currentIndex].setChecked(false);
+            currentIndex = index;
+            mrbArr[index].setChecked(true);
+        }
+        mrbArr[currentIndex].setChecked(false);
+        currentIndex = requestCode;
+        mrbArr[requestCode].setChecked(true);
     }
 
     private class MenuAdapter extends FragmentPagerAdapter {

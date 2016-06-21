@@ -24,6 +24,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_setting_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -76,6 +77,7 @@
         android:orientation="horizontal">
 
         <RelativeLayout
+            android:id="@+id/layout_collect_count"
             android:layout_width="@dimen/ebpay_dimen_20dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -188,6 +190,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/layout_orders"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"

@@ -2,14 +2,15 @@ package newer.project.fulicenter.task;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.android.volley.Response;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import newer.project.fulicenter.I;
 import newer.project.fulicenter.FuliCenterApplication;
+import newer.project.fulicenter.I;
 import newer.project.fulicenter.activity.BaseActivity;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.data.ApiParams;
@@ -22,7 +23,7 @@ public class DownloadContactListTask extends BaseActivity{
     private String username;
     private String path;
 
-    public DownloadContactListTask(Context context, String username) {
+    public DownloadContactListTask(Context context, final String username) {
         this.context = context;
         this.username = username;
         initPath();

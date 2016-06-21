@@ -67,6 +67,7 @@ public class UserDao extends SQLiteOpenHelper{
         if (cursor.moveToNext()) {
             User user = new User();
             user.setMUserId(cursor.getInt(cursor.getColumnIndex(I.User.USER_ID)));
+            user.setMUserName(cursor.getString(cursor.getColumnIndex(I.User.USER_NAME)));
             user.setMUserPassword(cursor.getString(cursor.getColumnIndex(I.User.PASSWORD)));
             user.setMUserNick(cursor.getString(cursor.getColumnIndex(I.User.NICK)));
             user.setMUserUnreadMsgCount(cursor.getInt(cursor.getColumnIndex(I.User.UN_READ_MSG_COUNT)));

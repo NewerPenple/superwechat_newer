@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +16,11 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.R;
+import newer.project.fulicenter.activity.SettingsActivity;
 import newer.project.fulicenter.task.DownloadCollectCountTask;
 import newer.project.fulicenter.utils.UserUtils;
 
-public class PersonFragment extends BaseFragment {
+public class PersonFragment extends BaseFragment implements View.OnClickListener{
     private static final String TAG = PersonFragment.class.getName();
     private TextView mtvSettingIcon,mtvUserName;
     private ImageView mivMsgIcon,mivQrcodeIcon;
@@ -40,11 +40,24 @@ public class PersonFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("my", TAG + " onCreateView");
         View layout = inflater.inflate(R.layout.fragment_person, container, false);
         initView(layout);
+        setListener();
         RegisterReceiver();
         return layout;
+    }
+
+    private void setListener() {
+        mtvSettingIcon.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tv_setting_icon:
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+        }
     }
 
     private void initView(View layout) {
@@ -66,12 +79,10 @@ public class PersonFragment extends BaseFragment {
         mLayoutCard2 = (RelativeLayout) layout.findViewById(R.id.layout_card2);
         mLayoutCard3 = (RelativeLayout) layout.findViewById(R.id.layout_card3);
         mLayoutPrivilege = (RelativeLayout) layout.findViewById(R.id.layout_privilege);
-        Log.i("my", TAG + String.valueOf(mtvCollectCount==null));
     }
 
     @Override
     public void initData() {
-        Log.i("my", TAG + " initData");
         collectCount = FuliCenterApplication.getInstance().getCollectCount();
         mtvCollectCount.setText(String.valueOf(collectCount));
         UserUtils.setCurrentUserBeanNick(mtvUserName);

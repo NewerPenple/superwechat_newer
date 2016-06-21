@@ -254,7 +254,7 @@
         <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="ucai-chengdu#superwechat" />
+            android:value="ucai-chengdu#fulicenter" />
         <!-- 声明sdk所需的service -->
         <service android:name="com.easemob.chat.EMChatService" />
         <!-- 声明sdk所需的receiver -->
@@ -295,6 +295,11 @@
             android:windowSoftInputMode="adjustResize|stateVisible" />
         <activity
             android:name="newer.project.fulicenter.activity.CategoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name="newer.project.fulicenter.activity.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" />

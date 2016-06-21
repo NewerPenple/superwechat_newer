@@ -51,7 +51,6 @@ public class RegisterActivity extends BaseActivity {
 	private String avatarName;//暂时保存的头像名，用于提交注册请求
 	private OnSetAvatarListener mOnSetAvatarListener;
 	private final static String TAG = RegisterActivity.class.getName();
-	private static String SERVER_ROOT = "http://10.0.2.2:8080/SuperWeChatServer/Server";
 	ProgressDialog pd;
 
 	@Override
@@ -176,7 +175,7 @@ public class RegisterActivity extends BaseActivity {
 	private void registerServer(final String username, final String nick, final String pwd) {
 		File file = new File(ImageUtils.getAvatarPath(RegisterActivity.this, I.AVATAR_TYPE_USER_PATH), avatarName + I.AVATAR_SUFFIX_JPG);//用户头像文件夹 + 暂存头像名 + .jpg
 		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
-		utils.url(SERVER_ROOT)
+		utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
 				.addParam(I.KEY_REQUEST,I.REQUEST_REGISTER)
 				.addParam(I.User.USER_NAME, username)
 				.addParam(I.User.NICK, nick)
@@ -187,9 +186,10 @@ public class RegisterActivity extends BaseActivity {
 					@Override
 					public void onSuccess(Message result) {
 						if (result.isResult()) {
-							registerEMServer(username,nick,pwd);
+							registerEMServer(username, nick, pwd);
 						} else {
-							Utils.showToast(RegisterActivity.this,Utils.getResourceString(RegisterActivity.this,result.getMsg()),Toast.LENGTH_SHORT);
+							Log.i("my", TAG + " registerServer result == null");
+							Utils.showToast(RegisterActivity.this, Utils.getResourceString(RegisterActivity.this, result.getMsg()), Toast.LENGTH_SHORT);
 							pd.dismiss();
 							Log.e(TAG, "register fail,error:" + result.getMsg());
 						}
@@ -197,7 +197,7 @@ public class RegisterActivity extends BaseActivity {
 
 					@Override
 					public void onError(String error) {
-						Utils.showToast(RegisterActivity.this,error,Toast.LENGTH_SHORT);
+						Utils.showToast(RegisterActivity.this, error, Toast.LENGTH_SHORT);
 						pd.dismiss();
 						Log.e(TAG, "register fail,error:" + error);
 					}
@@ -207,6 +207,7 @@ public class RegisterActivity extends BaseActivity {
 
 	/** 注册到环信服务端 */
 	private void registerEMServer(final String username, final String nick, final String pwd) {
+		Log.i("my", TAG + " registerEMServer");
 		new Thread(new Runnable() {
 			public void run() {
 				try {
@@ -218,7 +219,7 @@ public class RegisterActivity extends BaseActivity {
 								pd.dismiss();
 							// 保存用户名
 							FuliCenterApplication.getInstance().setUserName(username);
-							Toast.makeText(getApplicationContext(), getResources().getString(R.string.Registered_successfully), 0).show();
+							Toast.makeText(getApplicationContext(), getResources().getString(R.string.Registered_successfully), Toast.LENGTH_SHORT).show();
 							finish();
 						}
 					});
@@ -228,16 +229,16 @@ public class RegisterActivity extends BaseActivity {
 						public void run() {
 							if (!RegisterActivity.this.isFinishing())
 								pd.dismiss();
-							int errorCode=e.getErrorCode();
-							if(errorCode== EMError.NONETWORK_ERROR){
+							int errorCode = e.getErrorCode();
+							if (errorCode == EMError.NONETWORK_ERROR) {
 								Toast.makeText(getApplicationContext(), getResources().getString(R.string.network_anomalies), Toast.LENGTH_SHORT).show();
-							}else if(errorCode == EMError.USER_ALREADY_EXISTS){
+							} else if (errorCode == EMError.USER_ALREADY_EXISTS) {
 								Toast.makeText(getApplicationContext(), getResources().getString(R.string.User_already_exists), Toast.LENGTH_SHORT).show();
-							}else if(errorCode == EMError.UNAUTHORIZED){
+							} else if (errorCode == EMError.UNAUTHORIZED) {
 								Toast.makeText(getApplicationContext(), getResources().getString(R.string.registration_failed_without_permission), Toast.LENGTH_SHORT).show();
-							}else if(errorCode == EMError.ILLEGAL_USER_NAME){
-								Toast.makeText(getApplicationContext(), getResources().getString(R.string.illegal_user_name),Toast.LENGTH_SHORT).show();
-							}else{
+							} else if (errorCode == EMError.ILLEGAL_USER_NAME) {
+								Toast.makeText(getApplicationContext(), getResources().getString(R.string.illegal_user_name), Toast.LENGTH_SHORT).show();
+							} else {
 								Toast.makeText(getApplicationContext(), getResources().getString(R.string.Registration_failed) + e.getMessage(), Toast.LENGTH_SHORT).show();
 							}
 						}
@@ -249,8 +250,9 @@ public class RegisterActivity extends BaseActivity {
 
 	/** 环信服务端注册失败时，取消远端服务端的注册 */
 	private void unregister(String username) {
+		Log.i("my", TAG + " unregister");
 		OkHttpUtils2<Message> utils = new OkHttpUtils2<Message>();
-		utils.url(SERVER_ROOT)
+		utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
 				.addParam(I.KEY_REQUEST, I.REQUEST_UNREGISTER)
 				.addParam(I.User.USER_NAME, username)
 				.targetClass(Message.class)

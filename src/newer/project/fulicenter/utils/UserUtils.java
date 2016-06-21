@@ -11,9 +11,9 @@ import com.squareup.picasso.Picasso;
 
 import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.bean.User;

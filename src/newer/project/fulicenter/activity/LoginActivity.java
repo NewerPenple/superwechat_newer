@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.easemob.EMCallBack;
+import com.easemob.chat.EMChat;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 import com.squareup.okhttp.Callback;
@@ -67,6 +68,8 @@ import newer.project.fulicenter.utils.Utils;
 public class LoginActivity extends BaseActivity {
 	private static final String TAG = "LoginActivity";
 	public static final int REQUEST_CODE_SETNICK = 1;
+	public static final int RESULT_CODE_PERSON = 101;
+	public static final int RESULT_CODE_LOG_OUT = 102;
 	private EditText usernameEditText;
 	private EditText passwordEditText;
 
@@ -85,9 +88,9 @@ public class LoginActivity extends BaseActivity {
 		// 如果用户名密码都有，直接进入主页面
 		if (DemoHXSDKHelper.getInstance().isLogined()) {
 			autoLogin = true;
-			startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
-			return;
+//			startActivity(new Intent(LoginActivity.this, MainActivity.class));
+			setResult(RESULT_CODE_PERSON);
+			finish();
 		}
 		setContentView(R.layout.activity_login);
 
@@ -191,6 +194,7 @@ public class LoginActivity extends BaseActivity {
 
 			@Override
 			public void onProgress(int progress, String status) {
+				Log.i("my", TAG + " onProgress");
 			}
 
 			@Override
@@ -213,9 +217,9 @@ public class LoginActivity extends BaseActivity {
 	private void loginClientServer() {
 		UserDao userDao = new UserDao(this);
 		User user = userDao.findUserByUserName(currentUsername);
-		Log.i(TAG, String.valueOf(user == null));
 		if (user != null) { //本地是否保存该账号
 			if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
+				saveUser(user);
 				loginSuccess();
 			} else {
 				Toast.makeText(getApplicationContext(), R.string.login_failure_failed, Toast.LENGTH_SHORT).show();
@@ -331,10 +335,11 @@ public class LoginActivity extends BaseActivity {
 			pd.dismiss();
 		}
 		// 进入主页面
-		Intent intent = new Intent(LoginActivity.this,
+		/*Intent intent = new Intent(LoginActivity.this,
 				MainActivity.class);
-		startActivity(intent);
-
+		startActivity(intent);*/
+		setResult(RESULT_CODE_PERSON);
+		sendStickyBroadcast(new Intent("update_user"));
 		finish();
 	}
 
@@ -382,6 +387,14 @@ public class LoginActivity extends BaseActivity {
 		super.onResume();
 		if (autoLogin) {
 			return;
+		}
+	}
+
+	@Override
+	public void finish() {
+		super.finish();
+		if (!EMChat.getInstance().isLoggedIn()) {
+			setResult(RESULT_CODE_LOG_OUT);
 		}
 	}
 }

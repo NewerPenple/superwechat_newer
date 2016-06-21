@@ -24,149 +24,58 @@
           <theme>@android:style/Theme.Holo</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_settings.xml">
+        <config>
+          <theme>@android:style/Theme.Holo</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="my" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java" line="46" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6ffd7a8-7c9d-44b8-b327-51ab3e91a4e0" name="Default" comment="I接口中添加福利社服务器的接口">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/disklrucache-2.0.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jackson-core-asl-1.9.11.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BaseFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/BoutiqueDetailActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueDetailAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/CatChildFilterButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/CategoryDetailActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryDetailAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/ColorFilterButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/DiskLruImageCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/DisplayUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/FlowIndicator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/FooterHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/NewGoodDetailActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewGoodsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/widget/SlideAutoLoopView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_boutique_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_category_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_fuli.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_new_good_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_boutique.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_category.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_new_goods.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_boutique.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_boutique_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_cat_filter.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_category_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_category_group.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_catetory_child.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_color_filter.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_footer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_new_goods.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/layout_property_color.xml" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\res\merged\debug\layout\activity_group_blacklist.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\res\merged\debug\layout\activity_group_details.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\res\merged\debug\layout\activity_group_pick_contacts.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\build\intermediates\res\merged\debug\layout\activity_group_simle_details.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\res\layout\activity_group_blacklist.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\res\layout\activity_group_details.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\res\layout\activity_group_pick_contacts.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\res\layout\activity_group_simle_details.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\ChatRoomActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\ChatRoomDetailsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\ExitGroupDialog.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\GroupBlacklistActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\GroupDetailsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\GroupPickContactsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\GroupSimpleDetailActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\GroupsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\NewGroupActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\PublicChatRoomsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\PublicGroupsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\activity\PublicGroupsSeachActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\adapter\GroupAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\bean\Group.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\bean\Location.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\bean\Member.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\task\DownloadAllGroupTask.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\task\DownloadGroupMemberTask.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\task\DownloadPublicGroupTask.java" afterPath="" />
+    <list default="true" id="f6ffd7a8-7c9d-44b8-b327-51ab3e91a4e0" name="Default" comment="新建DownloadCollectCountTask类">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/AddContactActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/AddContactActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/AlbumBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/AlbumBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/data/ApiParams.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/ApiParams.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/data/BitmapLruCache.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/BitmapLruCache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/BoutiqueBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/BoutiqueBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/CameraHelper.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/CameraHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CartBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CartBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CategoryChildBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CategoryChildBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CategoryGroupBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CategoryGroupBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ChatActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/ChatActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ChatAllHistoryAdapter.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/ChatAllHistoryAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatAllHistoryFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatAllHistoryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatHistoryFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ChatHistoryFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CollectBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/CollectBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/ColorBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/ColorBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ContactlistFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/ContactlistFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadCollectCountTask.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadCollectCountTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadContactListTask.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadContactListTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/GoodDetailsBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/GoodDetailsBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/I.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/I.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageUtils.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/MainActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/MessageAdapter.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/MessageAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewFriendsMsgAdapter.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewFriendsMsgAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/NewGoodBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/NewGoodBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PickContactNoCheckboxActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/PickContactNoCheckboxActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/PropertyBean.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/PropertyBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RegisterActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RegisterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/data/RequestManager.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/data/RequestManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/SettingsFragment.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/SettingsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SettingsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/User.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/bean/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/UserProfileActivity.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/activity/UserProfileActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/db/UserDao.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/db/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/Utils.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_register.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_register.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_register.xml" afterPath="$PROJECT_DIR$/res/layout/activity_register.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_splash.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/res/layout/activity_splash.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_person.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_person.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/superwechat.iml" afterPath="$PROJECT_DIR$/superwechat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Project\superwechat\superwechat\res\D.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/D.java" />
-      <change type="MOVED" beforePath="D:\Project\superwechat\superwechat\res\FragmentUtils.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/utils/FragmentUtils.java" />
-      <change type="MOVED" beforePath="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\SuperWeChatApplication.java" afterPath="$PROJECT_DIR$/src/newer/project/fulicenter/FuliCenterApplication.java" />
     </list>
     <ignored path="superwechat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -218,92 +127,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CategoryDetailActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/CategoryDetailActivity.java">
+      <file leaf-file-name="PersonFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5359629">
-              <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding>
-                <element signature="e#2672#2879#0" expanded="true" />
-                <element signature="e#2878#2879#0" expanded="true" />
+                <element signature="e#1838#1839#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorFilterButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/widget/ColorFilterButton.java">
+      <file leaf-file-name="UserUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.3517835">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CatChildFilterButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/widget/CatChildFilterButton.java">
+      <file leaf-file-name="I.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/I.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="184" column="45" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="45" />
+              <caret line="406" column="20" selection-start-line="406" selection-start-column="20" selection-end-line="406" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoutiqueDetailAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueDetailAdapter.java">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+              <caret line="342" column="17" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
               <folding>
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#1512#1513#0" expanded="true" />
-                <element signature="e#4067#4068#0" expanded="true" />
-                <element signature="e#4134#4135#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4449#4551#0" expanded="false" />
+                <element signature="e#4550#4551#0" expanded="false" />
+                <element signature="e#4663#4762#0" expanded="false" />
+                <element signature="e#4761#4762#0" expanded="false" />
+                <element signature="e#5750#5751#0" expanded="false" />
+                <element signature="e#5793#5794#0" expanded="false" />
+                <element signature="e#5934#6134#0" expanded="false" />
+                <element signature="e#6133#6134#0" expanded="false" />
+                <element signature="e#7935#8058#0" expanded="false" />
+                <element signature="e#8057#8058#0" expanded="false" />
+                <element signature="e#8437#8446#0" expanded="false" />
+                <element signature="e#9477#9706#0" expanded="false" />
+                <element signature="e#9705#9706#0" expanded="false" />
+                <element signature="e#10298#10314#0" expanded="false" />
+                <element signature="e#11339#11347#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryAdapter.java">
+      <file leaf-file-name="DownloadCollectCountTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadCollectCountTask.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="67" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
-              <folding>
-                <element signature="e#4560#5143#0" expanded="true" />
-                <element signature="e#5142#5143#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewGoodsAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewGoodsAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryDetailAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryDetailAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#1500#1501#0" expanded="true" />
-                <element signature="e#1527#1528#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#3555#3954#0" expanded="true" />
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#4221#4222#0" expanded="true" />
-                <element signature="e#4288#4289#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -314,8 +203,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1196,31 +1085,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/res/color/main_botton_text_color.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/item_footer.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/FooterHolder.java" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_new_goods.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/res/layout/activity_fuli.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/widget/FlowIndicator.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/widget/SlideAutoLoopView.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/DisplayUtils.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/bean/GoodDetailsBean.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/I.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/NewGoodDetailActivity.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/DiskLruImageCache.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/FuliCenterApplication.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/data/RequestManager.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/data/BitmapLruCache.java" />
         <option value="$PROJECT_DIR$/res/layout/item_new_goods.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_boutique.xml" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BaseFragment.java" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/item_boutique_detail.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_boutique_detail.xml" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueAdapter.java" />
@@ -1229,24 +1101,41 @@
         <option value="$PROJECT_DIR$/res/layout/activity_new_good_detail.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_category_group.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_category.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/item_catetory_child.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java" />
         <option value="$PROJECT_DIR$/res/FragmentUtils.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/FragmentUtils.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_category_detail.xml" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/widget/ColorFilterButton.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/widget/CatChildFilterButton.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageUtils.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_category_detail.xml" />
-        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewGoodsAdapter.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/BoutiqueDetailActivity.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueDetailAdapter.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryDetailAdapter.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryAdapter.java" />
         <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/CategoryDetailActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/FuliCenterApplication.java" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_person.xml" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/bean/MessageBean.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/RegisterActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_settings.xml" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadContactListTask.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/db/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadCollectCountTask.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/data/ApiParams.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/I.java" />
+        <option value="$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java" />
       </list>
     </option>
   </component>
@@ -1289,6 +1178,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -1368,6 +1258,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulicenter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1529,7 +1441,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1558,11 +1469,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\bean" />
+      <recent name="D:\Project\superwechat\superwechat\res\drawable-hdpi" />
+      <recent name="D:\Project\superwechat\superwechat\res\drawable-xhdpi" />
       <recent name="D:\Project\superwechat\superwechat\res\layout" />
       <recent name="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\widget" />
-      <recent name="D:\Project\superwechat\superwechat\src\newer\project\fulicenter\utils" />
-      <recent name="D:\Project\superwechat\superwechat\libs" />
-      <recent name="D:\Project\superwechat\superwechat\res\drawable-xhdpi" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="newer.project.fulicenter.adapter" />
@@ -1789,11 +1700,53 @@
       <option name="project" value="LOCAL" />
       <updated>1465957501008</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成新品一、二级，精品一、二级，分类一级界面功能">
+      <created>1466386111629</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1466386111629</updated>
+    </task>
+    <task id="LOCAL-00009" summary="FuliCenterApplication中添加collectCount全局变量">
+      <created>1466386508607</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1466386508607</updated>
+    </task>
+    <task id="LOCAL-00010" summary="编写fragment_person布局">
+      <created>1466392663693</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1466392663693</updated>
+    </task>
+    <task id="LOCAL-00011" summary="添加MessageBean实体类">
+      <created>1466398487886</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1466398487886</updated>
+    </task>
+    <task id="LOCAL-00012" summary="新建DownloadCollectCountTask类">
+      <created>1466398996300</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1466398996300</updated>
+    </task>
+    <task id="LOCAL-00013" summary="编写PersonFragment类">
+      <created>1466417232470</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1466417232470</updated>
+    </task>
+    <task id="LOCAL-00014" summary="添加SettingsActivity类及其布局">
+      <created>1466418126099</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1466418126099</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1801,16 +1754,16 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05487122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54535276" sideWeight="0.50213677" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54535276" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54535276" sideWeight="0.49786323" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1847,537 +1800,451 @@
     <MESSAGE value="RegisterActivity中给返回按钮添加监听器，删除注册监听" />
     <MESSAGE value="修改activity_splash布局" />
     <MESSAGE value="I接口中添加福利社服务器的接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="I接口中添加福利社服务器的接口" />
+    <MESSAGE value="完成新品一、二级，精品一、二级，分类一级界面功能" />
+    <MESSAGE value="FuliCenterApplication中添加collectCount全局变量" />
+    <MESSAGE value="编写fragment_person布局" />
+    <MESSAGE value="添加MessageBean实体类" />
+    <MESSAGE value="新建DownloadCollectCountTask类" />
+    <MESSAGE value="编写PersonFragment类" />
+    <MESSAGE value="添加SettingsActivity类及其布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加SettingsActivity类及其布局" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageLoader.java">
+    <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.037123">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/volley.jar!/com/android/volley/toolbox/ImageLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52403843">
-          <caret line="240" column="32" selection-start-line="240" selection-start-column="32" selection-end-line="240" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/volley.jar!/com/android/volley/toolbox/NetworkImageView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47115386">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/DiskLruImageCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.174014">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/data/RequestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/data/BitmapLruCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/view/LayoutInflater.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35785535">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15313224">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33294663">
-          <caret line="167" column="13" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10208817">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_new_goods.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17831326">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/DisplayUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3062645">
-          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/NewGoodDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_boutique.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4849188">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.38341346">
+          <caret line="160" column="47" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_new_good_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="55" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.13253012">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_category_group.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/content/IntentFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79518074">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="0.16583541">
+          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_new_goods.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_category.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3180723">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_boutique.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/bean/CategoryGroupBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10208817">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/bean/MessageBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_catetory_child.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325301">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/FragmentUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4338747">
-          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41299304">
-          <caret line="286" column="58" selection-start-line="286" selection-start-column="58" selection-end-line="286" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-zh-rCN/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7526882">
-          <caret line="199" column="30" selection-start-line="199" selection-start-column="29" selection-end-line="199" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_category_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29156625">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_boutique_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25783134">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
+        <state vertical-scroll-proportion="-17.233334">
+          <caret line="190" column="80" selection-start-line="190" selection-start-column="28" selection-end-line="190" selection-end-column="80" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1297#1298#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#3797#3798#0" expanded="false" />
-            <element signature="e#3870#3871#0" expanded="false" />
+            <element signature="e#7198#8947#0" expanded="true" />
+            <element signature="e#7356#7718#0" expanded="true" />
+            <element signature="e#7717#7718#0" expanded="true" />
+            <element signature="e#8449#8522#0" expanded="true" />
+            <element signature="e#8946#8947#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15429235">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/I.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33294663">
-          <caret line="222" column="8" selection-start-line="222" selection-start-column="8" selection-end-line="222" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_boutique_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8746988">
-          <caret line="66" column="51" selection-start-line="40" selection-start-column="4" selection-end-line="66" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_cat_filter.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_color_filter.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37108433">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/bean/NewGoodBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/bean/GoodDetailsBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1743#1744#0" expanded="false" />
-            <element signature="e#1768#1769#0" expanded="false" />
-            <element signature="e#1801#1802#0" expanded="false" />
-            <element signature="e#1829#1830#0" expanded="false" />
-            <element signature="e#1860#1861#0" expanded="false" />
-            <element signature="e#1890#1891#0" expanded="false" />
-            <element signature="e#1933#1934#0" expanded="false" />
-            <element signature="e#1971#1972#0" expanded="false" />
-            <element signature="e#2000#2001#0" expanded="false" />
-            <element signature="e#2028#2029#0" expanded="false" />
-            <element signature="e#2067#2068#0" expanded="false" />
-            <element signature="e#2101#2102#0" expanded="false" />
-            <element signature="e#2137#2138#0" expanded="false" />
-            <element signature="e#2169#2170#0" expanded="false" />
-            <element signature="e#2219#2220#0" expanded="false" />
-            <element signature="e#2261#2262#0" expanded="false" />
-            <element signature="e#2304#2305#0" expanded="false" />
-            <element signature="e#2343#2344#0" expanded="false" />
-            <element signature="e#2500#2501#0" expanded="false" />
-            <element signature="e#2533#2534#0" expanded="false" />
-            <element signature="e#2585#2586#0" expanded="false" />
-            <element signature="e#2629#2630#0" expanded="false" />
-            <element signature="e#2665#2666#0" expanded="false" />
-            <element signature="e#2697#2698#0" expanded="false" />
-            <element signature="e#2747#2748#0" expanded="false" />
-            <element signature="e#2789#2790#0" expanded="false" />
-            <element signature="e#2829#2830#0" expanded="false" />
-            <element signature="e#2865#2866#0" expanded="false" />
-            <element signature="e#2923#2924#0" expanded="false" />
-            <element signature="e#2973#2974#0" expanded="false" />
-            <element signature="e#3012#3013#0" expanded="false" />
-            <element signature="e#3047#3048#0" expanded="false" />
-            <element signature="e#3103#3104#0" expanded="false" />
-            <element signature="e#3151#3152#0" expanded="false" />
-            <element signature="e#3187#3188#0" expanded="false" />
-            <element signature="e#3219#3220#0" expanded="false" />
-            <element signature="e#3269#3270#0" expanded="false" />
-            <element signature="e#3311#3312#0" expanded="false" />
-            <element signature="e#3348#3349#0" expanded="false" />
-            <element signature="e#3381#3382#0" expanded="false" />
-            <element signature="e#3433#3434#0" expanded="false" />
-            <element signature="e#3477#3478#0" expanded="false" />
-            <element signature="e#3512#3513#0" expanded="false" />
-            <element signature="e#3543#3544#0" expanded="false" />
-            <element signature="e#3591#3592#0" expanded="false" />
-            <element signature="e#3631#3632#0" expanded="false" />
-            <element signature="e#3663#3664#0" expanded="false" />
-            <element signature="e#3693#3694#0" expanded="false" />
-            <element signature="e#3737#3738#0" expanded="false" />
-            <element signature="e#3775#3776#0" expanded="false" />
-            <element signature="e#3810#3811#0" expanded="false" />
-            <element signature="e#3841#3842#0" expanded="false" />
-            <element signature="e#3889#3890#0" expanded="false" />
-            <element signature="e#3929#3930#0" expanded="false" />
-            <element signature="e#4159#4160#0" expanded="false" />
-            <element signature="e#4192#4193#0" expanded="false" />
-            <element signature="e#4252#4253#0" expanded="false" />
-            <element signature="e#4296#4297#0" expanded="false" />
-            <element signature="e#4596#4597#0" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/ImageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78846157">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7447796">
-          <caret line="186" column="86" selection-start-line="186" selection-start-column="86" selection-end-line="186" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/BoutiqueDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="28" selection-start-line="177" selection-start-column="28" selection-end-line="177" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/java/util/Comparator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.109725684">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryDetailAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#1500#1501#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#3555#3954#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#4221#4222#0" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_category_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.625">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/widget/ColorFilterButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/CategoryFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_person.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33189654">
+          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/java/lang/Override.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21945137">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/content/Context.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36805555">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1990" column="0" selection-start-line="1990" selection-start-column="0" selection-end-line="1990" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/app/BackStackRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21265823">
+          <caret line="742" column="0" selection-start-line="742" selection-start-column="0" selection-end-line="742" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="569" column="0" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/app/FragmentPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/extras/android/m2repository/com/android/support/support-v4/23.2.0/support-v4-23.2.0-sources.jar!/android/support/v4/view/ViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1563" column="0" selection-start-line="1563" selection-start-column="0" selection-end-line="1563" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/widget/RelativeLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16986302">
+          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0666666">
+          <caret line="1920" column="22" selection-start-line="1920" selection-start-column="22" selection-end-line="1920" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/view/ViewGroup.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0666666">
+          <caret line="620" column="19" selection-start-line="620" selection-start-column="19" selection-end-line="620" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/widget/FrameLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16986302">
+          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/widget/LinearLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16986302">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/java/lang/Runnable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13715711">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/okhttp-2.7.5.jar!/com/squareup/okhttp/HttpUrl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4666667">
+          <caret line="320" column="0" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/okhttp-2.7.5.jar!/com/squareup/okhttp/Request.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4666667">
+          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/util/Log.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/BoutiqueFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="51" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/NewGoodsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84686774">
+          <caret line="304" column="70" selection-start-line="304" selection-start-column="70" selection-end-line="304" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/NewGoodsAdapter.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_conversation_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/SettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="74" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/widget/CatChildFilterButton.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="184" column="45" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="45" />
+        <state vertical-scroll-proportion="-1.4168675">
+          <caret line="296" column="16" selection-start-line="296" selection-start-column="16" selection-end-line="296" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/easemobchat_2.2.8.jar!/com/easemob/chat/EMChat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.566667">
+          <caret line="161" column="19" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/data/OkHttpUtils2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18329467">
+          <caret line="325" column="16" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/android/widget/TextView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35785535">
+          <caret line="523" column="22" selection-start-line="523" selection-start-column="22" selection-end-line="523" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/applib/controller/HXSDKHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33294663">
+          <caret line="247" column="16" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/BoutiqueDetailAdapter.java">
+    <entry file="jar://$PROJECT_DIR$/libs/easemobchat_2.2.8.jar!/com/easemob/chat/EMChatManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34495193">
+          <caret line="984" column="19" selection-start-line="984" selection-start-column="19" selection-end-line="984" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+          <caret line="343" column="93" selection-start-line="343" selection-start-column="93" selection-end-line="343" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android/sdk/platforms/android-19/android.jar!/java/util/HashMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6736">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/FuliActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11136891">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#4067#4068#0" expanded="true" />
-            <element signature="e#4134#4135#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/adapter/CategoryAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadContactListTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="67" selection-start-line="117" selection-start-column="67" selection-end-line="117" selection-end-column="67" />
+        <state vertical-scroll-proportion="2.3218997">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
           <folding>
-            <element signature="e#4560#5143#0" expanded="true" />
-            <element signature="e#5142#5143#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/CategoryDetailActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/FuliCenterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5359629">
-          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.64942527">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
           <folding>
-            <element signature="e#2672#2879#0" expanded="true" />
-            <element signature="e#2878#2879#0" expanded="true" />
+            <element signature="e#0#629#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/db/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6937355">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52884614">
+          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+          <folding>
+            <element signature="e#1775#2731#0" expanded="true" />
+            <element signature="e#2730#2731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="342" column="17" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4449#4551#0" expanded="false" />
+            <element signature="e#4550#4551#0" expanded="false" />
+            <element signature="e#4663#4762#0" expanded="false" />
+            <element signature="e#4761#4762#0" expanded="false" />
+            <element signature="e#5750#5751#0" expanded="false" />
+            <element signature="e#5793#5794#0" expanded="false" />
+            <element signature="e#5934#6134#0" expanded="false" />
+            <element signature="e#6133#6134#0" expanded="false" />
+            <element signature="e#7935#8058#0" expanded="false" />
+            <element signature="e#8057#8058#0" expanded="false" />
+            <element signature="e#8437#8446#0" expanded="false" />
+            <element signature="e#9477#9706#0" expanded="false" />
+            <element signature="e#9705#9706#0" expanded="false" />
+            <element signature="e#10298#10314#0" expanded="false" />
+            <element signature="e#11339#11347#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/data/ApiParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38283062">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/task/DownloadCollectCountTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/fragment/PersonFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="e#1838#1839#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/I.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="406" column="20" selection-start-line="406" selection-start-column="20" selection-end-line="406" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newer/project/fulicenter/utils/UserUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3517835">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

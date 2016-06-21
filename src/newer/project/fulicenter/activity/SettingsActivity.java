@@ -23,7 +23,7 @@ import newer.project.fulicenter.R;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 
 public class SettingsActivity extends BaseActivity implements View.OnClickListener {
-
+    private static final String TAG = SettingsActivity.class.getName();
     /**
      * 设置新消息通知布局
      */
@@ -344,6 +344,9 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                         FuliCenterApplication instance = FuliCenterApplication.getInstance();
                         instance.getContactList().clear();
                         instance.getUserList().clear();
+                        instance.setUser(null);
+                        instance.setUserName(null);
+                        instance.setCollectCount(0);
                         // 重新显示登陆页面
                         finish();
                         startActivity(new Intent(SettingsActivity.this, LoginActivity.class));

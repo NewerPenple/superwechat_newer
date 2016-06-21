@@ -41,6 +41,7 @@ public class NewGoodsFragment extends BaseFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.i("my", TAG + " onCreateView");
         View layout = inflater.inflate(R.layout.fragment_new_goods, container, false);
         msrLayoutNewGoods = (SwipeRefreshLayout) layout.findViewById(R.id.srLayout_new_goods);
         mrvNewGoods = (RecyclerView) layout.findViewById(R.id.rv_new_goods);

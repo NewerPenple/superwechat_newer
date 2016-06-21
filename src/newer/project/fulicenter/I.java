@@ -407,7 +407,7 @@ public final int NEW_GOOD=0;
     /**壹收款服务端支付URL*/
     String PAY_URL= FuliCenterApplication.FULI_SERVER_ROOT+"?request="+I.REQUEST_PAY;
 	/** 下载用户头像请求 */
-	String REQUEST_DOWNLOAD_USER_AVATAR_URL			=		FuliCenterApplication.SERVER_ROOT + "?"
+	String REQUEST_DOWNLOAD_USER_AVATAR_URL			=		FuliCenterApplication.FULI_SERVER_ROOT + "?"
 			+ KEY_REQUEST + "=" + I.REQUEST_DOWNLOAD_AVATAR + "&" + AVATAR_TYPE + "=";
     String REQUEST_DOWNLOAD_BOUTIQUE_IMG_URL = FuliCenterApplication.FULI_SERVER_ROOT + "?"
             + KEY_REQUEST + "=" + I.REQUEST_DOWNLOAD_BOUTIQUE_IMG + "&" + Boutique.IMAGE_URL + "=";

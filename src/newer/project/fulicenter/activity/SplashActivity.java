@@ -72,6 +72,7 @@ public class SplashActivity extends BaseActivity {
 					}
 					//进入主页面
 					startActivity(new Intent(SplashActivity.this, FuliActivity.class));
+					sendStickyBroadcast(new Intent("update_user"));
 					finish();
 				}else {
 					try {

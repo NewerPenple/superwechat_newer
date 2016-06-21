@@ -1,6 +1,7 @@
 package newer.project.fulicenter.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import newer.project.fulicenter.data.OkHttpUtils2;
 import newer.project.fulicenter.utils.Utils;
 
 public class CategoryFragment extends BaseFragment {
+    private static final String TAG = CategoryFragment.class.getName();
     private ExpandableListView melvCategory;
     private ArrayList<CategoryGroupBean> groupList;
     private ArrayList<ArrayList<CategoryChildBean>> childList;
@@ -34,6 +36,7 @@ public class CategoryFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.i("my", TAG + " onCreateView");
         View layout = inflater.inflate(R.layout.fragment_category, container, false);
         melvCategory = (ExpandableListView) layout.findViewById(R.id.elv_category);
         return layout;

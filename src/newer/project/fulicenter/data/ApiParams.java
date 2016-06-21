@@ -4,8 +4,8 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Set;
 
-import newer.project.fulicenter.I;
 import newer.project.fulicenter.FuliCenterApplication;
+import newer.project.fulicenter.I;
 
 
 public class ApiParams extends HashMap<String, String> {
@@ -58,7 +58,7 @@ public class ApiParams extends HashMap<String, String> {
 	}
 
 	public String getRequestUrl(String request) throws Exception {
-		StringBuilder url = new StringBuilder(FuliCenterApplication.SERVER_ROOT);
+		StringBuilder url = new StringBuilder(FuliCenterApplication.FULI_SERVER_ROOT);
 		if (this == null || this.isEmpty()) {
 			return url.toString();
 		}
