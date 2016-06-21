@@ -2,6 +2,7 @@ package newer.project.fulicenter.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -18,6 +19,8 @@ import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.bean.AlbumBean;
 import newer.project.fulicenter.bean.GoodDetailsBean;
+import newer.project.fulicenter.bean.MessageBean;
+import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.OkHttpUtils2;
 import newer.project.fulicenter.utils.DisplayUtils;
 import newer.project.fulicenter.utils.ImageUtils;
@@ -25,6 +28,7 @@ import newer.project.fulicenter.widget.FlowIndicator;
 import newer.project.fulicenter.widget.SlideAutoLoopView;
 
 public class NewGoodDetailActivity extends BaseActivity {
+    private static final String TAG = NewGoodDetailActivity.class.getName();
     private TextView mtvBack,mtvNameEn,mtvNameCh,mtvPrice,mtvCartIconHint;
     private ImageView mivCartIcon,mivCollectIcon,mivShareIcon;
     private RelativeLayout mLayoutCartIcon;
@@ -58,6 +62,31 @@ public class NewGoodDetailActivity extends BaseActivity {
         }
     }
 
+    private void downloadIsCollect() {
+        User user = FuliCenterApplication.getInstance().getUser();
+        OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
+        utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                .addParam(I.KEY_REQUEST,I.REQUEST_IS_COLLECT)
+                .addParam(I.Collect.GOODS_ID, String.valueOf(goodId))
+                .addParam(I.Collect.USER_NAME,user.getMUserName())
+                .targetClass(MessageBean.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<MessageBean>() {
+                    @Override
+                    public void onSuccess(MessageBean result) {
+                        if (result != null && result.isSuccess()) {
+                            setCollectIcon(true);
+                        } else {
+                            setCollectIcon(false);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        Log.i("my", TAG + " " + error);
+                    }
+                });
+    }
+
     private void showGood() {
         OkHttpUtils2<GoodDetailsBean> utils = new OkHttpUtils2<GoodDetailsBean>();
         utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
@@ -74,6 +103,7 @@ public class NewGoodDetailActivity extends BaseActivity {
                             mtvPrice.setText(result.getCurrencyPrice());
                             mwvDetail.loadDataWithBaseURL(null, result.getGoodsBrief().trim(), D.TEXT_HTML, D.UTF_8, null);
                             initColorsBanner();
+                            downloadIsCollect();
                         } else {
                             finish();
                         }
@@ -133,5 +163,13 @@ public class NewGoodDetailActivity extends BaseActivity {
         WebSettings settings = mwvDetail.getSettings();
         settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         settings.setBuiltInZoomControls(true);
+    }
+
+    public void setCollectIcon(boolean isCollect) {
+        if (isCollect) {
+            mivCollectIcon.setImageResource(R.drawable.bg_collect_out);
+        } else {
+            mivCollectIcon.setImageResource(R.drawable.bg_collect_in);
+        }
     }
 }
