@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:2:1-308:12
+ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:2:1-309:12
 	xmlns:android
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:2:11-69
 	package
@@ -131,7 +131,7 @@ ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:41:5-88
 	android:name
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:41:30-85
 application
-ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:43:5-306:19
+ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:43:5-307:19
 MERGED from [com.android.support:support-v4:23.2.0] D:\Project\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.0] D:\Project\superwechat\superwechat\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 	android:label
@@ -534,3 +534,7 @@ ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:301:9-305:71
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:304:13-52
 	android:name
 		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:302:13-54
+activity#newer.project.fulicenter.activity.CollectActivity
+ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:306:9-71
+	android:name
+		ADDED from D:\Project\superwechat\superwechat\AndroidManifest.xml:306:19-59

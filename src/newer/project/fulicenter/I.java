@@ -413,4 +413,6 @@ public final int NEW_GOOD=0;
             + KEY_REQUEST + "=" + I.REQUEST_DOWNLOAD_BOUTIQUE_IMG + "&" + Boutique.IMAGE_URL + "=";
     String REQUEST_DOWNLOAD_COLOR_IMG_URL = FuliCenterApplication.FULI_SERVER_ROOT + "?"
             + KEY_REQUEST + "=" + I.REQUEST_DOWNLOAD_COLOR_IMG + "&" + Color.COLOR_IMG + "=";
+    static final int ACT_COLLECT_ADD = 0;
+    static final int ACT_COLLECT_DELETE = 1;
 }

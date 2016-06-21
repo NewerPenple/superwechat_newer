@@ -16,6 +16,7 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.R;
+import newer.project.fulicenter.activity.CollectActivity;
 import newer.project.fulicenter.activity.SettingsActivity;
 import newer.project.fulicenter.task.DownloadCollectCountTask;
 import newer.project.fulicenter.utils.UserUtils;
@@ -49,6 +50,7 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
 
     private void setListener() {
         mtvSettingIcon.setOnClickListener(this);
+        mLayoutCollectCount.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +58,9 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
         switch (view.getId()) {
             case R.id.tv_setting_icon:
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+            case R.id.layout_collect_count:
+                startActivity(new Intent(getActivity(), CollectActivity.class));
                 break;
         }
     }

@@ -21,6 +21,7 @@ import newer.project.fulicenter.DemoHXSDKModel;
 import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
+import newer.project.fulicenter.utils.DisplayUtils;
 
 public class SettingsActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = SettingsActivity.class.getName();
@@ -105,6 +106,8 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
 
     DemoHXSDKModel model;
 
+    private TextView mtvBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -179,6 +182,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         llDiagnose.setOnClickListener(this);
         pushNick.setOnClickListener(this);
         rl_switch_chatroom_leave.setOnClickListener(this);
+        DisplayUtils.initBack(this);
     }
 
     private void initData() {
@@ -216,6 +220,8 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         userProfileContainer = (LinearLayout) findViewById(R.id.ll_user_profile);
         llDiagnose=(LinearLayout) findViewById(R.id.ll_diagnose);
         pushNick=(LinearLayout) findViewById(R.id.ll_set_push_nick);
+
+        mtvBack = (TextView) findViewById(R.id.tv_back);
     }
 
 

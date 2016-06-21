@@ -50,13 +50,14 @@ public class CategoryFragment extends BaseFragment {
 
     @Override
     public void initData() {
+        Log.i("my", TAG + " initData");
         if (init) {
             return;
         }
         init = true;
         OkHttpUtils2<CategoryGroupBean[]> utils = new OkHttpUtils2<CategoryGroupBean[]>();
         utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
-                .addParam(I.KEY_REQUEST,I.REQUEST_FIND_CATEGORY_GROUP)
+                .addParam(I.KEY_REQUEST, I.REQUEST_FIND_CATEGORY_GROUP)
                 .targetClass(CategoryGroupBean[].class)
                 .execute(new OkHttpUtils2.OnCompleteListener<CategoryGroupBean[]>() {
                     @Override

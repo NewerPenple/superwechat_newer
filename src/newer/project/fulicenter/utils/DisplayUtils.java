@@ -17,7 +17,7 @@ public class DisplayUtils {
         });
     }
 
-    public static void initBackWithTitle(final Activity activity, String title) {
+    public static void initBackWithTitle(Activity activity, String title) {
         ((TextView) activity.findViewById(R.id.tv_title)).setText(title);
         initBack(activity);
     }
