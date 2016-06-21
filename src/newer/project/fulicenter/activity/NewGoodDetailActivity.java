@@ -10,8 +10,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.easemob.chat.EMChat;
 
 import newer.project.fulicenter.D;
 import newer.project.fulicenter.FuliCenterApplication;
@@ -22,8 +24,10 @@ import newer.project.fulicenter.bean.GoodDetailsBean;
 import newer.project.fulicenter.bean.MessageBean;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.OkHttpUtils2;
+import newer.project.fulicenter.task.DownloadCollectCountTask;
 import newer.project.fulicenter.utils.DisplayUtils;
 import newer.project.fulicenter.utils.ImageUtils;
+import newer.project.fulicenter.utils.Utils;
 import newer.project.fulicenter.widget.FlowIndicator;
 import newer.project.fulicenter.widget.SlideAutoLoopView;
 
@@ -39,6 +43,9 @@ public class NewGoodDetailActivity extends BaseActivity {
     private GoodDetailsBean mGoodDetails;
     private LinearLayout mLayoutColor;
     private int currentColor;
+    private User user;
+    private boolean isCollect;
+    private int action;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +53,90 @@ public class NewGoodDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_new_good_detail);
         initView();
         initData();
+        setListener();
+    }
+
+    private void setListener() {
+        mivCollectIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!EMChat.getInstance().isLoggedIn()) {
+                    startActivity(new Intent(NewGoodDetailActivity.this, LoginActivity.class));
+                } else {
+                    switch (action) {
+                        case I.ACT_COLLECT_ADD:
+                            if (!isCollect) {
+                                addCollect();
+                            }
+                            break;
+                        case I.ACT_COLLECT_DELETE:
+                            if (isCollect) {
+                                deleteCollect();
+                            }
+                            break;
+                    }
+                }
+            }
+        });
+    }
+
+    private void deleteCollect() {
+        OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
+        utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                .addParam(I.KEY_REQUEST, I.REQUEST_DELETE_COLLECT)
+                .addParam(I.Collect.USER_NAME, user.getMUserName())
+                .addParam(I.Collect.GOODS_ID, String.valueOf(mGoodDetails.getGoodsId()))
+                .targetClass(MessageBean.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<MessageBean>() {
+                    @Override
+                    public void onSuccess(MessageBean result) {
+                        if (result != null && result.isSuccess()) {
+                            isCollect = false;
+                            action = I.ACT_COLLECT_ADD;
+                            setCollectIcon();
+                            new DownloadCollectCountTask(NewGoodDetailActivity.this);
+                        } else {
+                            Utils.showToast(NewGoodDetailActivity.this, result.getMsg(), Toast.LENGTH_SHORT);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        Log.i("my", TAG + " " + error);
+                    }
+                });
+    }
+
+    private void addCollect() {
+        OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
+        utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                .addParam(I.KEY_REQUEST, I.REQUEST_ADD_COLLECT)
+                .addParam(I.Collect.USER_NAME, user.getMUserName())
+                .addParam(I.Collect.GOODS_ID, String.valueOf(mGoodDetails.getGoodsId()))
+                .addParam(I.Collect.GOODS_NAME, mGoodDetails.getGoodsName())
+                .addParam(I.Collect.GOODS_ENGLISH_NAME, mGoodDetails.getGoodsEnglishName())
+                .addParam(I.Collect.GOODS_THUMB, mGoodDetails.getGoodsThumb())
+                .addParam(I.Collect.GOODS_IMG, mGoodDetails.getGoodsImg())
+                .addParam(I.Collect.ADD_TIME, String.valueOf(mGoodDetails.getAddTime()))
+                .targetClass(MessageBean.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<MessageBean>() {
+                    @Override
+                    public void onSuccess(MessageBean result) {
+                        if (result != null && result.isSuccess()) {
+                            isCollect = true;
+                            action = I.ACT_COLLECT_DELETE;
+                            setCollectIcon();
+                            new DownloadCollectCountTask(NewGoodDetailActivity.this);
+                        } else {
+                            Utils.showToast(NewGoodDetailActivity.this, result.getMsg(), Toast.LENGTH_SHORT);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        Log.i("my", TAG + " " + error);
+                    }
+                });
     }
 
     private void initData() {
@@ -63,7 +154,7 @@ public class NewGoodDetailActivity extends BaseActivity {
     }
 
     private void downloadIsCollect() {
-        User user = FuliCenterApplication.getInstance().getUser();
+        user = FuliCenterApplication.getInstance().getUser();
         OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
         utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
                 .addParam(I.KEY_REQUEST,I.REQUEST_IS_COLLECT)
@@ -74,9 +165,13 @@ public class NewGoodDetailActivity extends BaseActivity {
                     @Override
                     public void onSuccess(MessageBean result) {
                         if (result != null && result.isSuccess()) {
-                            setCollectIcon(true);
+                            isCollect = true;
+                            action = I.ACT_COLLECT_DELETE;
+                            setCollectIcon();
                         } else {
-                            setCollectIcon(false);
+                            isCollect = false;
+                            action = I.ACT_COLLECT_ADD;
+                            setCollectIcon();
                         }
                     }
 
@@ -165,7 +260,7 @@ public class NewGoodDetailActivity extends BaseActivity {
         settings.setBuiltInZoomControls(true);
     }
 
-    public void setCollectIcon(boolean isCollect) {
+    public void setCollectIcon() {
         if (isCollect) {
             mivCollectIcon.setImageResource(R.drawable.bg_collect_out);
         } else {
