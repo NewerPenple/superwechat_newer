@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <CheckBox
+        android:id="@+id/cb_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomCheckboxTheme"
+        android:layout_centerVertical="true"
+        />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/niv_cart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/cb_cart"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_cart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/niv_cart"
+        android:layout_marginLeft="10dp"
+        android:text="名称"
+        android:textColor="@color/main_orange"
+        android:textSize="20sp"
+        android:lines="1"
+        />
+
+    <Button
+        android:id="@+id/btn_cart_add"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/add_cart"
+        android:layout_toRightOf="@id/niv_cart"
+        android:layout_below="@id/tv_cart_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_cart_num"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_cart_add"
+        android:layout_below="@id/tv_cart_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="(1)"
+        android:textColor="#ff00bb"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btn_cart_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/del_cart"
+        android:layout_toRightOf="@id/tv_cart_num"
+        android:layout_below="@id/tv_cart_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_cart_name"
+        android:layout_marginTop="6dp"
+        android:text="¥998"
+        android:textColor="@color/main_orange"
+        android:textSize="20sp"
+        />
+</RelativeLayout>
