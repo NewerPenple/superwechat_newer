@@ -303,7 +303,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize|stateVisible" />
-        <activity android:name="newer.project.fulicenter.activity.CollectActivity" />
+        <activity
+            android:name="newer.project.fulicenter.activity.CollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
     </application>
 
 </manifest>

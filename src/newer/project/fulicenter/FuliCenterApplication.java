@@ -21,6 +21,7 @@ import com.easemob.EMCallBack;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import newer.project.fulicenter.bean.CartBean;
 import newer.project.fulicenter.bean.Contact;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.RequestManager;
@@ -47,6 +48,8 @@ public class FuliCenterApplication extends Application {
 	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
 
 	private int collectCount;
+
+	private ArrayList<CartBean> cartList;
 
 	public User getUser() {
 		return user;
@@ -78,6 +81,14 @@ public class FuliCenterApplication extends Application {
 
 	public void setCollectCount(int collectCount) {
 		this.collectCount = collectCount;
+	}
+
+	public ArrayList<CartBean> getCartList() {
+		return cartList;
+	}
+
+	public void setCartList(ArrayList<CartBean> cartList) {
+		this.cartList = cartList;
 	}
 
 	@Override

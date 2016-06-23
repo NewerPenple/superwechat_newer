@@ -1,8 +1,8 @@
 package newer.project.fulicenter.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
@@ -114,11 +114,10 @@ public class CategoryAdapter extends BaseExpandableListAdapter{
         holder.mLayoutCategoryChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("my", String.valueOf(childList.get(groupPosition).size()));
-                context.startActivity(new Intent(context, CategoryDetailActivity.class)
-                        .putExtra("goodDetail", childList.get(groupPosition).get(childPosition))
-                        .putExtra("groupName", groupList.get(groupPosition).getName())
-                        .putExtra("childList", (ArrayList<CategoryChildBean>) childList.get(groupPosition)));
+                ((Activity) context).startActivityForResult(new Intent(context, CategoryDetailActivity.class)
+                        .putExtra(I.CategoryChild.CAT_ID, childList.get(groupPosition).get(childPosition).getId())
+                        .putExtra(I.CategoryGroup.NAME, groupList.get(groupPosition).getName())
+                        .putExtra("childList", childList.get(groupPosition)), 0);
             }
         });
         return convertView;

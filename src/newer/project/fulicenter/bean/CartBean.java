@@ -13,16 +13,16 @@ public class CartBean implements Serializable {
      */
 
     private int id;
-    private int userName;
+    private String userName;
     private int goodsId;
     private int count;
     private boolean checked;
-    private String goods;
+    private GoodDetailsBean goods;
 
     public CartBean() {
     }
 
-    public CartBean(int userName, int goodsId, int count, boolean checked, String goods) {
+    public CartBean(String userName, int goodsId, int count, boolean checked, GoodDetailsBean goods) {
         this.userName = userName;
         this.goodsId = goodsId;
         this.count = count;
@@ -38,11 +38,11 @@ public class CartBean implements Serializable {
         this.id = id;
     }
 
-    public int getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(int userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -54,15 +54,39 @@ public class CartBean implements Serializable {
         this.goodsId = goodsId;
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public GoodDetailsBean getGoods() {
+        return goods;
+    }
+
+    public void setGoods(GoodDetailsBean goods) {
+        this.goods = goods;
+    }
+
     @Override
     public String toString() {
         return "CartBean{" +
                 "id=" + id +
-                ", userName=" + userName +
+                ", userName='" + userName + '\'' +
                 ", goodsId=" + goodsId +
                 ", count=" + count +
                 ", checked=" + checked +
-                ", goods='" + goods + '\'' +
+                ", goods=" + goods +
                 '}';
     }
 }

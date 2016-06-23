@@ -68,9 +68,9 @@
                     android:padding="2dp"
                     android:paddingLeft="50dp"
                     android:gravity="center"
-                    android:text="10"
+                    android:text="20"
                     android:textColor="#fff"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:visibility="gone"
                     />
             </RelativeLayout>

@@ -1,6 +1,9 @@
 package newer.project.fulicenter.activity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,15 +18,19 @@ import android.widget.Toast;
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.chat.EMChat;
 
+import java.util.ArrayList;
+
 import newer.project.fulicenter.D;
 import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.bean.AlbumBean;
+import newer.project.fulicenter.bean.CartBean;
 import newer.project.fulicenter.bean.GoodDetailsBean;
 import newer.project.fulicenter.bean.MessageBean;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.OkHttpUtils2;
+import newer.project.fulicenter.task.DownloadCartTask;
 import newer.project.fulicenter.task.DownloadCollectCountTask;
 import newer.project.fulicenter.utils.DisplayUtils;
 import newer.project.fulicenter.utils.ImageUtils;
@@ -46,6 +53,7 @@ public class NewGoodDetailActivity extends BaseActivity {
     private User user;
     private boolean isCollect;
     private int action;
+    private CartCountReceiver cartCountReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +62,7 @@ public class NewGoodDetailActivity extends BaseActivity {
         initView();
         initData();
         setListener();
+        setCartCountReceiver();
     }
 
     private void setListener() {
@@ -78,6 +87,47 @@ public class NewGoodDetailActivity extends BaseActivity {
                 }
             }
         });
+
+        mivCartIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ArrayList<CartBean> list = FuliCenterApplication.getInstance().getCartList();
+                for (CartBean cart : list) {
+                    if (cart.getGoods().getGoodsId() == goodId) {
+                        setResult(LoginActivity.RESULT_CODE_TO_CART);
+                        finish();
+                        return;
+                    }
+                }
+                addCart();
+            }
+        });
+    }
+
+    private void addCart() {
+        OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
+        utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                .addParam(I.KEY_REQUEST, I.REQUEST_ADD_CART)
+                .addParam(I.Cart.USER_NAME, FuliCenterApplication.getInstance().getUser().getMUserName())
+                .addParam(I.Cart.GOODS_ID, String.valueOf(goodId))
+                .addParam(I.Cart.COUNT, String.valueOf(1))
+                .addParam(I.Cart.IS_CHECKED, String.valueOf(true))
+                .targetClass(MessageBean.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<MessageBean>() {
+                    @Override
+                    public void onSuccess(MessageBean result) {
+                        if (result != null && result.isSuccess()) {
+                            new DownloadCartTask(NewGoodDetailActivity.this, 1024 * 10).execute();
+                        } else {
+                            Utils.showToast(NewGoodDetailActivity.this, "商品添加失败", Toast.LENGTH_SHORT);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        Log.i("my", TAG + " " + error);
+                    }
+                });
     }
 
     private void deleteCollect() {
@@ -94,7 +144,7 @@ public class NewGoodDetailActivity extends BaseActivity {
                             isCollect = false;
                             action = I.ACT_COLLECT_ADD;
                             setCollectIcon();
-                            new DownloadCollectCountTask(NewGoodDetailActivity.this);
+                            new DownloadCollectCountTask(NewGoodDetailActivity.this).execute();
                         } else {
                             Utils.showToast(NewGoodDetailActivity.this, result.getMsg(), Toast.LENGTH_SHORT);
                         }
@@ -126,7 +176,7 @@ public class NewGoodDetailActivity extends BaseActivity {
                             isCollect = true;
                             action = I.ACT_COLLECT_DELETE;
                             setCollectIcon();
-                            new DownloadCollectCountTask(NewGoodDetailActivity.this);
+                            new DownloadCollectCountTask(NewGoodDetailActivity.this).execute();
                         } else {
                             Utils.showToast(NewGoodDetailActivity.this, result.getMsg(), Toast.LENGTH_SHORT);
                         }
@@ -266,5 +316,43 @@ public class NewGoodDetailActivity extends BaseActivity {
         } else {
             mivCollectIcon.setImageResource(R.drawable.bg_collect_in);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(cartCountReceiver);
+    }
+
+    private class CartCountReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (FuliCenterApplication.getInstance().getCartList() != null) {
+                int cartCount = 0;
+                ArrayList<CartBean> list = FuliCenterApplication.getInstance().getCartList();
+                for (CartBean cart : list) {
+                    if (cart.getGoods() == null) {
+                        cartCount++;
+                    } else {
+                        cartCount += cart.getCount();
+                    }
+                }
+                if (cartCount > 0) {
+                    mtvCartIconHint.setText(String.valueOf(cartCount));
+                    mtvCartIconHint.setVisibility(View.VISIBLE);
+                } else {
+                    mtvCartIconHint.setVisibility(View.GONE);
+                }
+            } else {
+                mtvCartIconHint.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    private void setCartCountReceiver() {
+        cartCountReceiver = new CartCountReceiver();
+        IntentFilter filter = new IntentFilter("update_user_cart");
+        registerReceiver(cartCountReceiver, filter);
     }
 }

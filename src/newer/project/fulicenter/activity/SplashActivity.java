@@ -13,8 +13,8 @@ import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 
 import newer.project.fulicenter.DemoHXSDKHelper;
-import newer.project.fulicenter.R;
 import newer.project.fulicenter.FuliCenterApplication;
+import newer.project.fulicenter.R;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.db.UserDao;
 import newer.project.fulicenter.task.DownloadContactListTask;
@@ -73,6 +73,7 @@ public class SplashActivity extends BaseActivity {
 					//进入主页面
 					startActivity(new Intent(SplashActivity.this, FuliActivity.class));
 					sendStickyBroadcast(new Intent("update_user"));
+					sendStickyBroadcast(new Intent("update_cart"));
 					finish();
 				}else {
 					try {
@@ -86,7 +87,7 @@ public class SplashActivity extends BaseActivity {
 		}).start();
 
 	}
-	
+
 	/**
 	 * 获取当前应用程序的版本号
 	 */

@@ -40,7 +40,6 @@ public class BoutiqueFragment extends BaseFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("my", TAG + " onCreateView");
         View layout = inflater.inflate(R.layout.fragment_new_goods, container, false);
         msrLayoutBoutique = (SwipeRefreshLayout) layout.findViewById(R.id.srLayout_new_goods);
         mrvBoutique = (RecyclerView) layout.findViewById(R.id.rv_new_goods);

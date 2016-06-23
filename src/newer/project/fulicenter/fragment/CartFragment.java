@@ -1,6 +1,9 @@
 package newer.project.fulicenter.fragment;
 
-import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,8 +38,8 @@ public class CartFragment extends BaseFragment {
     private CartAdapter adapter;
     private LinearLayoutManager manager;
     private int pageId = 0;
-    private AlertDialog dialog;
     private int listSize;
+    private PriceReceiver priceReceiver;
 
 
     public CartFragment() {
@@ -61,6 +64,7 @@ public class CartFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         initView();
         setListener();
+        registerPriceReceiver();
     }
 
     private void setListener() {
@@ -112,11 +116,6 @@ public class CartFragment extends BaseFragment {
                     public void run() {
                         switch (action) {
                             case I.ACTION_DOWNLOAD:
-                                dialog = new AlertDialog.Builder(getActivity())
-                                        .setTitle("加载商品信息")
-                                        .setMessage("加载中……")
-                                        .create();
-                                dialog.show();
                                 break;
                             case I.ACTION_PULL_UP:
                                 break;
@@ -132,23 +131,26 @@ public class CartFragment extends BaseFragment {
                     public void onSuccess(CartBean[] result) {
                         if (result != null) {
                             ArrayList<CartBean> list = Utils.array2List(result);
-                            boolean more = list != null && list.size() > 0;
+                            boolean more = list.size() > 0;
                             adapter.setMore(more);
                             cartList = list;
-                            downloadGoodsDetail(action);
+                            if (more) {
+                                downloadGoodsDetail(action);
+                            } else if (action != I.ACTION_PULL_UP) {
+                                adapter.initList(cartList);
+                            }
                         } else {
-                            dismissDialog();
                             Utils.showToast(getActivity(), getResources().getString(R.string.failed_to_load_data), Toast.LENGTH_SHORT);
                         }
                     }
 
                     @Override
                     public void onError(String error) {
-                        dismissDialog();
                         Log.i("my", TAG + " " + error);
                     }
                 });
     }
+
 
     private void downloadGoodsDetail(final int action) {
         listSize = 0;
@@ -159,12 +161,6 @@ public class CartFragment extends BaseFragment {
                     .addParam(I.CategoryGood.GOODS_ID, String.valueOf(cartList.get(i).getGoodsId()))
                     .targetClass(GoodDetailsBean.class)
                     .execute(new GetGoodsDetailListener(i, action));
-        }
-    }
-
-    private void dismissDialog() {
-        if (dialog != null) {
-            dialog.dismiss();
         }
     }
 
@@ -182,12 +178,30 @@ public class CartFragment extends BaseFragment {
         mrvCart.setAdapter(adapter);
     }
 
+    private void setPrice() {
+        int totalPrice = 0;
+        int totalRankPrice = 0;
+        if (cartList == null) {
+            return;
+        }
+        for (CartBean cart : cartList) {
+            if (cart.getGoods() == null || !cart.isChecked()) {
+                continue;
+            }
+            int price = Integer.parseInt(cart.getGoods().getCurrencyPrice().substring(1, cart.getGoods().getCurrencyPrice().length()));
+            int rankPrice = Integer.parseInt(cart.getGoods().getRankPrice().substring(1, cart.getGoods().getRankPrice().length()));
+            totalPrice += price * cart.getCount();
+            totalRankPrice += rankPrice * cart.getCount();
+        }
+        mtvCartPriceTotal.setText("合计：¥" + totalRankPrice);
+        mtvCartPriceSave.setText("节省：¥" + (totalPrice - totalRankPrice));
+    }
+
     private class GetGoodsDetailListener implements OkHttpUtils3.OnCompleteListener<GoodDetailsBean> {
         private final int num;
         private int action;
 
         public GetGoodsDetailListener(int num, int action) {
-            Log.i("my", TAG + " num = " + num);
             this.num = num;
             this.action = action;
         }
@@ -196,20 +210,24 @@ public class CartFragment extends BaseFragment {
         public void onSuccess(GoodDetailsBean result) {
             listSize++;
             if (result != null) {
-                Log.i("my", TAG + " final num = " + num);
                 cartList.get(num).setGoods(result);
             }
             if (listSize == cartList.size()) {
                 switch (action) {
                     case I.ACTION_DOWNLOAD:
-                        adapter.initList(cartList);
-                        dismissDialog();
+                        if (adapter.isMore()) {
+                            adapter.initList(cartList);
+                        }
                         break;
                     case I.ACTION_PULL_UP:
-                        adapter.addList(cartList);
+                        if (adapter.isMore()) {
+                            adapter.addList(cartList);
+                        }
                         break;
                     case I.ACTION_PULL_DOWN:
-                        adapter.initList(cartList);
+                        if (adapter.isMore()) {
+                            adapter.initList(cartList);
+                        }
                         msrLayoutCart.setRefreshing(false);
                         mtvCartRefresh.setVisibility(View.GONE);
                         break;
@@ -224,7 +242,6 @@ public class CartFragment extends BaseFragment {
                 switch (action) {
                     case I.ACTION_DOWNLOAD:
                         adapter.initList(cartList);
-                        dismissDialog();
                         break;
                     case I.ACTION_PULL_UP:
                         adapter.addList(cartList);
@@ -237,5 +254,34 @@ public class CartFragment extends BaseFragment {
                 }
             }
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(priceReceiver);
+    }
+
+    private class PriceReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals("update_price")) {
+                cartList.clear();
+                cartList.addAll((ArrayList<CartBean>) intent.getSerializableExtra("cartList"));
+                Log.i("my", TAG + " size = " + cartList.size());
+                setPrice();
+            }else if (intent.getAction().equals("update_user_cart")) {
+//                initData();
+            }
+        }
+    }
+
+    private void registerPriceReceiver() {
+        priceReceiver = new PriceReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("update_price");
+        filter.addAction("update_user_cart");
+        getActivity().registerReceiver(priceReceiver, filter);
     }
 }

@@ -1,5 +1,6 @@
 package newer.project.fulicenter.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -89,8 +90,8 @@ public class BoutiqueAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 boutiqueHolder.mLayoutBoutique.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        context.startActivity(new Intent(context, BoutiqueDetailActivity.class)
-                                .putExtra("good", boutiqueList.get(position)));
+                        ((Activity) context).startActivityForResult(new Intent(context, BoutiqueDetailActivity.class)
+                                .putExtra("good", boutiqueList.get(position)), 0);
                     }
                 });
                 break;

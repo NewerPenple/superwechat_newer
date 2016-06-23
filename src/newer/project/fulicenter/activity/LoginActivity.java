@@ -29,7 +29,6 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.easemob.EMCallBack;
-import com.easemob.chat.EMChat;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 import com.squareup.okhttp.Callback;
@@ -44,9 +43,9 @@ import java.util.Map;
 
 import newer.project.fulicenter.Constant;
 import newer.project.fulicenter.DemoHXSDKHelper;
+import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
-import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.applib.controller.HXSDKHelper;
 import newer.project.fulicenter.bean.User;
 import newer.project.fulicenter.data.ApiParams;
@@ -70,6 +69,8 @@ public class LoginActivity extends BaseActivity {
 	public static final int REQUEST_CODE_SETNICK = 1;
 	public static final int RESULT_CODE_PERSON = 101;
 	public static final int RESULT_CODE_LOG_OUT = 102;
+	public static final int REQUEST_CODE_BY_SETTING = 103;
+	public static final int RESULT_CODE_TO_CART = 104;
 	private EditText usernameEditText;
 	private EditText passwordEditText;
 
@@ -112,6 +113,11 @@ public class LoginActivity extends BaseActivity {
 		findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
+//				int request = getIntent().getIntExtra("request", -1);
+//				if (request == REQUEST_CODE_BY_SETTING) {
+//					Log.i("my", TAG + " by setting");
+//					sendStickyBroadcast(new Intent("log_out"));
+//				}
 				finish();
 			}
 		});
@@ -340,6 +346,7 @@ public class LoginActivity extends BaseActivity {
 		startActivity(intent);*/
 		setResult(RESULT_CODE_PERSON);
 		sendStickyBroadcast(new Intent("update_user"));
+		sendStickyBroadcast(new Intent("update_cart"));
 		finish();
 	}
 
@@ -393,8 +400,10 @@ public class LoginActivity extends BaseActivity {
 	@Override
 	public void finish() {
 		super.finish();
-		if (!EMChat.getInstance().isLoggedIn()) {
-			setResult(RESULT_CODE_LOG_OUT);
+		int request = getIntent().getIntExtra("request", -1);
+		if (request == REQUEST_CODE_BY_SETTING) {
+			Log.i("my", TAG + " by setting");
+			sendStickyBroadcast(new Intent("log_out"));
 		}
 	}
 }

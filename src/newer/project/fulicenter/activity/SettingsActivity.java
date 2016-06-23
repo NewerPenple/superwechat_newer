@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -353,10 +354,11 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                         instance.setUser(null);
                         instance.setUserName(null);
                         instance.setCollectCount(0);
+                        instance.setCartList(null);
                         // 重新显示登陆页面
                         finish();
-                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
-
+                        Log.i("my", TAG + " set to login");
+                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class).putExtra("request", LoginActivity.REQUEST_CODE_BY_SETTING));
                     }
                 });
             }

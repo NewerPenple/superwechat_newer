@@ -1,5 +1,6 @@
 package newer.project.fulicenter.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -98,7 +99,7 @@ public class NewGoodsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     public void onClick(View view) {
                         Intent intent = new Intent(context, NewGoodDetailActivity.class);
                         intent.putExtra(D.NewGood.KEY_GOODS_ID, goodsList.get(position).getGoodsId());
-                        context.startActivity(intent);
+                        ((Activity) context).startActivityForResult(intent, 0);
                     }
                 });
                 break;

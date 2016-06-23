@@ -5,12 +5,17 @@ import android.content.Intent;
 
 import com.android.volley.Response;
 
+import java.util.ArrayList;
+
 import newer.project.fulicenter.FuliCenterApplication;
 import newer.project.fulicenter.I;
 import newer.project.fulicenter.activity.BaseActivity;
 import newer.project.fulicenter.bean.CartBean;
+import newer.project.fulicenter.bean.GoodDetailsBean;
 import newer.project.fulicenter.data.ApiParams;
 import newer.project.fulicenter.data.GsonRequest;
+import newer.project.fulicenter.data.OkHttpUtils3;
+import newer.project.fulicenter.utils.Utils;
 
 public class DownloadCartTask extends BaseActivity {
     private static final String TAG = DownloadCartTask.class.toString();
@@ -18,10 +23,13 @@ public class DownloadCartTask extends BaseActivity {
     private String username;
     private String path;
     private int pageId = 0;
-    private int pageSize = 1024 * 100;
+    private int pageSize;
+    private ArrayList<CartBean> cartList;
+    private int listSize;
 
-    public DownloadCartTask(Context context) {
+    public DownloadCartTask(Context context,int pageSize) {
         this.context = context;
+        this.pageSize = pageSize;
         this.username = FuliCenterApplication.getInstance().getUser().getMUserName();
         initPath();
     }
@@ -47,11 +55,54 @@ public class DownloadCartTask extends BaseActivity {
             @Override
             public void onResponse(CartBean[] cartBeans) {
                 if (cartBeans != null && cartBeans.length > 0) {
-                    int count = cartBeans.length;
-                    FuliCenterApplication.getInstance().setCartCount(count);
-                    context.sendStickyBroadcast(new Intent("update_cart_count"));
+                    cartList = Utils.array2List(cartBeans);
+                    downloadGoodsDetailOfCarts();
+                } else {
+                    FuliCenterApplication.getInstance().setCartList(null);
+                    context.sendStickyBroadcast(new Intent("update_user_cart"));
                 }
             }
         };
+    }
+
+    private void downloadGoodsDetailOfCarts() {
+        listSize = 0;
+        for (int i = 0; i < cartList.size(); i++) {
+            OkHttpUtils3<GoodDetailsBean> utils = new OkHttpUtils3<GoodDetailsBean>();
+            utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                    .addParam(I.KEY_REQUEST,I.REQUEST_FIND_GOOD_DETAILS)
+                    .addParam(I.CategoryGood.GOODS_ID, String.valueOf(cartList.get(i).getGoodsId()))
+                    .targetClass(GoodDetailsBean.class)
+                    .execute(new GoodsDetailListener(i));
+        }
+    }
+
+    private class GoodsDetailListener implements OkHttpUtils3.OnCompleteListener<GoodDetailsBean> {
+        private int num;
+
+        public GoodsDetailListener(int num) {
+            this.num = num;
+        }
+
+        @Override
+        public void onSuccess(GoodDetailsBean result) {
+            listSize++;
+            if (result != null) {
+                cartList.get(num).setGoods(result);
+            }
+            if (listSize == cartList.size()) {
+                FuliCenterApplication.getInstance().setCartList(cartList);
+                context.sendStickyBroadcast(new Intent("update_user_cart"));
+            }
+        }
+
+        @Override
+        public void onError(String error) {
+            listSize++;
+            if (listSize == cartList.size()) {
+                FuliCenterApplication.getInstance().setCartList(cartList);
+                context.sendStickyBroadcast(new Intent("update_user_cart"));
+            }
+        }
     }
 }

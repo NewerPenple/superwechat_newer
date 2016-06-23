@@ -1,5 +1,6 @@
 package newer.project.fulicenter.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
@@ -177,5 +178,14 @@ public class BoutiqueDetailActivity extends BaseActivity {
         goodsList = new ArrayList<NewGoodBean>();
         adapter = new BoutiqueDetailAdapter(this, goodsList, I.SORT_BY_PRICE_DESC);
         mrvBoutiqueDetail.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == LoginActivity.RESULT_CODE_TO_CART) {
+            setResult(resultCode);
+            finish();
+        }
     }
 }

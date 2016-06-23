@@ -1,7 +1,6 @@
 package newer.project.fulicenter.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import newer.project.fulicenter.R;
 import newer.project.fulicenter.adapter.CategoryAdapter;
 import newer.project.fulicenter.bean.CategoryChildBean;
 import newer.project.fulicenter.bean.CategoryGroupBean;
-import newer.project.fulicenter.data.OkHttpUtils2;
+import newer.project.fulicenter.data.OkHttpUtils3;
 import newer.project.fulicenter.utils.Utils;
 
 public class CategoryFragment extends BaseFragment {
@@ -28,6 +27,7 @@ public class CategoryFragment extends BaseFragment {
     private boolean init = false;
     private static final int PAGE_ID = 0;
     private static final int PAGE_SIZE = 50;
+    private int listSize;
 
     public CategoryFragment() {
         // Required empty public constructor
@@ -36,7 +36,6 @@ public class CategoryFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("my", TAG + " onCreateView");
         View layout = inflater.inflate(R.layout.fragment_category, container, false);
         melvCategory = (ExpandableListView) layout.findViewById(R.id.elv_category);
         return layout;
@@ -50,16 +49,15 @@ public class CategoryFragment extends BaseFragment {
 
     @Override
     public void initData() {
-        Log.i("my", TAG + " initData");
         if (init) {
             return;
         }
         init = true;
-        OkHttpUtils2<CategoryGroupBean[]> utils = new OkHttpUtils2<CategoryGroupBean[]>();
+        OkHttpUtils3<CategoryGroupBean[]> utils = new OkHttpUtils3<CategoryGroupBean[]>();
         utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
                 .addParam(I.KEY_REQUEST, I.REQUEST_FIND_CATEGORY_GROUP)
                 .targetClass(CategoryGroupBean[].class)
-                .execute(new OkHttpUtils2.OnCompleteListener<CategoryGroupBean[]>() {
+                .execute(new OkHttpUtils3.OnCompleteListener<CategoryGroupBean[]>() {
                     @Override
                     public void onSuccess(CategoryGroupBean[] result) {
                         if (result != null) {
@@ -82,38 +80,16 @@ public class CategoryFragment extends BaseFragment {
     }
 
     private void initChildData() {
+        listSize = 0;
         for (int i = 0; i < groupList.size(); i++) {
-            final int num = i;
-            OkHttpUtils2<CategoryChildBean[]> utils2 = new OkHttpUtils2<CategoryChildBean[]>();
+            OkHttpUtils3<CategoryChildBean[]> utils2 = new OkHttpUtils3<CategoryChildBean[]>();
             utils2.url(FuliCenterApplication.FULI_SERVER_ROOT)
                     .addParam(I.KEY_REQUEST, I.REQUEST_FIND_CATEGORY_CHILDREN)
                     .addParam(I.CategoryChild.PARENT_ID, String.valueOf(groupList.get(i).getId()))
                     .addParam(I.PAGE_ID, String.valueOf(PAGE_ID))
                     .addParam(I.PAGE_SIZE, String.valueOf(PAGE_SIZE))
                     .targetClass(CategoryChildBean[].class)
-                    .execute(new OkHttpUtils2.OnCompleteListener<CategoryChildBean[]>() {
-                        @Override
-                        public void onSuccess(CategoryChildBean[] result) {
-                            if (result != null) {
-                                ArrayList<CategoryChildBean> list = Utils.array2List(result);
-                                for (int j = 0; j < groupList.size(); j++) {
-                                    if (list.get(0).getParentId() == groupList.get(j).getId()) {
-                                        childList.set(j, list);
-                                    }
-                                }
-                            }
-                            if (num == groupList.size() - 1) {
-                                adapter.initList(groupList, childList);
-                            }
-                        }
-
-                        @Override
-                        public void onError(String error) {
-                            if (num == groupList.size() - 1) {
-                                adapter.initList(groupList, childList);
-                            }
-                        }
-                    });
+                    .execute(new GetCategoryChildListener(i));
         }
     }
 
@@ -122,5 +98,33 @@ public class CategoryFragment extends BaseFragment {
         childList = new ArrayList<ArrayList<CategoryChildBean>>();
         adapter = new CategoryAdapter(getActivity(),groupList,childList);
         melvCategory.setAdapter(adapter);
+    }
+
+    private class GetCategoryChildListener implements OkHttpUtils3.OnCompleteListener<CategoryChildBean[]> {
+        private int num;
+
+        public GetCategoryChildListener(int num) {
+            this.num = num;
+        }
+
+        @Override
+        public void onSuccess(CategoryChildBean[] result) {
+            listSize++;
+            if (result != null) {
+                ArrayList<CategoryChildBean> list = Utils.array2List(result);
+                childList.set(num, list);
+            }
+            if (listSize == groupList.size()) {
+                adapter.initList(groupList, childList);
+            }
+        }
+
+        @Override
+        public void onError(String error) {
+            listSize++;
+            if (listSize == groupList.size()) {
+                adapter.initList(groupList, childList);
+            }
+        }
     }
 }

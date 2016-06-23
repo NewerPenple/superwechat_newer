@@ -1,5 +1,6 @@
 package newer.project.fulicenter.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -40,7 +41,7 @@ public class CategoryDetailActivity extends BaseActivity {
     private GridLayoutManager manager;
     private int pageId = 0;
     private android.app.AlertDialog dialog;
-    private CategoryChildBean good;
+    private int goodId;
     private String groupName;
     private ArrayList<CategoryChildBean> childList;
     SortStateChangedListener sortStateChangedListener;
@@ -56,10 +57,9 @@ public class CategoryDetailActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_detail);
-        good = (CategoryChildBean) getIntent().getSerializableExtra("goodDetail");
+        goodId = getIntent().getIntExtra(I.CategoryChild.CAT_ID, -1);
         groupName = getIntent().getStringExtra("groupName");
         childList = (ArrayList<CategoryChildBean>) getIntent().getSerializableExtra("childList");
-        Log.i("my", TAG + String.valueOf(childList.size()));
         initView();
         initData();
         setListener();
@@ -94,7 +94,7 @@ public class CategoryDetailActivity extends BaseActivity {
                 msrLayoutCategoryDetail.setEnabled(topPosition >= 0);
             }
         });
-
+        Log.i("my", TAG + String.valueOf(childList.size()));
         mbtnCat.setOnCatFilterClickListener(groupName, childList);
         mbtnByPrice.setOnClickListener(sortStateChangedListener);
         mbtnByTime.setOnClickListener(sortStateChangedListener);
@@ -106,11 +106,10 @@ public class CategoryDetailActivity extends BaseActivity {
     }
 
     private void downloadGoods(final int action) {
-        Log.i("my", TAG + " " + good.getId());
         OkHttpUtils2<GoodDetailsBean[]> utils = new OkHttpUtils2<GoodDetailsBean[]>();
         utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
                 .addParam(I.KEY_REQUEST, I.REQUEST_FIND_NEW_BOUTIQUE_GOODS)
-                .addParam(I.CategoryGood.CAT_ID, String.valueOf(good.getId()))
+                .addParam(I.CategoryGood.CAT_ID, String.valueOf(goodId))
                 .addParam(I.PAGE_ID, String.valueOf(I.PAGE_ID_DEFAULT))
                 .addParam(I.PAGE_SIZE, String.valueOf(I.PAGE_SIZE_DEFAULT))
                 .targetClass(GoodDetailsBean[].class)
@@ -245,6 +244,15 @@ public class CategoryDetailActivity extends BaseActivity {
                     break;
             }
             adapter.setSortBy(sortBy);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == LoginActivity.RESULT_CODE_TO_CART) {
+            setResult(resultCode);
+            finish();
         }
     }
 }

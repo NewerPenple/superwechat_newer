@@ -60,7 +60,7 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
                 break;
             case R.id.layout_collect_count:
-                startActivity(new Intent(getActivity(), CollectActivity.class));
+                startActivityForResult(new Intent(getActivity(), CollectActivity.class), 0);
                 break;
         }
     }

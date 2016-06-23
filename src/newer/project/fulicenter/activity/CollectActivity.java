@@ -2,6 +2,7 @@ package newer.project.fulicenter.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
@@ -178,5 +179,14 @@ public class CollectActivity extends Activity {
         collectList = new ArrayList<CollectBean>();
         adapter = new CollectAdapter(this, collectList);
         mrvCollect.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == LoginActivity.RESULT_CODE_TO_CART) {
+            setResult(resultCode);
+            finish();
+        }
     }
 }

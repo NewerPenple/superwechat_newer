@@ -1,26 +1,36 @@
 package newer.project.fulicenter.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 
 import newer.project.fulicenter.D;
+import newer.project.fulicenter.FuliCenterApplication;
+import newer.project.fulicenter.I;
 import newer.project.fulicenter.R;
 import newer.project.fulicenter.activity.NewGoodDetailActivity;
 import newer.project.fulicenter.bean.CollectBean;
+import newer.project.fulicenter.bean.MessageBean;
+import newer.project.fulicenter.data.OkHttpUtils2;
+import newer.project.fulicenter.task.DownloadCollectCountTask;
 import newer.project.fulicenter.utils.ImageUtils;
+import newer.project.fulicenter.utils.Utils;
 
 public class CollectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private static final String TAG = CollectAdapter.class.getName();
     private Context context;
     private ArrayList<CollectBean> collectList;
     private String footerText;
@@ -91,13 +101,13 @@ public class CollectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     public void onClick(View view) {
                         Intent intent = new Intent(context, NewGoodDetailActivity.class);
                         intent.putExtra(D.NewGood.KEY_GOODS_ID, collectList.get(position).getGoodsId());
-                        context.startActivity(intent);
+                        ((Activity) context).startActivityForResult(intent, 0);
                     }
                 });
                 collectHolder.mivCollectDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        deleteCollect(collectList.get(position).getGoodsId(),position);
                     }
                 });
                 break;
@@ -106,6 +116,32 @@ public class CollectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 footerHolder.mtvFooter.setText(footerText);
                 break;
         }
+    }
+
+    private void deleteCollect(int goodId, final int position) {
+        OkHttpUtils2<MessageBean> utils = new OkHttpUtils2<MessageBean>();
+        utils.url(FuliCenterApplication.FULI_SERVER_ROOT)
+                .addParam(I.KEY_REQUEST, I.REQUEST_DELETE_COLLECT)
+                .addParam(I.Collect.USER_NAME, FuliCenterApplication.getInstance().getUser().getMUserName())
+                .addParam(I.Collect.GOODS_ID, String.valueOf(goodId))
+                .targetClass(MessageBean.class)
+                .execute(new OkHttpUtils2.OnCompleteListener<MessageBean>() {
+                    @Override
+                    public void onSuccess(MessageBean result) {
+                        if (result != null && result.isSuccess()) {
+                            new DownloadCollectCountTask(context).execute();
+                            collectList.remove(position);
+                            notifyDataSetChanged();
+                        } else {
+                            Utils.showToast(context, result.getMsg(), Toast.LENGTH_SHORT);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        Log.i("my", TAG + " " + error);
+                    }
+                });
     }
 
     @Override
